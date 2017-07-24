@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/user_action"
+        app:showAsAction="always"
+        android:icon="@drawable/user_menu"
+        android:title="Action">
+        <menu>
+            <item android:id="@+id/user_connect"
+                android:icon="@drawable/user_menu"
+                android:title="Se connecter" />
+            <item android:id="@+id/user_signup"
+                android:icon="@drawable/user_menu"
+                android:title="S'inscrire" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/user_space"
+        android:icon="@drawable/user_menu"
+        android:title="Action"
+        android:visible="false"
+        app:showAsAction="always" />
+</menu>

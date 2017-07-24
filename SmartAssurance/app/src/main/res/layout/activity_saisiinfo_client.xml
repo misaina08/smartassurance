@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aro.misaina.smartassurance.SaisiInfoClientActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="314dp"
+        android:layout_above="@+id/bottomBar"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1.00">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.23"
+                android:text="Saisie des informations personnelles" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newNomClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="nom" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newPrenomClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Prénom" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newAdresseClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Adresse" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newProfessionClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Profession" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newDateNaissClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Date de naissance" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newLieuNaissClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lieu de naissance" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newCinClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CIN" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/newTelClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Téléphone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/suivantButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Suivant" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

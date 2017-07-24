@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_acueil"
+        icon="@drawable/ic_action_name"
+        title="Accueil" />
+    <tab
+        id="@+id/tab_guichet"
+        icon="@drawable/ic_action_name"
+        title="Guichet" />
+    <tab
+        id="@+id/tab_ai"
+        icon="@drawable/ic_action_name"
+        title="AI" />
+    <tab
+        id="@+id/tab_contrats"
+        icon="@drawable/ic_action_name"
+        title="Contrats" />
+    <tab
+        id="@+id/tab_parametres"
+        icon="@drawable/ic_action_name"
+        title="Paramètres" />
+</tabs>
