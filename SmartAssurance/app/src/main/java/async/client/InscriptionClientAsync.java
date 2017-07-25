@@ -14,13 +14,13 @@ import ws.WSRequestModele;
  * Created by Misaina on 22/07/2017.
  */
 
-public class InscriptionClientAsync extends AsyncTask<Client, Void, Client>{
-    private Integer idSouscripteur;
+public class InscriptionClientAsync extends AsyncTask<Client, Void, Client> {
     private SaisiIdentifierClientActivity activity;
+
     @Override
     protected Client doInBackground(Client... params) {
         try {
-            String url = WSUtil.getUrlServer()+"/clients/inscrire/"+idSouscripteur;
+            String url = WSUtil.getUrlServer() + "/clients/inscrire";
             WSRequestModele wsRequestModele = new WSRequestModele();
             wsRequestModele.post(url, params[0]);
             return params[0];
@@ -31,22 +31,15 @@ public class InscriptionClientAsync extends AsyncTask<Client, Void, Client>{
     }
 
     @Override
-    protected  void onPostExecute(Client a){
-        if(a!=null){
+    protected void onPostExecute(Client a) {
+        if (a != null) {
             Intent intent = new Intent(activity, ApresInscriptionActivity.class);
-            intent.putExtra("nomCompletClient", "Mr ou Mme "+a.getNom());
+            intent.putExtra("nomCompletClient", "Mr ou Mme " + a.getNom());
             activity.startActivity(intent);
 
         }
     }
 
-    public Integer getIdSouscripteur() {
-        return idSouscripteur;
-    }
-
-    public void setIdSouscripteur(Integer idSouscripteur) {
-        this.idSouscripteur = idSouscripteur;
-    }
 
     public SaisiIdentifierClientActivity getActivity() {
         return activity;

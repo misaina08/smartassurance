@@ -39,7 +39,6 @@ public class ClientView extends BaseModele {
     private String mdp;
     private String noclient;
     private Date dateSouscription;
-    private Integer clientId;
     private String cltype;
     private String agence;
 
@@ -166,13 +165,6 @@ public class ClientView extends BaseModele {
         this.dateSouscription = dateSouscription;
     }
 
-    public Integer getClientId() {
-        return clientId;
-    }
-
-    public void setClientId(Integer clientId) {
-        this.clientId = clientId;
-    }
 
     public String getCltype() {
         return cltype;
