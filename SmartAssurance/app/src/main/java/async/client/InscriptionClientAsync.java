@@ -15,12 +15,12 @@ import ws.WSRequestModele;
  */
 
 public class InscriptionClientAsync extends AsyncTask<Client, Void, Client>{
-    private Integer idSouscripteur;
+
     private SaisiIdentifierClientActivity activity;
     @Override
     protected Client doInBackground(Client... params) {
         try {
-            String url = WSUtil.getUrlServer()+"/clients/inscrire/"+idSouscripteur;
+            String url = WSUtil.getUrlServer()+"/clients/inscrire";
             WSRequestModele wsRequestModele = new WSRequestModele();
             wsRequestModele.post(url, params[0]);
             return params[0];
@@ -38,14 +38,6 @@ public class InscriptionClientAsync extends AsyncTask<Client, Void, Client>{
             activity.startActivity(intent);
 
         }
-    }
-
-    public Integer getIdSouscripteur() {
-        return idSouscripteur;
-    }
-
-    public void setIdSouscripteur(Integer idSouscripteur) {
-        this.idSouscripteur = idSouscripteur;
     }
 
     public SaisiIdentifierClientActivity getActivity() {

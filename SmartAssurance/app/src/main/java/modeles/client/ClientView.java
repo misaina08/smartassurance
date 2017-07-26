@@ -14,9 +14,6 @@ import modeles.BaseModele;
  */
 public class ClientView extends BaseModele {
 
-    private String souscripteur;
-
-
     private Integer id;
 
     private Integer clTypeId;
@@ -39,7 +36,6 @@ public class ClientView extends BaseModele {
     private String mdp;
     private String noclient;
     private Date dateSouscription;
-    private Integer clientId;
     private String cltype;
     private String agence;
 
@@ -165,15 +161,6 @@ public class ClientView extends BaseModele {
     public void setDateSouscription(Date dateSouscription) {
         this.dateSouscription = dateSouscription;
     }
-
-    public Integer getClientId() {
-        return clientId;
-    }
-
-    public void setClientId(Integer clientId) {
-        this.clientId = clientId;
-    }
-
     public String getCltype() {
         return cltype;
     }
@@ -190,12 +177,5 @@ public class ClientView extends BaseModele {
         this.agence = agence;
     }
 
-    public String getSouscripteur() {
-        return souscripteur;
-    }
-
-    public void setSouscripteur(String souscripteur) {
-        this.souscripteur = souscripteur;
-    }
 
 }
