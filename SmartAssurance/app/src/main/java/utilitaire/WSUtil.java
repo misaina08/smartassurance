@@ -18,7 +18,7 @@ import modeles.BaseModele;
  */
 
 public class WSUtil {
-    private static String urlServer = "http://192.168.10.2:8080/SmartAssuranceWS-war/rest";
+    private static String urlServer = "http://localhost:8080/SmartAssuranceWS-war/rest";
 
     public String parseObjectToJson(BaseModele baseModele) throws Exception {
         try {
