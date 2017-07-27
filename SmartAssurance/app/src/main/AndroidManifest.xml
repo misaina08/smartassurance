@@ -37,7 +37,11 @@
         <activity
             android:name=".ConnexionActivity"
             android:parentActivityName=".AccueilActivity" />
-        <activity android:name=".EspaceClientActivity"></activity>
+        <activity android:name=".EspaceClientActivity" />
+        <activity
+            android:name=".BotActivity"
+            android:parentActivityName=".AccueilActivity" />
+
     </application>
 
 </manifest>

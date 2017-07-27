@@ -84,7 +84,8 @@ public class SaisiIdentifierClientActivity extends AppCompatActivity {
 
                     InscriptionClientAsync inscriptionClientAsync = new InscriptionClientAsync();
                     inscriptionClientAsync.setActivity(thisActivity);
-                    Client[] params = new Client[1];
+                    inscriptionClientAsync.setIdSouscripteur(1);
+                    Client[]  params = new Client[1];
                     params[0] = client;
 
                     inscriptionClientAsync.execute(params);

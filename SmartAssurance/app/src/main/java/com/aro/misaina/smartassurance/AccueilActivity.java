@@ -2,21 +2,45 @@ package com.aro.misaina.smartassurance;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
+
 import services.SessionManager;
 
 public class AccueilActivity extends AppCompatActivity {
-
+    private AccueilActivity accueilActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
+        accueilActivity = this;
+        initBottomBar();
+    }
 
+    /**
+     * Initialisation du bottom bar
+     */
+    public void initBottomBar() {
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                if (tabId == R.id.tab_acueil) {
+                    System.out.println("--accueil");
+                }
+                if (tabId == R.id.tab_ai) {
+                    Intent intent = new Intent(accueilActivity, BotActivity.class);
+                    accueilActivity.startActivity(intent);
+                }
+            }
+        });
     }
 
     /**

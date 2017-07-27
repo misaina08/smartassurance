@@ -161,6 +161,8 @@ public class ClientView extends BaseModele {
     public void setDateSouscription(Date dateSouscription) {
         this.dateSouscription = dateSouscription;
     }
+
+
     public String getCltype() {
         return cltype;
     }
