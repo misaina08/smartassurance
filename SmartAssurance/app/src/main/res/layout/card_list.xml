@@ -7,9 +7,8 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="314dp"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1.00">
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:id="@+id/contentList"

@@ -1,12 +1,14 @@
 package ai;
 
-import android.content.Context;
+import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.aro.misaina.smartassurance.BotActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ai.ui.BulleListUI;
 import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
@@ -18,24 +20,53 @@ import modeles.produit.ProduitView;
  */
 
 public class Actions {
-    private Context context;
+    private BotActivity context;
 
-    public Actions(Context context) {
+    public Actions(BotActivity context) {
         this.context = context;
     }
 
+    /**
+     * Liste tous les produits
+     * @return
+     */
     public UIElement listeProduit() {
-        List<ProduitView> produits = new ArrayList<ProduitView>();
+        final List<ProduitView> produits = new ArrayList<ProduitView>();
         for (int i = 0; i < 10; i++) {
             produits.add(new ProduitView(i, "produit " + i));
         }
         List<CardUI> cards = new ArrayList<CardUI>(produits.size());
-        for (int i = 0; i < produits.size(); i++) {
+        for (final ProduitView p : produits) {
             CardUI card = new CardUI(getContext());
-            card.setText(produits.get(i).getNom());
-            TextView t = new TextView(getContext());
-            t.setText(produits.get(i).getNom());
-            card.getOptionsCardLayout().addView(t);
+            card.setText(p.getNom());
+
+            // ajout du bouton info pour le card
+            Button buttonInfo = new Button(getContext());
+            buttonInfo.setText("Info");
+
+            // ajout du bouton souscrire
+            Button buttonSouscrire = new Button((getContext()));
+            buttonSouscrire.setText("Souscrire");
+
+            buttonInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try{
+                        infoProduit(p);
+                    }
+                    catch (Exception ex){
+                        ex.printStackTrace();
+                    }
+                }
+            });
+            buttonSouscrire.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+            card.getOptionsCardLayout().addView(buttonInfo);
             cards.add(card);
         }
         CardListUI cardListUI = new CardListUI(getContext());
@@ -43,6 +74,10 @@ public class Actions {
         return cardListUI;
     }
 
+    /**
+     * Agence la plus proche
+     * @return
+     */
     public UIElement agenceProche() {
         CardUI cardUI = new CardUI(getContext());
         cardUI.setText("agence proche");
@@ -59,20 +94,30 @@ public class Actions {
         return cardUI;
     }
 
-    public UIElement infoProduit() {
-        CardUI cardUI = new CardUI(getContext());
-        cardUI.setText("info produit");
+    /**
+     * Informations sur un produit
+     * @param produit
+     * @throws Exception
+     */
+    public void infoProduit(ProduitView produit) throws Exception{
+        BulleUI bulleUI = new BulleUI(getContext(), 0);
+        bulleUI.setTextInBulle("Informations sur le produit " + produit.getNom());
 
-        Button b1 = new Button(getContext());
-        b1.setText("Souscrire");
+        BulleUI bulleUI1 = new BulleUI(getContext(), 0);
+        bulleUI1.setTextInBulle("wawa ");
 
-        Button b2 = new Button(getContext());
-        b2.setText("Info");
+        BulleUI bulleUI2 = new BulleUI(getContext(), 0);
+        bulleUI2.setTextInBulle("huhu");
 
-        cardUI.getOptionsCardLayout().addView(b1);
-        cardUI.getOptionsCardLayout().addView(b2);
+        List<BulleUI> list = new ArrayList<BulleUI>();
+        list.add(bulleUI);
+        list.add(bulleUI1);
+        list.add(bulleUI2);
 
-        return cardUI;
+        BulleListUI bulleListUI = new BulleListUI(getContext());
+        bulleListUI.addBulles(list);
+
+        getContext().sendFromUI(bulleListUI, "Informations sur le produit");
     }
 
     public UIElement name() {
@@ -81,11 +126,11 @@ public class Actions {
         return bulleUi;
     }
 
-    public Context getContext() {
+    public BotActivity getContext() {
         return context;
     }
 
-    public void setContext(Context context) {
+    public void setContext(BotActivity context) {
         this.context = context;
     }
 }

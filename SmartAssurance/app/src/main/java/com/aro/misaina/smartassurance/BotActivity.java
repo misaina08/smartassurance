@@ -13,6 +13,7 @@ import ai.ui.UIElement;
 
 public class BotActivity extends AppCompatActivity {
     private BotActivity botActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +29,7 @@ public class BotActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Bot bot = new Bot();
-                    UIElement result = bot.execute(saisi.getText().toString(), botActivity);
-                    updateMyChat(saisi.getText().toString());
-                    updateBotChat(result);
+                    sendFromRequest(saisi.getText().toString());
                     saisi.setText("");
 
                 } catch (Exception ex) {
@@ -40,6 +38,18 @@ public class BotActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void sendFromRequest(String request) throws Exception {
+        Bot bot = new Bot();
+        UIElement result = bot.execute(request, botActivity);
+        updateMyChat(request);
+        updateBotChat(result);
+    }
+
+    public void sendFromUI(UIElement uiElement, String request) throws Exception{
+        updateMyChat(request);
+        updateBotChat(uiElement);
     }
 
     public void updateMyChat(String myRequest) {
