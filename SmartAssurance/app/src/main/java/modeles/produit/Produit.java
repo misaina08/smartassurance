@@ -6,16 +6,24 @@ import modeles.BaseModele;
  * Created by Misaina on 27/07/2017.
  */
 
-public class ProduitView extends BaseModele {
+public class Produit extends BaseModele {
     private Integer id;
     private String nom;
-
-    public ProduitView(){
+    private String code;
+    public Produit(){
 
     }
-    public ProduitView(Integer id, String nom) {
+    public Produit(Integer id, String nom) {
         this.id = id;
         this.nom = nom;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Integer getId() {

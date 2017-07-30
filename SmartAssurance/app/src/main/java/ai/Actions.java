@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotActivity;
+import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
 import ai.ui.UIElement;
-import modeles.produit.ProduitView;
+import modeles.produit.Produit;
 
 /**
  * Created by Misaina on 27/07/2017.
@@ -31,12 +32,12 @@ public class Actions {
      * @return
      */
     public UIElement listeProduit() {
-        final List<ProduitView> produits = new ArrayList<ProduitView>();
+        final List<Produit> produits = new ArrayList<Produit>();
         for (int i = 0; i < 10; i++) {
-            produits.add(new ProduitView(i, "produit " + i));
+            produits.add(new Produit(i, "produit " + i));
         }
         List<CardUI> cards = new ArrayList<CardUI>(produits.size());
-        for (final ProduitView p : produits) {
+        for (final Produit p : produits) {
             CardUI card = new CardUI(getContext());
             card.setText(p.getNom());
 
@@ -62,11 +63,14 @@ public class Actions {
             buttonSouscrire.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    SRAutoMotoPopFragment amPopFragment = new SRAutoMotoPopFragment();
+                    amPopFragment.setBotActivity(context);
+                    amPopFragment.show(context.getFragmentManager(), "Automoto popup");
                 }
             });
 
             card.getOptionsCardLayout().addView(buttonInfo);
+            card.getOptionsCardLayout().addView(buttonSouscrire);
             cards.add(card);
         }
         CardListUI cardListUI = new CardListUI(getContext());
@@ -99,7 +103,7 @@ public class Actions {
      * @param produit
      * @throws Exception
      */
-    public void infoProduit(ProduitView produit) throws Exception{
+    public void infoProduit(Produit produit) throws Exception{
         BulleUI bulleUI = new BulleUI(getContext(), 0);
         bulleUI.setTextInBulle("Informations sur le produit " + produit.getNom());
 
@@ -125,6 +129,8 @@ public class Actions {
         bulleUi.setTextInBulle("my name is jarvis");
         return bulleUi;
     }
+
+
 
     public BotActivity getContext() {
         return context;

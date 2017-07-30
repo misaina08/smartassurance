@@ -20,7 +20,7 @@ public class InscriptionClientAsync extends AsyncTask<Client, Void, Client>{
     @Override
     protected Client doInBackground(Client... params) {
         try {
-            String url = WSUtil.getUrlServer()+"/clients/inscrire/"+idSouscripteur;
+            String url = WSUtil.getUrlServer()+"/clients/inscrire";
             WSRequestModele wsRequestModele = new WSRequestModele();
             wsRequestModele.post(url, params[0]);
             return params[0];

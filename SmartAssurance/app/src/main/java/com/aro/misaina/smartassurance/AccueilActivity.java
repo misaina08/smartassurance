@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import services.ObjetsStatique;
 import services.SessionManager;
 
 public class AccueilActivity extends AppCompatActivity {
@@ -22,6 +23,9 @@ public class AccueilActivity extends AppCompatActivity {
 
         accueilActivity = this;
         initBottomBar();
+
+        ObjetsStatique objetsStatique =  new ObjetsStatique();
+        objetsStatique.init();
     }
 
     /**

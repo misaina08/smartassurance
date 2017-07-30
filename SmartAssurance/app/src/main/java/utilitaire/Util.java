@@ -5,6 +5,7 @@ import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Util {
@@ -167,14 +168,11 @@ public class Util {
             if (typeObjet.compareTo("java.lang.String") == 0) {
                 return value;
             } else if (typeObjet.compareTo("java.util.Date") == 0) {
-//                SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-//                Calendar c = Calendar.getInstance();
-//                c.setTime(format1.parse(value));
-//                Date d = c.getTime();
-                Long d = new Long(value);
-                Date daty = new Date();
-                daty.setTime(d);
-                return daty;
+                SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+                Calendar c = Calendar.getInstance();
+                c.setTime(format1.parse(value));
+                Date d = c.getTime();
+                return d;
             } else if (typeObjet.compareTo("java.lang.Integer") == 0) {
                 return new Integer(value);
             } else if (typeObjet.compareTo("java.lang.Double") == 0) {

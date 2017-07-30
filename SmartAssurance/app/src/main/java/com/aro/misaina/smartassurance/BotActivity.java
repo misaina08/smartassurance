@@ -40,6 +40,12 @@ public class BotActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Envoi depuis le textinput
+     *
+     * @param request
+     * @throws Exception
+     */
     public void sendFromRequest(String request) throws Exception {
         Bot bot = new Bot();
         UIElement result = bot.execute(request, botActivity);
@@ -47,11 +53,19 @@ public class BotActivity extends AppCompatActivity {
         updateBotChat(result);
     }
 
-    public void sendFromUI(UIElement uiElement, String request) throws Exception{
-        updateMyChat(request);
+    /**
+     * Envoi depuis une autre affichage
+     *
+     * @param uiElement
+     * @param request
+     * @throws Exception
+     */
+    public void sendFromUI(UIElement uiElement, String request) throws Exception {
+        if (request != null) {
+            updateMyChat(request);
+        }
         updateBotChat(uiElement);
     }
-
     public void updateMyChat(String myRequest) {
         LinearLayout chatContent = (LinearLayout) findViewById(R.id.chatContent);
         BulleUI bulle = new BulleUI(this, 1);
