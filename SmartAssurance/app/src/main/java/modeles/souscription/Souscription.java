@@ -20,6 +20,11 @@ public class Souscription extends BaseModele {
     private Integer valide;
     private Integer idProduit;
     private Integer duree;
+    private String nomClient;
+    private String prenomClient;
+    private String nomSouscripteur;
+    private String prenomSouscripteur;
+    private String nomProduit;
 
     public Souscription() {
     }
@@ -30,6 +35,46 @@ public class Souscription extends BaseModele {
 
     public void setIdClientSouscripteur(Integer idClientSouscripteur) {
         this.idClientSouscripteur = idClientSouscripteur;
+    }
+
+    public String getNomClient() {
+        return nomClient;
+    }
+
+    public void setNomClient(String nomClient) {
+        this.nomClient = nomClient;
+    }
+
+    public String getPrenomClient() {
+        return prenomClient;
+    }
+
+    public void setPrenomClient(String prenomClient) {
+        this.prenomClient = prenomClient;
+    }
+
+    public String getNomSouscripteur() {
+        return nomSouscripteur;
+    }
+
+    public void setNomSouscripteur(String nomSouscripteur) {
+        this.nomSouscripteur = nomSouscripteur;
+    }
+
+    public String getPrenomSouscripteur() {
+        return prenomSouscripteur;
+    }
+
+    public void setPrenomSouscripteur(String prenomSouscripteur) {
+        this.prenomSouscripteur = prenomSouscripteur;
+    }
+
+    public String getNomProduit() {
+        return nomProduit;
+    }
+
+    public void setNomProduit(String nomProduit) {
+        this.nomProduit = nomProduit;
     }
 
     public Integer getId() {

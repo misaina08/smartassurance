@@ -98,7 +98,7 @@ public class Util {
 
 
 //	date => jj/mm/yyyy
-    public String dateToString(Date d) {
+    public static String dateToString(Date d) {
         String day = d.getDate() + "";
         String mois = (d.getMonth() + 1) + "";
         if (d.getDate() < 10) {
