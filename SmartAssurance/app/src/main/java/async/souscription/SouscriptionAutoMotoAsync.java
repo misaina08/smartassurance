@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.aro.misaina.smartassurance.BotActivity;
+import com.aro.misaina.smartassurance.BotFragment;
 import com.google.gson.Gson;
 
 import ai.ui.CardUI;
@@ -20,7 +20,7 @@ import ws.WSRequestModele;
 
 public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, String> {
     private Integer nbMois;
-    private BotActivity botActivity;
+    private BotFragment botFragment;
     @Override
     protected String doInBackground(VehiculeWS... params) {
         try{
@@ -42,19 +42,19 @@ public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, Strin
         Result resultWS = new Result();
         Gson gson = new Gson();
         resultWS = gson.fromJson(res, Result.class);
-        CardUI cardUI = new CardUI(botActivity);
+        CardUI cardUI = new CardUI(botFragment.getActivity());
         try {
 
             cardUI.setText("Votre souscription a bien été effectuée. Veuillez consulter la liste des souscription en attente de paiement.");
 
             if (resultWS.getRes() == 1) {
-                Button b1 = new Button(botActivity);
+                Button b1 = new Button(botFragment.getActivity());
                 b1.setText("Voir");
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         // action à faire
-                        Toast.makeText(botActivity, "Action à faire", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(botFragment.getActivity(), "Action à faire", Toast.LENGTH_SHORT).show();
                     }
                 });
                 cardUI.getOptionsCardLayout().addView(b1);
@@ -62,7 +62,7 @@ public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, Strin
 
                 throw new Exception("");
             }
-            botActivity.sendFromUI(cardUI, null);
+            botFragment.sendFromUI(cardUI, null);
         } catch (Exception ex) {
             ex.printStackTrace();
             cardUI.setText("Une erreur est survenue. Veuillez réessayer.");
@@ -77,11 +77,11 @@ public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, Strin
         this.nbMois = nbMois;
     }
 
-    public BotActivity getBotActivity() {
-        return botActivity;
+    public BotFragment getBotFragment() {
+        return botFragment;
     }
 
-    public void setBotActivity(BotActivity botActivity) {
-        this.botActivity = botActivity;
+    public void setBotFragment(BotFragment botFragment) {
+        this.botFragment = botFragment;
     }
 }

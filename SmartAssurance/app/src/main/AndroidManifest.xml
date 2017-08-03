@@ -39,7 +39,7 @@
             android:parentActivityName=".AccueilActivity" />
         <activity android:name=".EspaceClientActivity" />
         <activity
-            android:name=".BotActivity"
+            android:name=".BotFragment"
             android:parentActivityName=".AccueilActivity" />
 
     </application>

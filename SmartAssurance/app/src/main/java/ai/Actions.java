@@ -3,7 +3,7 @@ package ai;
 import android.view.View;
 import android.widget.Button;
 
-import com.aro.misaina.smartassurance.BotActivity;
+import com.aro.misaina.smartassurance.BotFragment;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 
 import java.util.ArrayList;
@@ -21,9 +21,9 @@ import modeles.produit.Produit;
  */
 
 public class Actions {
-    private BotActivity context;
+    private BotFragment context;
 
-    public Actions(BotActivity context) {
+    public Actions(BotFragment context) {
         this.context = context;
     }
 
@@ -38,15 +38,15 @@ public class Actions {
         }
         List<CardUI> cards = new ArrayList<CardUI>(produits.size());
         for (final Produit p : produits) {
-            CardUI card = new CardUI(getContext());
+            CardUI card = new CardUI(getContext().getActivity());
             card.setText(p.getNom());
 
             // ajout du bouton info pour le card
-            Button buttonInfo = new Button(getContext());
+            Button buttonInfo = new Button(getContext().getActivity());
             buttonInfo.setText("Info");
 
             // ajout du bouton souscrire
-            Button buttonSouscrire = new Button((getContext()));
+            Button buttonSouscrire = new Button((getContext().getActivity()));
             buttonSouscrire.setText("Souscrire");
 
             buttonInfo.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +64,7 @@ public class Actions {
                 @Override
                 public void onClick(View v) {
                     SRAutoMotoPopFragment amPopFragment = new SRAutoMotoPopFragment();
-                    amPopFragment.setBotActivity(context);
+                    amPopFragment.setBotFragment(context);
                     amPopFragment.show(context.getFragmentManager(), "Automoto popup");
                 }
             });
@@ -73,7 +73,7 @@ public class Actions {
             card.getOptionsCardLayout().addView(buttonSouscrire);
             cards.add(card);
         }
-        CardListUI cardListUI = new CardListUI(getContext());
+        CardListUI cardListUI = new CardListUI(getContext().getActivity());
         cardListUI.addCards(cards);
         return cardListUI;
     }
@@ -83,13 +83,13 @@ public class Actions {
      * @return
      */
     public UIElement agenceProche() {
-        CardUI cardUI = new CardUI(getContext());
+        CardUI cardUI = new CardUI(getContext().getActivity());
         cardUI.setText("agence proche");
 
-        Button b1 = new Button(getContext());
+        Button b1 = new Button(getContext().getActivity());
         b1.setText("Consulter");
 
-        Button b2 = new Button(getContext());
+        Button b2 = new Button(getContext().getActivity());
         b2.setText("Voir dans le map");
 
         cardUI.getOptionsCardLayout().addView(b1);
@@ -104,13 +104,13 @@ public class Actions {
      * @throws Exception
      */
     public void infoProduit(Produit produit) throws Exception{
-        BulleUI bulleUI = new BulleUI(getContext(), 0);
+        BulleUI bulleUI = new BulleUI(getContext().getActivity(), 0);
         bulleUI.setTextInBulle("Informations sur le produit " + produit.getNom());
 
-        BulleUI bulleUI1 = new BulleUI(getContext(), 0);
+        BulleUI bulleUI1 = new BulleUI(getContext().getActivity(), 0);
         bulleUI1.setTextInBulle("wawa ");
 
-        BulleUI bulleUI2 = new BulleUI(getContext(), 0);
+        BulleUI bulleUI2 = new BulleUI(getContext().getActivity(), 0);
         bulleUI2.setTextInBulle("huhu");
 
         List<BulleUI> list = new ArrayList<BulleUI>();
@@ -118,25 +118,25 @@ public class Actions {
         list.add(bulleUI1);
         list.add(bulleUI2);
 
-        BulleListUI bulleListUI = new BulleListUI(getContext());
+        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
         bulleListUI.addBulles(list);
 
         getContext().sendFromUI(bulleListUI, "Informations sur le produit");
     }
 
     public UIElement name() {
-        BulleUI bulleUi = new BulleUI(getContext(), 0);
+        BulleUI bulleUi = new BulleUI(getContext().getActivity(), 0);
         bulleUi.setTextInBulle("my name is jarvis");
         return bulleUi;
     }
 
 
 
-    public BotActivity getContext() {
+    public BotFragment getContext() {
         return context;
     }
 
-    public void setContext(BotActivity context) {
+    public void setContext(BotFragment context) {
         this.context = context;
     }
 }

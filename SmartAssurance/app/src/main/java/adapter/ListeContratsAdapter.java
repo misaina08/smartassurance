@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.aro.misaina.smartassurance.R;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import modeles.souscription.Souscription;
@@ -32,7 +33,7 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
     public void onBindViewHolder(ListeContratsAdapter.ViewHolder holder, int position) {
         holder.tTitreContrat.setText("Assurances " + contrats.get(position).getNomProduit());
         holder.eDate.setText(Util.dateToString(contrats.get(position).getDateSouscription()));
-        holder.tMt.setText("Prime total à payer : " + contrats.get(position).getPrimetotal() + " Ar");
+        holder.tMt.setText("Prime total à payer : " + new DecimalFormat("#,##0.00").format(contrats.get(position).getPrimetotal()) + " Ar");
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.aro.misaina.smartassurance;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -16,6 +18,7 @@ import services.SessionManager;
 
 public class AccueilActivity extends AppCompatActivity {
     private AccueilActivity accueilActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,7 @@ public class AccueilActivity extends AppCompatActivity {
         accueilActivity = this;
         initBottomBar();
 
-        ObjetsStatique objetsStatique =  new ObjetsStatique();
+        ObjetsStatique objetsStatique = new ObjetsStatique();
         objetsStatique.init();
     }
 
@@ -36,13 +39,23 @@ public class AccueilActivity extends AppCompatActivity {
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
+                Fragment fragment = fragment = new BotFragment();
                 if (tabId == R.id.tab_acueil) {
-                    System.out.println("--accueil");
+
                 }
                 if (tabId == R.id.tab_ai) {
-                    Intent intent = new Intent(accueilActivity, BotActivity.class);
-                    accueilActivity.startActivity(intent);
+                    fragment = new BotFragment();
                 }
+                if (tabId == R.id.tab_parametres) {
+                    fragment = new ParametresFragment();
+                }
+                if (tabId == R.id.tab_contrats) {
+                    fragment = new ListeContratsFragment();
+                }
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.contentContainer, fragment)
+                        .addToBackStack(fragment.getClass().getName())
+                        .commit();
             }
         });
     }

@@ -25,7 +25,7 @@ import services.SessionManager;
  *
  */
 public class SRRetraitePopFragment extends DialogFragment {
-    private BotActivity botActivity;
+    private BotFragment botFragment;
 
     private EditText eAgeRetraite;
     private EditText eBeneficiaire;
@@ -111,13 +111,13 @@ public class SRRetraitePopFragment extends DialogFragment {
             rtSouscription.setPrimetotal(new Double(eMt.getText().toString()));
             rtSouscription.setValide(0);
             rtSouscription.setIdProduit(1);
-            SessionManager sessionManager = new SessionManager(botActivity.getApplicationContext());
+            SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
             ClientView cl = (ClientView) SessionManager.getClientConnected();
             rtSouscription.setIdClient(cl.getId());
             rtSouscription.setIdClientSouscripteur(cl.getId());
 
             SouscriptionRetraiteAsync souscriptionAsync = new SouscriptionRetraiteAsync();
-            souscriptionAsync.setBotActivity(getBotActivity());
+            souscriptionAsync.setBotFragment(getBotFragment());
             RtSouscription[] params = new RtSouscription[1];
             params[0] = rtSouscription;
             souscriptionAsync.execute(params);
@@ -130,11 +130,11 @@ public class SRRetraitePopFragment extends DialogFragment {
 
     }
 
-    public BotActivity getBotActivity() {
-        return botActivity;
+    public BotFragment getBotFragment() {
+        return botFragment;
     }
 
-    public void setBotActivity(BotActivity botActivity) {
-        this.botActivity = botActivity;
+    public void setBotFragment(BotFragment botFragment) {
+        this.botFragment = botFragment;
     }
 }

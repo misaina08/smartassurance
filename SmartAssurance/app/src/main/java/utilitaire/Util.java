@@ -174,17 +174,21 @@ public class Util {
                 Date d = c.getTime();
                 return d;
             } else if (typeObjet.compareTo("java.lang.Integer") == 0) {
+                if(value == null || value.compareToIgnoreCase("null")==0){
+                    return new Integer(0);
+                }
                 return new Integer(value);
             } else if (typeObjet.compareTo("java.lang.Double") == 0) {
+                if(value == null || value.compareToIgnoreCase("null")==0){
+                    return new Double(0);
+                }
                 return new Double(value);
             }
             else if (typeObjet.compareTo("java.lang.Float") == 0) {
                 return new Float(value);
             }
             else if (typeObjet.compareTo("java.lang.Boolean") == 0) {
-                System.out.println("utillll "+value);
                 if(value.compareToIgnoreCase("1")==0) {
-                    System.out.println("ato");
                     return new Boolean("true");
                 }
                 else return new Boolean("false");

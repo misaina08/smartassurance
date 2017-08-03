@@ -1,6 +1,6 @@
 package ai;
 
-import com.aro.misaina.smartassurance.BotActivity;
+import com.aro.misaina.smartassurance.BotFragment;
 
 import java.lang.reflect.Method;
 
@@ -11,7 +11,7 @@ import ai.ui.UIElement;
  */
 
 public class Bot {
-    public UIElement execute(String request, BotActivity context) throws Exception {
+    public UIElement execute(String request, BotFragment context) throws Exception {
         Actions actions = new Actions(context);
         Method method = actions.getClass().getMethod(request, null);
         return (UIElement) method.invoke(actions, null);

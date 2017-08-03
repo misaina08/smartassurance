@@ -1,8 +1,10 @@
 package com.aro.misaina.smartassurance;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -11,20 +13,29 @@ import ai.Bot;
 import ai.ui.BulleUI;
 import ai.ui.UIElement;
 
-public class BotActivity extends AppCompatActivity {
-    private BotActivity botActivity;
+public class BotFragment extends Fragment {
+    private BotFragment botFragment;
+
+    public BotFragment(){
+
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bot);
-        botActivity = this;
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        botFragment = this;
         initComponents();
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        return inflater.inflate(R.layout.fragment_bot, container, false);
+    }
+
     public void initComponents() {
-        final EditText saisi = (EditText) findViewById(R.id.textSaisi);
-        Button sendButton = (Button) findViewById(R.id.buttonSend);
+        final EditText saisi = (EditText) getView().findViewById(R.id.textSaisi);
+        Button sendButton = (Button) getView().findViewById(R.id.buttonSend);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +59,7 @@ public class BotActivity extends AppCompatActivity {
      */
     public void sendFromRequest(String request) throws Exception {
         Bot bot = new Bot();
-        UIElement result = bot.execute(request, botActivity);
+        UIElement result = bot.execute(request, botFragment);
         updateMyChat(request);
         updateBotChat(result);
     }
@@ -67,14 +78,14 @@ public class BotActivity extends AppCompatActivity {
         updateBotChat(uiElement);
     }
     public void updateMyChat(String myRequest) {
-        LinearLayout chatContent = (LinearLayout) findViewById(R.id.chatContent);
-        BulleUI bulle = new BulleUI(this, 1);
+        LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
+        BulleUI bulle = new BulleUI(this.getActivity(), 1);
         bulle.setTextInBulle(myRequest);
         chatContent.addView(bulle);
     }
 
     public void updateBotChat(UIElement botResponse) {
-        LinearLayout chatContent = (LinearLayout) findViewById(R.id.chatContent);
+        LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
         chatContent.addView(botResponse);
     }
 

@@ -32,7 +32,7 @@ import utilitaire.Util;
  * A simple {@link Fragment} subclass.
  */
 public class SRAutoMotoPopFragment extends DialogFragment {
-    private BotActivity botActivity;
+    private BotFragment botFragment;
 
     private LinearLayout content;
     private EditText eNoImmatr;
@@ -78,7 +78,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
 //        initialisation des saisis de garanties
         initSaisiGaraties();
         for (EditText editTextGarantie : eListGaranties) {
-            TextInputLayout textInputLayout = new TextInputLayout(getBotActivity());
+            TextInputLayout textInputLayout = new TextInputLayout(getBotFragment().getActivity());
             textInputLayout.addView(editTextGarantie);
             content.addView(textInputLayout);
         }
@@ -116,7 +116,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             vehiculeWS.setNbRoues(new Integer(eNbRoues.getText().toString()));
             vehiculeWS.setNoSerie(eNoSerie.getText().toString());
             vehiculeWS.setNoImm(eNoImmatr.getText().toString());
-            SessionManager sessionManager = new SessionManager(botActivity.getApplicationContext());
+            SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
             vehiculeWS.setIdClient(((ClientView) SessionManager.getClientConnected()).getId());
 
             AutoMotoService autoMotoService = new AutoMotoService();
@@ -138,7 +138,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             }
             vehiculeWS.setGaranties(listeGarantiesVehicu);
             SouscriptionAutoMotoAsync async = new SouscriptionAutoMotoAsync();
-            async.setBotActivity(getBotActivity());
+            async.setBotFragment(getBotFragment());
             async.setNbMois(12);
             VehiculeWS[] param = new VehiculeWS[1];
             param[0] = vehiculeWS;
@@ -157,17 +157,17 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         List<AmGaranti> listeGaranties = autoMotoService.getGaranties();
         eListGaranties = new ArrayList<EditText>(listeGaranties.size());
         for (AmGaranti garanti : listeGaranties) {
-            EditText editText = new EditText(getBotActivity());
+            EditText editText = new EditText(getBotFragment().getActivity());
             editText.setHint(garanti.getLibelle());
             eListGaranties.add(editText);
         }
     }
 
-    public BotActivity getBotActivity() {
-        return botActivity;
+    public BotFragment getBotFragment() {
+        return botFragment;
     }
 
-    public void setBotActivity(BotActivity botActivity) {
-        this.botActivity = botActivity;
+    public void setBotFragment(BotFragment botFragment) {
+        this.botFragment = botFragment;
     }
 }

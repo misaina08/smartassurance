@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:botFragment="com.aro.misaina.smartassurance.ListeContratsActivity">
+    tools:botFragment="com.aro.misaina.smartassurance.ListeContratsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

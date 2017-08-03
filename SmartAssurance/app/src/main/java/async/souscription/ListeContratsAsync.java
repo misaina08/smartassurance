@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.aro.misaina.smartassurance.ListeContratsActivity;
+import com.aro.misaina.smartassurance.ListeContratsFragment;
 import com.aro.misaina.smartassurance.R;
 
 import java.util.ArrayList;
@@ -22,11 +22,11 @@ import ws.WSRequestModele;
  */
 
 public class ListeContratsAsync extends AsyncTask<Void, Void, List<Souscription>> {
-    private ListeContratsActivity listeContratsActivity;
+    private ListeContratsFragment listeContratsFragment;
     @Override
     protected List<Souscription> doInBackground(Void... params) {
         List<Souscription> contrats = new ArrayList<Souscription>();
-        SessionManager sessionManager = new SessionManager(listeContratsActivity);
+        SessionManager sessionManager = new SessionManager(listeContratsFragment.getActivity());
 
         try{
             ClientView clientConnected = SessionManager.getClientConnected();
@@ -43,18 +43,18 @@ public class ListeContratsAsync extends AsyncTask<Void, Void, List<Souscription>
 
     @Override
     protected void onPostExecute(List<Souscription> contrats) {
-        final RecyclerView recyclerView = (RecyclerView) listeContratsActivity.findViewById(R.id.recContrats);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getListeContratsActivity().getBaseContext()));
+        final RecyclerView recyclerView = (RecyclerView) listeContratsFragment.getView().findViewById(R.id.recContrats);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getListeContratsFragment().getActivity().getBaseContext()));
         ListeContratsAdapter listeContratsAdapter = new ListeContratsAdapter();
         listeContratsAdapter.setContrats(contrats);
         recyclerView.setAdapter(listeContratsAdapter);
     }
 
-    public ListeContratsActivity getListeContratsActivity() {
-        return listeContratsActivity;
+    public ListeContratsFragment getListeContratsFragment() {
+        return listeContratsFragment;
     }
 
-    public void setListeContratsActivity(ListeContratsActivity listeContratsActivity) {
-        this.listeContratsActivity = listeContratsActivity;
+    public void setListeContratsFragment(ListeContratsFragment listeContratsFragment) {
+        this.listeContratsFragment = listeContratsFragment;
     }
 }
