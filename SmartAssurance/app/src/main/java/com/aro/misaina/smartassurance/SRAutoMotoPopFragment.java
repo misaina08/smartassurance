@@ -125,7 +125,6 @@ public class SRAutoMotoPopFragment extends DialogFragment {
 
             int i = 0;
             for (EditText etextGaranties : eListGaranties) {
-//                System.out.println("/"+etextGaranties.getText().toString()+"-");
                 if (!etextGaranties.getText().toString().isEmpty()) {
                     SaisiGaranti gar = new SaisiGaranti();
                     gar.setId(listeGaranties.get(i).getId());

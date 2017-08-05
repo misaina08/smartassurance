@@ -21,9 +21,18 @@ public class VehiculeWS extends BaseModele {
     private Integer nbPlaces;
     private Integer idClient;
     private List<SaisiGaranti> garanties;
+//    private Integer idSouscription;
 
     public VehiculeWS() {
     }
+
+//    public Integer getIdSouscription() {
+//        return idSouscription;
+//    }
+//
+//    public void setIdSouscription(Integer idSouscription) {
+//        this.idSouscription = idSouscription;
+//    }
 
     public Integer getIdClient() {
         return idClient;

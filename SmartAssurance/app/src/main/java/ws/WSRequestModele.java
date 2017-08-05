@@ -45,8 +45,31 @@ public class WSRequestModele extends WebServiceModele {
         {
             throw ex;
         }
-
     }
+
+    @Override
+    public BaseModele getOne(String url, BaseModele baseModele) throws Exception {
+        try{
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .connectTimeout(20, TimeUnit.SECONDS)
+                    .writeTimeout(20, TimeUnit.SECONDS)
+                    .readTimeout(40, TimeUnit.SECONDS)
+                    .build();
+            Request request = new Request.Builder()
+                    .url(url)
+                    .build();
+
+            Response response = null;
+            response = client.newCall(request).execute();
+            String jsonStr=response.body().string();
+            WSUtil wsUtil=new WSUtil();
+            return wsUtil.parseJsonObjectStringToObject(jsonStr, baseModele);
+        }
+        catch(Exception ex){
+            throw ex;
+        }
+    }
+
     @Override
     public String post(String url, BaseModele baseModele)  throws Exception{
         WSUtil wsUtil=new WSUtil();

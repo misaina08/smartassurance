@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import async.souscription.ListeContratsAsync;
 
 public class ListeContratsFragment extends Fragment {
-    private LinearLayout contentContainer;
     public ListeContratsFragment(){
 
     }

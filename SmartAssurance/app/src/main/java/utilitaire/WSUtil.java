@@ -18,7 +18,7 @@ import modeles.BaseModele;
  */
 
 public class WSUtil {
-    private static String urlServer = "http://192.168.10.5:56905/SmartAssuranceWS-war/rest";
+    private static String urlServer = "http://192.168.10.2:56905/SmartAssuranceWS-war/rest";
 
     public String parseObjectToJson(BaseModele baseModele) throws Exception {
         try {
@@ -87,17 +87,19 @@ public class WSUtil {
         try {
             util = new Util();
             fieldsBaseModele = baseModele.getClass().getDeclaredFields();
-            //Log.i("taille ", fieldsBaseModele.length+"");
             JSONObject jsonObject = new JSONObject(jsonStr);
             for (int i = 0; i < fieldsBaseModele.length; i++) {
+
                 if (fieldsBaseModele[i].getName().compareToIgnoreCase("serialVersionUID") == 0
                         || fieldsBaseModele[i].getName().compareToIgnoreCase("$change") == 0) {
                     continue;
                 }
+                if (fieldsBaseModele[i].getType().getName().compareToIgnoreCase("java.util.List") == 0) {
+                    continue;
+                }
+
                 Class[] type = new Class[1];
                 type[0] = fieldsBaseModele[i].getType();
-                //Log.i("field : ",fieldsBaseModele[i].getName());
-
 
                 Method method = result.getClass().getMethod("set" + util.premierMaj(fieldsBaseModele[i].getName()), type);
                 Object param = util.setValueInString(fieldsBaseModele[i], jsonObject.getString(fieldsBaseModele[i].getName()));

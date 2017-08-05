@@ -38,10 +38,11 @@
             android:name=".ConnexionActivity"
             android:parentActivityName=".AccueilActivity" />
         <activity android:name=".EspaceClientActivity" />
+        <activity android:name=".BotFragment" />
+        <activity android:name=".ListeContratsFragment" />
         <activity
-            android:name=".BotFragment"
-            android:parentActivityName=".AccueilActivity" />
-
+            android:name=".FicheContratAutoActivity"
+            android:parentActivityName=".ListeContratsFragment"></activity>
     </application>
 
 </manifest>

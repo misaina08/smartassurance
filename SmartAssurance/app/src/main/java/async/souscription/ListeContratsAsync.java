@@ -46,6 +46,7 @@ public class ListeContratsAsync extends AsyncTask<Void, Void, List<Souscription>
         final RecyclerView recyclerView = (RecyclerView) listeContratsFragment.getView().findViewById(R.id.recContrats);
         recyclerView.setLayoutManager(new LinearLayoutManager(getListeContratsFragment().getActivity().getBaseContext()));
         ListeContratsAdapter listeContratsAdapter = new ListeContratsAdapter();
+        listeContratsAdapter.setListeContratsFragment(listeContratsFragment);
         listeContratsAdapter.setContrats(contrats);
         recyclerView.setAdapter(listeContratsAdapter);
     }

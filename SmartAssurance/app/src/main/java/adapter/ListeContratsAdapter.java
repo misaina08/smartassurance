@@ -1,11 +1,14 @@
 package adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.aro.misaina.smartassurance.FicheContratAutoActivity;
+import com.aro.misaina.smartassurance.ListeContratsFragment;
 import com.aro.misaina.smartassurance.R;
 
 import java.text.DecimalFormat;
@@ -20,6 +23,7 @@ import utilitaire.Util;
 
 public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdapter.ViewHolder> {
     List<Souscription> contrats;
+    private ListeContratsFragment listeContratsFragment;
 
     @Override
     public ListeContratsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -56,6 +60,18 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
 
 //            events
 //            ex : item onclick
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Souscription contratSelectionne = getContrats().get(getAdapterPosition());
+                    if (contratSelectionne.getIdProduit() == 2) {
+                        Intent intent = new Intent(listeContratsFragment.getActivity(), FicheContratAutoActivity.class);
+                        intent.putExtra("idSouscription", contratSelectionne.getId());
+                        listeContratsFragment.getActivity().startActivity(intent);
+
+                    }
+                }
+            });
 
         }
 
@@ -67,5 +83,13 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
 
     public void setContrats(List<Souscription> contrats) {
         this.contrats = contrats;
+    }
+
+    public ListeContratsFragment getListeContratsFragment() {
+        return listeContratsFragment;
+    }
+
+    public void setListeContratsFragment(ListeContratsFragment listeContratsFragment) {
+        this.listeContratsFragment = listeContratsFragment;
     }
 }
