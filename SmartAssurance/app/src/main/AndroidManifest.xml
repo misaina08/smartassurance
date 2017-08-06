@@ -42,6 +42,8 @@
         <activity android:name=".ListeContratsFragment" />
         <activity
             android:name=".FicheContratAutoActivity"
+            android:parentActivityName=".ListeContratsFragment" />
+        <activity android:name=".FicheContratRetraiteActivity"
             android:parentActivityName=".ListeContratsFragment"></activity>
     </application>
 

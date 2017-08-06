@@ -50,9 +50,6 @@ public class ListePersonneAsync extends AsyncTask<Void, Void, List<Personne>> {
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getBaseContext()));
             ListePersonneAdapter listePersonneAdapter = new ListePersonneAdapter();
             listePersonneAdapter.setListePersonne(liste);
-            System.out.println("__act " + getActivity());
-            System.out.println("__recyc " + recyclerView);
-            System.out.println("__adapt " + listePersonneAdapter);
             recyclerView.setAdapter(listePersonneAdapter);
 
         } catch (Exception e) {

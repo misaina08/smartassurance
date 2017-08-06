@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.aro.misaina.smartassurance.FicheContratAutoActivity;
+import com.aro.misaina.smartassurance.FicheContratRetraiteActivity;
 import com.aro.misaina.smartassurance.ListeContratsFragment;
 import com.aro.misaina.smartassurance.R;
 
@@ -69,6 +70,11 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
                         intent.putExtra("idSouscription", contratSelectionne.getId());
                         listeContratsFragment.getActivity().startActivity(intent);
 
+                    }
+                    else if(contratSelectionne.getIdProduit() == 3) {
+                        Intent intent = new Intent(listeContratsFragment.getActivity(), FicheContratRetraiteActivity.class);
+                        intent.putExtra("idSouscription", contratSelectionne.getId());
+                        listeContratsFragment.getActivity().startActivity(intent);
                     }
                 }
             });

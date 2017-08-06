@@ -92,12 +92,6 @@ public class SRRetraitePopFragment extends DialogFragment {
      * Souscription à la retraite
      */
     public void onClickSouscrire() throws Exception{
-//        System.out.println("____________________________________________________________");
-//        System.out.println("type : " + drType.getSelectedItem().toString());
-//        System.out.println("option : " + drOption.getSelectedItem().toString());
-//        System.out.println("cotisation : " + drCotisation.getSelectedItem().toString());
-//        System.out.println("age "+ eAgeRetraite.getText().toString());
-//        System.out.println("mt "+ eMt.getText().toString());
 
         try {
             RtSouscription rtSouscription = new RtSouscription();
@@ -110,7 +104,7 @@ public class SRRetraitePopFragment extends DialogFragment {
             rtSouscription.setDuree(12);
             rtSouscription.setPrimetotal(new Double(eMt.getText().toString()));
             rtSouscription.setValide(0);
-            rtSouscription.setIdProduit(1);
+            rtSouscription.setIdProduit(3);
             SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
             ClientView cl = (ClientView) SessionManager.getClientConnected();
             rtSouscription.setIdClient(cl.getId());
