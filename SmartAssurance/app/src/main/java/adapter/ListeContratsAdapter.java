@@ -11,6 +11,7 @@ import com.aro.misaina.smartassurance.FicheContratAutoActivity;
 import com.aro.misaina.smartassurance.FicheContratRetraiteActivity;
 import com.aro.misaina.smartassurance.ListeContratsFragment;
 import com.aro.misaina.smartassurance.R;
+import com.google.gson.Gson;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -64,16 +65,22 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Gson gson = new Gson();
                     Souscription contratSelectionne = getContrats().get(getAdapterPosition());
+                    String dataJson = gson.toJson(contratSelectionne);
                     if (contratSelectionne.getIdProduit() == 2) {
                         Intent intent = new Intent(listeContratsFragment.getActivity(), FicheContratAutoActivity.class);
                         intent.putExtra("idSouscription", contratSelectionne.getId());
+                        intent.putExtra("valide", contratSelectionne.getValide());
+                        intent.putExtra("dataJson", dataJson);
                         listeContratsFragment.getActivity().startActivity(intent);
 
                     }
                     else if(contratSelectionne.getIdProduit() == 3) {
                         Intent intent = new Intent(listeContratsFragment.getActivity(), FicheContratRetraiteActivity.class);
                         intent.putExtra("idSouscription", contratSelectionne.getId());
+                        intent.putExtra("valide", contratSelectionne.getValide());
+                        intent.putExtra("dataJson", dataJson);
                         listeContratsFragment.getActivity().startActivity(intent);
                     }
                 }

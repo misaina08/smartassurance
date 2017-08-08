@@ -18,28 +18,37 @@ import services.SessionManager;
 
 public class AccueilActivity extends AppCompatActivity {
     private AccueilActivity accueilActivity;
-
+    BottomBar bottomBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
-        accueilActivity = this;
-        initBottomBar();
+        try {
+            accueilActivity = this;
+            initBottomBar();
 
-        ObjetsStatique objetsStatique = new ObjetsStatique();
-        objetsStatique.init();
+            ObjetsStatique objetsStatique = new ObjetsStatique();
+            objetsStatique.init();
+            Bundle bundle = getIntent().getExtras();
+            if(new Integer(bundle.getInt("tabid")) != null){
+                bottomBar.selectTabWithId(bundle.getInt("tabid"));
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * Initialisation du bottom bar
      */
     public void initBottomBar() {
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
-                Fragment fragment = fragment = new BotFragment();
+                Fragment fragment = new BotFragment();
                 if (tabId == R.id.tab_acueil) {
 
                 }

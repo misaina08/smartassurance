@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aro.misaina.smartassurance.ResumePaiementContratFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="357dp"
+            android:layout_above="@+id/cAccept"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/vContrat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="contrat" />
+        </ScrollView>
+
+        <CheckBox
+            android:id="@+id/cAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accepter les termes du contrat" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <EditText
+                android:id="@+id/eMtDepot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Montant à déposer (Ar)" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <EditText
+                android:id="@+id/eCodeSecret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code secret" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</LinearLayout>
