@@ -77,8 +77,8 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_etatretraite, menu);
         MenuItem menuPayer = (MenuItem) menu.findItem(R.id.menuPayer);
-        if (valide == 0 || valide == null) {
-            menuPayer.setTitle("Payer");
+//        if (valide == 0 || valide == null) {
+            menuPayer.setTitle("Déposer");
             menuPayer.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
@@ -89,9 +89,9 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
                     return false;
                 }
             });
-        }else{
-            menuPayer.setTitle("Payé");
-        }
+//        }else{
+//            menuPayer.setTitle("Payé");
+//        }
         return true;
     }
 

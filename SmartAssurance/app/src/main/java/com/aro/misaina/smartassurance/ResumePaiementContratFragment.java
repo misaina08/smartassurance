@@ -8,11 +8,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -59,6 +61,10 @@ public class ResumePaiementContratFragment extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         try {
+                            if(TextUtils.isEmpty(eCodeSecret.getText().toString())){
+                                eCodeSecret.setError("Code secret de votre compte obligatoire");
+                                throw new Exception("Code secret de votre compte obligatoire");
+                            }
                             PayerContratAsync async = new PayerContratAsync();
                             async.setContext(fragment.getActivity().getApplicationContext());
                             async.setSouscription(souscription);
@@ -69,15 +75,22 @@ public class ResumePaiementContratFragment extends DialogFragment {
                             historique.setDateOperation(new Date());
                             historique.setIdMoyenPaiementClient(paiementClientView.getId());
                             historique.setMt(souscription.getPrimetotal());
-                            historique.setMotif("Paiement de la souscription au produit " + souscription.getNomProduit());
+                            historique.setMotif(souscription.getNomProduit() + " : paiement assurances");
                             historique.setIdProduit(souscription.getIdProduit());
                             if (souscription.getIdProduit() == 3) {
                                 historique.setMt(new Double(eMtDepot.getText().toString()));
+                                historique.setMotif(souscription.getNomProduit() + " : dépot");
+                                if(TextUtils.isEmpty(eMtDepot.getText().toString())){
+                                    eMtDepot.setError("Montant obligatoire");
+                                    throw new Exception("Montant obligatoire");
+                                }
                             }
                             params[0] = historique;
                             async.execute(params);
                         } catch (Exception ex) {
                             ex.printStackTrace();
+                            Toast.makeText(fragment.getActivity().getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
                         }
                     }
                 })

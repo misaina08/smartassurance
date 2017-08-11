@@ -46,8 +46,10 @@
         <activity
             android:name=".FicheContratRetraiteActivity"
             android:parentActivityName=".ListeContratsFragment" />
-        <activity android:name=".ListeComptePaiementActivity"
-            android:parentActivityName=".EspaceClientActivity"></activity>
+        <activity
+            android:name=".ListeComptePaiementActivity"
+            android:parentActivityName=".EspaceClientActivity" />
+        <activity android:name=".FormulaireSinistreActivity"></activity>
     </application>
 
 </manifest>

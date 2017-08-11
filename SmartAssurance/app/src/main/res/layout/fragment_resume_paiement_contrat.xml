@@ -40,7 +40,8 @@
                 android:id="@+id/eMtDepot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Montant à déposer (Ar)" />
+                android:hint="Montant à déposer (Ar)"
+                android:inputType="numberDecimal" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -53,7 +54,8 @@
                 android:id="@+id/eCodeSecret"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Code secret" />
+                android:hint="Code secret"
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 </LinearLayout>

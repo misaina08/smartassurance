@@ -22,7 +22,7 @@ public class FicheContratAutoActivity extends AppCompatActivity implements Actio
     private String dataJsonsouscription;
     private FicheContratAutoActivity activity;
 
-    private String[] tabNames = {"Informations", "Véhicule", "Garanties"};
+    private String[] tabNames = {"Informations", "Véhicule", "Garanties", "Sinistres"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +95,7 @@ public class FicheContratAutoActivity extends AppCompatActivity implements Actio
                 }
             });
         } else {
-            menuPayer.setTitle("Payé");
+            menuPayer.setTitle("Validé");
         }
         return true;
     }

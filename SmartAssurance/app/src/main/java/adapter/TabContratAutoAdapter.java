@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.aro.misaina.smartassurance.TabGarantiesSousAutoFragment;
 import com.aro.misaina.smartassurance.TabInfoSousAutoFragment;
+import com.aro.misaina.smartassurance.TabSinistreFragment;
 import com.aro.misaina.smartassurance.TabVehiculeSousAutoFragment;
 
 /**
@@ -40,13 +41,19 @@ public class TabContratAutoAdapter extends FragmentPagerAdapter {
                 bundle2.putInt("idSouscription", idSouscription);
                 garantiesFragment.setArguments(bundle2);
                 return garantiesFragment;
+            case 3:
+                TabSinistreFragment sinistreFragment = new TabSinistreFragment();
+                Bundle bundle3 = new Bundle();
+                bundle3.putInt("idSouscription", idSouscription);
+                sinistreFragment.setArguments(bundle3);
+                return sinistreFragment;
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     public Integer getIdSouscription() {

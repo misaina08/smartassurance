@@ -3,6 +3,8 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import modeles.automoto.SinCategorie;
+
 /**
  * Created by LENOVO on 7/28/2017.
  */
@@ -11,6 +13,7 @@ public class ObjetsStatique {
     private static List<String> rtOptions;
     private static List<String> rtTypes;
     private static List<String> rtCotisations;
+    private static List<SinCategorie> sinCategories;
 
     public void init(){
         rtOptions = new ArrayList<String>();
@@ -29,6 +32,11 @@ public class ObjetsStatique {
         rtCotisations.add("Trimestrielle");
         rtCotisations.add("Mensuelle");
         rtCotisations.add("Libre");
+
+        sinCategories = new ArrayList<SinCategorie>();
+        sinCategories.add(new SinCategorie(1, "Accident"));
+        sinCategories.add(new SinCategorie(2, "Vol/incendie"));
+        sinCategories.add(new SinCategorie(3, "autres"));
     }
 
     public static List<String> getRtOptions() {
@@ -53,5 +61,13 @@ public class ObjetsStatique {
 
     public static void setRtCotisations(List<String> rtCotisations) {
         ObjetsStatique.rtCotisations = rtCotisations;
+    }
+
+    public static List<SinCategorie> getSinCategories() {
+        return sinCategories;
+    }
+
+    public static void setSinCategories(List<SinCategorie> sinCategories) {
+        ObjetsStatique.sinCategories = sinCategories;
     }
 }
