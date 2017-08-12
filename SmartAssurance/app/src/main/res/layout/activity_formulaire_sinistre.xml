@@ -65,7 +65,8 @@
                     android:id="@+id/eNomCond"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nom" />
+                    android:hint="Nom"
+                    android:inputType="textPersonName" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -77,7 +78,8 @@
                     android:id="@+id/ePrenomCond"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Prénom" />
+                    android:hint="Prénom"
+                    android:inputType="textPersonName" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -88,7 +90,8 @@
                     android:id="@+id/eDn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date de naissance" />
+                    android:hint="Date de naissance"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -99,7 +102,8 @@
                     android:id="@+id/eAdresse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Adresse" />
+                    android:hint="Adresse"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
@@ -117,7 +121,8 @@
                     android:id="@+id/eNopermis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Numéro" />
+                    android:hint="Numéro"
+                    android:inputType="textShortMessage" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -128,7 +133,8 @@
                     android:id="@+id/eDuplic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Duplicata n°" />
+                    android:hint="Duplicata n°"
+                    android:inputType="textShortMessage" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -139,7 +145,8 @@
                     android:id="@+id/eCatPermis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Catégorie" />
+                    android:hint="Catégorie"
+                    android:inputType="textShortMessage" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -150,7 +157,8 @@
                     android:id="@+id/eCatvalidees"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cat. validées" />
+                    android:hint="Cat. validées"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -161,7 +169,8 @@
                     android:id="@+id/eDebValidite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Validité du" />
+                    android:hint="Validité du"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -172,7 +181,8 @@
                     android:id="@+id/eFinValidite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Au" />
+                    android:hint="Au"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -183,7 +193,8 @@
                     android:id="@+id/eDateDeliv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date de délivrance" />
+                    android:hint="Date de délivrance"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -194,7 +205,8 @@
                     android:id="@+id/eLieuDelivrance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Lieu de délivrance" />
+                    android:hint="Lieu de délivrance"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
     </ScrollView>

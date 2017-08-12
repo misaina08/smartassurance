@@ -49,6 +49,7 @@ public class TabSinistreFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(fragment.getActivity(), FormulaireSinistreActivity.class);
+                intent.putExtra("idsouscription", idSouscription);
                 fragment.getActivity().startActivity(intent);
             }
         });

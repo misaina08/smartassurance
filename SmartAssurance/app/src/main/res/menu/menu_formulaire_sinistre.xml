@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menuValiderCreationSinistre"
-        android:title="Payer"
+        android:title="Déclarer"
         app:showAsAction="always"></item>
 </menu>

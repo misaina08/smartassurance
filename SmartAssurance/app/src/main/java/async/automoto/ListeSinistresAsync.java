@@ -23,7 +23,7 @@ import ws.WSRequestModele;
                 @Override
                 protected List<AmSinistreView> doInBackground(Integer... params) {
                     try{
-                        String url = WSUtil.getUrlServer()+"/vehicules/sinistres/"+params[0];
+                        String url = WSUtil.getUrlServer()+"/vehicules/sinistres/contrat-"+params[0];
                         WSRequestModele requestModele = new WSRequestModele();
                         List<AmSinistreView> res = (List<AmSinistreView>)(List<?>)requestModele.get(url, new AmSinistreView());
                         return res;

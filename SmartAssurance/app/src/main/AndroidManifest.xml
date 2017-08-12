@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 
     <uses-feature
         android:name="android.hardware.nfc"
@@ -48,7 +50,7 @@
             android:parentActivityName=".ListeContratsFragment" />
         <activity
             android:name=".ListeComptePaiementActivity"
-            android:parentActivityName=".EspaceClientActivity" />
+            android:parentActivityName=".EspaceClientActivity"/>
         <activity android:name=".FormulaireSinistreActivity"></activity>
     </application>
 
