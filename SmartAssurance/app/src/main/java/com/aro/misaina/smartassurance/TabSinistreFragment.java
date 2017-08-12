@@ -19,6 +19,7 @@ public class TabSinistreFragment extends Fragment {
     private Integer idSouscription;
     private FloatingActionButton fCreateSinistre;
     TabSinistreFragment fragment;
+    private String datajson;
     public TabSinistreFragment() {
         // Required empty public constructor
     }
@@ -30,6 +31,7 @@ public class TabSinistreFragment extends Fragment {
         fragment = this;
         Bundle bundle = this.getArguments();
         idSouscription = bundle.getInt("idSouscription");
+        datajson = bundle.getString("dataJson");
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tab_sinistre, container, false);
@@ -50,6 +52,8 @@ public class TabSinistreFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(fragment.getActivity(), FormulaireSinistreActivity.class);
                 intent.putExtra("idsouscription", idSouscription);
+                System.out.println("huhu123 "+ datajson);
+                intent.putExtra("datajson", datajson);
                 fragment.getActivity().startActivity(intent);
             }
         });
@@ -62,4 +66,5 @@ public class TabSinistreFragment extends Fragment {
     public void setIdSouscription(Integer idSouscription) {
         this.idSouscription = idSouscription;
     }
+
 }

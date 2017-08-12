@@ -16,6 +16,7 @@ import com.aro.misaina.smartassurance.TabVehiculeSousAutoFragment;
 
 public class TabContratAutoAdapter extends FragmentPagerAdapter {
     private Integer idSouscription;
+    private String dataJson;
     public TabContratAutoAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -26,6 +27,7 @@ public class TabContratAutoAdapter extends FragmentPagerAdapter {
             case 0:
                 Bundle bundle = new Bundle();
                 bundle.putInt("idSouscription", idSouscription);
+
                 TabInfoSousAutoFragment tabInfoSousAutoFragment = new TabInfoSousAutoFragment();
                 tabInfoSousAutoFragment.setArguments(bundle);
                 return tabInfoSousAutoFragment;
@@ -45,6 +47,7 @@ public class TabContratAutoAdapter extends FragmentPagerAdapter {
                 TabSinistreFragment sinistreFragment = new TabSinistreFragment();
                 Bundle bundle3 = new Bundle();
                 bundle3.putInt("idSouscription", idSouscription);
+                bundle3.putString("dataJson", dataJson);
                 sinistreFragment.setArguments(bundle3);
                 return sinistreFragment;
         }
@@ -62,5 +65,13 @@ public class TabContratAutoAdapter extends FragmentPagerAdapter {
 
     public void setIdSouscription(Integer idSouscription) {
         this.idSouscription = idSouscription;
+    }
+
+    public String getDataJson() {
+        return dataJson;
+    }
+
+    public void setDataJson(String dataJson) {
+        this.dataJson = dataJson;
     }
 }

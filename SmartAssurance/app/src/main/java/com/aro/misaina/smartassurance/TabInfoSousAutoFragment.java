@@ -41,7 +41,6 @@ public class TabInfoSousAutoFragment extends Fragment {
         async.setFragment(this);
         async.execute(params);
 
-        System.out.println("onview created");
     }
 
 //    public Souscription getSouscription() {

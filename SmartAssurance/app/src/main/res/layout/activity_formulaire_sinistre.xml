@@ -9,6 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -28,16 +30,33 @@
                 android:layout_height="45dp"
                 android:layout_weight="0.19" />
 
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_weight="0.19"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
-                <EditText
-                    android:id="@+id/eLieu"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.00">
+
+                    <EditText
+                        android:id="@+id/eLieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Lieu de l'accident" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/bCurrentPos"
+                    android:layout_width="46dp"
                     android:layout_height="wrap_content"
-                    android:hint="Lieu de l'accident" />
-            </android.support.design.widget.TextInputLayout>
+                    android:text="C" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView15"

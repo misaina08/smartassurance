@@ -21,7 +21,7 @@ public class FicheContratAutoActivity extends AppCompatActivity implements Actio
     private Souscription souscription;
     private String dataJsonsouscription;
     private FicheContratAutoActivity activity;
-
+    Integer idTab;
     private String[] tabNames = {"Informations", "Véhicule", "Garanties", "Sinistres"};
 
     @Override
@@ -33,22 +33,27 @@ public class FicheContratAutoActivity extends AppCompatActivity implements Actio
 
 //        get souscription from async
         Integer idSouscription = getIntent().getExtras().getInt("idSouscription");
+        idTab = getIntent().getExtras().getInt("idtab");
+        dataJsonsouscription = getIntent().getExtras().getString("dataJson");
         initSouscription(idSouscription);
         Gson gson = new Gson();
-        dataJsonsouscription = getIntent().getExtras().getString("dataJson");
         souscription = gson.fromJson(getIntent().getExtras().getString("dataJson"), Souscription.class);
     }
 
 
     public void initSouscription(Integer idSouscription) {
-        System.out.println("--------------" + idSouscription);
+
         // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getSupportActionBar();
         adapter = new TabContratAutoAdapter(getSupportFragmentManager());
         adapter.setIdSouscription(idSouscription);
+//        System.out.println("fiche contrat =" +dataJsonsouscription);
+        adapter.setDataJson(dataJsonsouscription);
+
 
         viewPager.setAdapter(adapter);
+
         actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -57,7 +62,8 @@ public class FicheContratAutoActivity extends AppCompatActivity implements Actio
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
         }
-
+        viewPager.setCurrentItem(idTab);
+        actionBar.setSelectedNavigationItem(idTab);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override

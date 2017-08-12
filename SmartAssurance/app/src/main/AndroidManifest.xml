@@ -51,7 +51,8 @@
         <activity
             android:name=".ListeComptePaiementActivity"
             android:parentActivityName=".EspaceClientActivity"/>
-        <activity android:name=".FormulaireSinistreActivity"></activity>
+        <activity android:name=".FormulaireSinistreActivity"
+            android:parentActivityName=".FicheContratAutoActivity"/>
     </application>
 
 </manifest>

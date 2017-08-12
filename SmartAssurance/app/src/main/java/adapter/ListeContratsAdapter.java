@@ -71,7 +71,7 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
                     if (contratSelectionne.getIdProduit() == 2) {
                         Intent intent = new Intent(listeContratsFragment.getActivity(), FicheContratAutoActivity.class);
                         intent.putExtra("idSouscription", contratSelectionne.getId());
-                        intent.putExtra("valide", contratSelectionne.getValide());
+                        intent.putExtra("idtab", 0);
                         intent.putExtra("dataJson", dataJson);
                         listeContratsFragment.getActivity().startActivity(intent);
 
