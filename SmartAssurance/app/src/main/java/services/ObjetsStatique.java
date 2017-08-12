@@ -3,6 +3,7 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import modeles.automoto.AmDommage;
 import modeles.automoto.SinCategorie;
 
 /**
@@ -14,6 +15,7 @@ public class ObjetsStatique {
     private static List<String> rtTypes;
     private static List<String> rtCotisations;
     private static List<SinCategorie> sinCategories;
+    private static List<AmDommage> amDommages;
 
     public void init(){
         rtOptions = new ArrayList<String>();
@@ -37,6 +39,20 @@ public class ObjetsStatique {
         sinCategories.add(new SinCategorie(1, "Accident"));
         sinCategories.add(new SinCategorie(2, "Vol/incendie"));
         sinCategories.add(new SinCategorie(3, "autres"));
+
+        amDommages = new ArrayList<AmDommage>();
+        amDommages.add(new AmDommage(1, "Pare-chocs "));
+        amDommages.add(new AmDommage(2, "Capot "));
+        amDommages.add(new AmDommage(3, "Peinture "));
+        amDommages.add(new AmDommage(4, "Pneu "));
+    }
+
+    public static List<AmDommage> getAmDommages() {
+        return amDommages;
+    }
+
+    public static void setAmDommages(List<AmDommage> amDommages) {
+        ObjetsStatique.amDommages = amDommages;
     }
 
     public static List<String> getRtOptions() {

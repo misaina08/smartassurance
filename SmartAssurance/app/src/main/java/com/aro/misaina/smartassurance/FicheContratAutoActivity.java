@@ -14,15 +14,15 @@ import com.google.gson.Gson;
 import adapter.TabContratAutoAdapter;
 import modeles.souscription.Souscription;
 
-public class FicheContratAutoActivity extends AppCompatActivity implements ActionBar.TabListener {
-    private ViewPager viewPager;
-    private TabContratAutoAdapter adapter;
-    private android.support.v7.app.ActionBar actionBar;
-    private Souscription souscription;
-    private String dataJsonsouscription;
-    private FicheContratAutoActivity activity;
-    Integer idTab;
-    private String[] tabNames = {"Informations", "Véhicule", "Garanties", "Sinistres"};
+    public class FicheContratAutoActivity extends AppCompatActivity implements ActionBar.TabListener {
+        private ViewPager viewPager;
+        private TabContratAutoAdapter adapter;
+        private android.support.v7.app.ActionBar actionBar;
+        private Souscription souscription;
+        private String dataJsonsouscription;
+        private FicheContratAutoActivity activity;
+        Integer idTab;
+        private String[] tabNames = {"Informations", "Véhicule", "Garanties", "Sinistres"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

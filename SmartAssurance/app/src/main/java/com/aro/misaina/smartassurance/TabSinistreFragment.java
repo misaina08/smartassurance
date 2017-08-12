@@ -52,7 +52,6 @@ public class TabSinistreFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(fragment.getActivity(), FormulaireSinistreActivity.class);
                 intent.putExtra("idsouscription", idSouscription);
-                System.out.println("huhu123 "+ datajson);
                 intent.putExtra("datajson", datajson);
                 fragment.getActivity().startActivity(intent);
             }
