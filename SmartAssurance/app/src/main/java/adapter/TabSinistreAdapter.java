@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.aro.misaina.smartassurance.TabCirconstanceSinistreFragment;
 import com.aro.misaina.smartassurance.TabDommagesSinistreFragment;
 import com.aro.misaina.smartassurance.TabInfoSinistreFragment;
 import com.aro.misaina.smartassurance.TabPhotosSinistreFragment;
@@ -38,11 +39,11 @@ public class TabSinistreAdapter extends FragmentPagerAdapter {
                 dommagesSinistreFragment.setArguments(b1);
                 return dommagesSinistreFragment;
             case 2:
-                TabInfoSinistreFragment infoSinistreFragment2 = new TabInfoSinistreFragment();
+                TabCirconstanceSinistreFragment tabCirconstanceSinistreFragment = new TabCirconstanceSinistreFragment();
                 Bundle b2 = new Bundle();
                 b2.putString("dataJson", gson.toJson(sinistre));
-                infoSinistreFragment2.setArguments(b2);
-                return infoSinistreFragment2;
+                tabCirconstanceSinistreFragment.setArguments(b2);
+                return tabCirconstanceSinistreFragment;
             case 3:
                 TabPhotosSinistreFragment photosSinistre = new TabPhotosSinistreFragment();
                 Bundle b3 = new Bundle();
