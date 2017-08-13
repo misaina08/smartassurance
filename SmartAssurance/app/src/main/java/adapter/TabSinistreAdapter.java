@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.aro.misaina.smartassurance.TabDommagesSinistreFragment;
 import com.aro.misaina.smartassurance.TabInfoSinistreFragment;
+import com.aro.misaina.smartassurance.TabPhotosSinistreFragment;
 import com.google.gson.Gson;
 
 import modeles.automoto.AmSinistreView;
@@ -43,11 +44,11 @@ public class TabSinistreAdapter extends FragmentPagerAdapter {
                 infoSinistreFragment2.setArguments(b2);
                 return infoSinistreFragment2;
             case 3:
-                TabInfoSinistreFragment infoSinistreFragment3 = new TabInfoSinistreFragment();
+                TabPhotosSinistreFragment photosSinistre = new TabPhotosSinistreFragment();
                 Bundle b3 = new Bundle();
                 b3.putString("dataJson", gson.toJson(sinistre));
-                infoSinistreFragment3.setArguments(b3);
-                return infoSinistreFragment3;
+                photosSinistre.setArguments(b3);
+                return photosSinistre;
         }
         return null;
     }

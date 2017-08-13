@@ -1,5 +1,13 @@
 package utilitaire;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.ParcelFileDescriptor;
+
+import java.io.FileDescriptor;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.sql.Time;
 import java.text.DateFormat;
@@ -9,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Util {
+
     public static Date stringToDate(String dateString) throws Exception{
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
