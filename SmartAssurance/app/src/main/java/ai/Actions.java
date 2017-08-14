@@ -1,10 +1,13 @@
 package ai;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotFragment;
+import com.aro.misaina.smartassurance.MapAgenceActivity;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
+import com.aro.misaina.smartassurance.SRRetraitePopFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +17,11 @@ import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
 import ai.ui.UIElement;
+import modeles.Agence;
 import modeles.produit.Produit;
+import services.ObjetsStatique;
+import utilitaire.Coordonnee;
+import utilitaire.CoordonneeUtil;
 
 /**
  * Created by Misaina on 27/07/2017.
@@ -23,21 +30,20 @@ import modeles.produit.Produit;
 public class Actions {
     private BotFragment context;
 
+
     public Actions(BotFragment context) {
         this.context = context;
     }
 
     /**
      * Liste tous les produits
+     *
      * @return
      */
     public UIElement listeProduit() {
-        final List<Produit> produits = new ArrayList<Produit>();
-        for (int i = 0; i < 10; i++) {
-            produits.add(new Produit(i, "produit " + i));
-        }
-        List<CardUI> cards = new ArrayList<CardUI>(produits.size());
-        for (final Produit p : produits) {
+
+        List<CardUI> cards = new ArrayList<CardUI>(ObjetsStatique.getProduits().size());
+        for (final Produit p : ObjetsStatique.getProduits()) {
             CardUI card = new CardUI(getContext().getActivity());
             card.setText(p.getNom());
 
@@ -52,10 +58,9 @@ public class Actions {
             buttonInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    try{
+                    try {
                         infoProduit(p);
-                    }
-                    catch (Exception ex){
+                    } catch (Exception ex) {
                         ex.printStackTrace();
                     }
                 }
@@ -63,9 +68,21 @@ public class Actions {
             buttonSouscrire.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    SRAutoMotoPopFragment amPopFragment = new SRAutoMotoPopFragment();
-                    amPopFragment.setBotFragment(context);
-                    amPopFragment.show(context.getFragmentManager(), "Automoto popup");
+                    switch (p.getId()) {
+                        case 2:
+
+                            SRAutoMotoPopFragment amPopFragment = new SRAutoMotoPopFragment();
+                            amPopFragment.setBotFragment(context);
+                            amPopFragment.show(context.getFragmentManager(), "Automoto popup");
+                            break;
+
+                        case 3:
+                            SRRetraitePopFragment retraitePopFragment = new SRRetraitePopFragment();
+                            retraitePopFragment.setBotFragment(context);
+                            retraitePopFragment.show(context.getFragmentManager(), "Retraite popup");
+                            break;
+                    }
+
                 }
             });
 
@@ -80,30 +97,53 @@ public class Actions {
 
     /**
      * Agence la plus proche
+     *
      * @return
      */
     public UIElement agenceProche() {
+        Coordonnee currPos = new Coordonnee(new Double(-18.879202), new Double(47.507904));
+        CoordonneeUtil coordonneeUtil = new CoordonneeUtil();
+
+        Agence agenceProche = coordonneeUtil.getAgenceProche(currPos);
+//        CurrentPositionAsync async = new CurrentPositionAsync();
+//        async.setActions(this);
+//        async.setActivity(getContext().getActivity());
+//        async.execute();
+//        System.out.println(agenceProche());
+
         CardUI cardUI = new CardUI(getContext().getActivity());
-        cardUI.setText("agence proche");
+        cardUI.setText(agenceProche.getNom());
 
         Button b1 = new Button(getContext().getActivity());
-        b1.setText("Consulter");
+        b1.setText("Voir dans le map");
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext().getActivity(), MapAgenceActivity.class);
+                getContext().getActivity().startActivity(intent);
+            }
+        });
 
         Button b2 = new Button(getContext().getActivity());
-        b2.setText("Voir dans le map");
+        b2.setText("Envoyer un mail");
+
+        Button b3 = new Button(getContext().getActivity());
+        b3.setText("Appeler");
 
         cardUI.getOptionsCardLayout().addView(b1);
         cardUI.getOptionsCardLayout().addView(b2);
+        cardUI.getOptionsCardLayout().addView(b3);
 
         return cardUI;
     }
 
     /**
      * Informations sur un produit
+     *
      * @param produit
      * @throws Exception
      */
-    public void infoProduit(Produit produit) throws Exception{
+    public void infoProduit(Produit produit) throws Exception {
         BulleUI bulleUI = new BulleUI(getContext().getActivity(), 0);
         bulleUI.setTextInBulle("Informations sur le produit " + produit.getNom());
 
@@ -129,7 +169,6 @@ public class Actions {
         bulleUi.setTextInBulle("my name is jarvis");
         return bulleUi;
     }
-
 
 
     public BotFragment getContext() {

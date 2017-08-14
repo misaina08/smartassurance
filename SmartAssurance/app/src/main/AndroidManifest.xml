@@ -6,9 +6,15 @@
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:name="android.hardware.camera"
+
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="25" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -58,7 +64,10 @@
         <activity
             android:name=".FormulaireSinistreActivity"
             android:parentActivityName=".FicheContratAutoActivity" />
-        <activity android:name=".FicheSinistreActivity"></activity>
+        <activity android:name=".FicheSinistreActivity" />
+        <activity android:name=".MapAgenceActivity"></activity>
+
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBSNO4AH9j3IGzN73X6VETTdUvMgU3Cyg0"/>
     </application>
 
 </manifest>

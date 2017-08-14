@@ -3,8 +3,10 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import modeles.Agence;
 import modeles.automoto.AmDommage;
 import modeles.automoto.SinCategorie;
+import modeles.produit.Produit;
 
 /**
  * Created by LENOVO on 7/28/2017.
@@ -16,6 +18,8 @@ public class ObjetsStatique {
     private static List<String> rtCotisations;
     private static List<SinCategorie> sinCategories;
     private static List<AmDommage> amDommages;
+    private static List<Produit> produits;
+    private static List<Agence> agences;
 
     public void init(){
         rtOptions = new ArrayList<String>();
@@ -45,6 +49,21 @@ public class ObjetsStatique {
         amDommages.add(new AmDommage(2, "Capot "));
         amDommages.add(new AmDommage(3, "Peinture "));
         amDommages.add(new AmDommage(4, "Pneu "));
+
+        produits = new ArrayList<Produit>();
+        produits.add(new Produit(1, "Assurance vie"));
+        produits.add(new Produit(2, "Assurance auto-moto"));
+        produits.add(new Produit(3, "Assurance retraite"));
+
+        agences = new ArrayList<Agence>();
+        agences.add(new Agence(1,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(2,"Anosizato","Antananarivo", "Anosizato", "Anosizato", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(3,"Soavimasoandro","Antananarivo", "Soavimasoandro", "Soavimasoandro", new Double(47.522460), new Double(-18.862551), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(4,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(5,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(6,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(7,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(8,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
     }
 
     public static List<AmDommage> getAmDommages() {
@@ -85,5 +104,21 @@ public class ObjetsStatique {
 
     public static void setSinCategories(List<SinCategorie> sinCategories) {
         ObjetsStatique.sinCategories = sinCategories;
+    }
+
+    public static List<Produit> getProduits() {
+        return produits;
+    }
+
+    public static void setProduits(List<Produit> produits) {
+        ObjetsStatique.produits = produits;
+    }
+
+    public static List<Agence> getAgences() {
+        return agences;
+    }
+
+    public static void setAgences(List<Agence> agences) {
+        ObjetsStatique.agences = agences;
     }
 }

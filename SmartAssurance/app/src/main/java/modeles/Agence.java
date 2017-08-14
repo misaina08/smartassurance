@@ -27,8 +27,49 @@ public class Agence extends BaseModele implements Serializable {
     private Double latitude;
 
     private String code;
+    private Integer codePostal;
+    private String tel;
+    private String email;
 
     public Agence() {
+    }
+
+    public Agence(Integer id, String nom, String ville, String rue, String adresse, Double longitude, Double latitude, String code, Integer codePostal, String tel, String email) {
+        this.id = id;
+        this.nom = nom;
+        this.ville = ville;
+        this.rue = rue;
+        this.adresse = adresse;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.code = code;
+        this.codePostal = codePostal;
+        this.tel = tel;
+        this.email = email;
+    }
+
+    public Integer getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(Integer codePostal) {
+        this.codePostal = codePostal;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getId() {
