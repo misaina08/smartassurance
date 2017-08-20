@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.aro.misaina.smartassurance.TabVehiculeSousAutoFragment"
-    android:weightSum="1">
+    android:padding="10dp"
+    android:weightSum="1"
+    tools:context="com.aro.misaina.smartassurance.TabVehiculeSousAutoFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,15 +17,17 @@
 
         <TextView
             android:id="@+id/textView7"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.03"
             android:text="NO Immatriculation" />
 
         <TextView
             android:id="@+id/vNoimm"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.03"
             android:text="TextView" />
     </LinearLayout>
@@ -38,15 +41,17 @@
 
         <TextView
             android:id="@+id/textView13"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="0.40"
             android:text="Marque et type" />
 
         <TextView
             android:id="@+id/vMarque"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -58,14 +63,16 @@
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
+            style="@style/TextNormal"
+            android:layout_width="136dp"
+            android:layout_height="40dp"
             android:text="NO série" />
 
         <TextView
             android:id="@+id/vNoSerie"
+            style="@style/TextNormal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="TextView" />
     </LinearLayout>
@@ -78,16 +85,18 @@
 
         <TextView
             android:id="@+id/textView20"
+            style="@style/TextNormal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="Mis en circulation" />
 
         <TextView
             android:id="@+id/vDateMisCirc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/TextNormal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.27"
             android:text="TextView" />
     </LinearLayout>
 
@@ -99,16 +108,18 @@
 
         <TextView
             android:id="@+id/textView22"
+            style="@style/TextNormal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="Puissance fiscale" />
 
         <TextView
             android:id="@+id/vPuissance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/TextNormal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.23"
             android:text="TextView" />
     </LinearLayout>
 
@@ -120,16 +131,18 @@
 
         <TextView
             android:id="@+id/textView24"
+            style="@style/TextNormal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="Source d'énergie" />
 
         <TextView
             android:id="@+id/vSe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/TextNormal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.12"
             android:text="TextView" />
     </LinearLayout>
 
@@ -141,16 +154,18 @@
 
         <TextView
             android:id="@+id/textView26"
+            style="@style/TextNormal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:text="Nombre de roues" />
 
         <TextView
             android:id="@+id/vNbRoues"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/TextNormal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.21"
             android:text="TextView" />
     </LinearLayout>
 
@@ -158,18 +173,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.03"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textView28"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/TextNormal"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
             android:text="Nombre de places" />
 
         <TextView
             android:id="@+id/vNbPlace"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="TextView" />
     </LinearLayout>
 

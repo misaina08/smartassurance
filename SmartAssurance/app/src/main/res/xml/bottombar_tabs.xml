@@ -2,22 +2,22 @@
 <tabs>
     <tab
         id="@+id/tab_acueil"
-        icon="@drawable/ic_action_name"
+        icon="@drawable/ic_home_simple"
         title="Accueil" />
     <tab
         id="@+id/tab_guichet"
-        icon="@drawable/ic_action_name"
+        icon="@drawable/ic_guichet"
         title="Guichet" />
     <tab
         id="@+id/tab_ai"
-        icon="@drawable/ic_action_name"
+        icon="@drawable/ic_chat"
         title="AI" />
     <tab
         id="@+id/tab_contrats"
-        icon="@drawable/ic_action_name"
+        icon="@drawable/ic_contrat"
         title="Contrats" />
     <tab
         id="@+id/tab_parametres"
-        icon="@drawable/ic_action_name"
+        icon="@drawable/ic_setting_simple"
         title="Paramètres" />
 </tabs>
