@@ -57,13 +57,8 @@ public class ObjetsStatique {
 
         agences = new ArrayList<Agence>();
         agences.add(new Agence(1,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(2,"Anosizato","Antananarivo", "Anosizato", "Anosizato", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(3,"Soavimasoandro","Antananarivo", "Soavimasoandro", "Soavimasoandro", new Double(47.522460), new Double(-18.862551), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(4,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(5,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(6,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(7,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(8,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(24.9807), new Double(2.98888), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(2,"Anosizato","Antananarivo", "Anosizato", "Anosizato", new Double(47.496558), new Double(-18.938178), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(3,"Ampefiloha","Antananarivo", "Ampefiloha", "Ampefiloha", new Double(47.517867), new Double(-18.912766), "aa", 101, "033890890", "antsahavola@gmail.com"));
     }
 
     public static List<AmDommage> getAmDommages() {

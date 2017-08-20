@@ -1,13 +1,19 @@
 package ai;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotFragment;
 import com.aro.misaina.smartassurance.MapAgenceActivity;
+import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 import com.aro.misaina.smartassurance.SRRetraitePopFragment;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,10 +107,11 @@ public class Actions {
      * @return
      */
     public UIElement agenceProche() {
-        Coordonnee currPos = new Coordonnee(new Double(-18.879202), new Double(47.507904));
+
+        final Coordonnee currPos = new Coordonnee(new Double(-18.868577), new Double(47.515464));
         CoordonneeUtil coordonneeUtil = new CoordonneeUtil();
 
-        Agence agenceProche = coordonneeUtil.getAgenceProche(currPos);
+        final Agence agenceProche = coordonneeUtil.getAgenceProche(currPos);
 //        CurrentPositionAsync async = new CurrentPositionAsync();
 //        async.setActions(this);
 //        async.setActivity(getContext().getActivity());
@@ -115,23 +122,42 @@ public class Actions {
         cardUI.setText(agenceProche.getNom());
 
         Button b1 = new Button(getContext().getActivity());
+        b1.setBackgroundResource(R.drawable.shape_button_background_none);
         b1.setText("Voir dans le map");
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext().getActivity(), MapAgenceActivity.class);
+                Gson gson = new Gson();
+                intent.putExtra("currPos", gson.toJson(currPos));
+                intent.putExtra("agenceDest", gson.toJson(agenceProche));
                 getContext().getActivity().startActivity(intent);
             }
         });
 
-        Button b2 = new Button(getContext().getActivity());
-        b2.setText("Envoyer un mail");
 
         Button b3 = new Button(getContext().getActivity());
         b3.setText("Appeler");
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+agenceProche.getTel()));
+                if (ActivityCompat.checkSelfPermission(getContext().getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                getContext().getActivity().startActivity(callIntent);
+            }
+        });
 
         cardUI.getOptionsCardLayout().addView(b1);
-        cardUI.getOptionsCardLayout().addView(b2);
         cardUI.getOptionsCardLayout().addView(b3);
 
         return cardUI;

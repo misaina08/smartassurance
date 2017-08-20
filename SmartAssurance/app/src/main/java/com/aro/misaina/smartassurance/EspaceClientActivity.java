@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,20 +53,15 @@ public class EspaceClientActivity extends AppCompatActivity {
                     intent.putExtra("action", "liste");
                     activity.startActivity(intent);
                 }
-            }
-        });
-
-        Button deconnect = (Button) findViewById(R.id.deconnectButton);
-        deconnect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    SessionManager sessionManager = new SessionManager(activity);
-                    sessionManager.destroyUserSession();
-                    Intent intent = new Intent(activity, AccueilActivity.class);
-                    activity.startActivity(intent);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                else if(position == 2){
+                    try {
+                        SessionManager sessionManager = new SessionManager(activity);
+                        sessionManager.destroyUserSession();
+                        Intent intent = new Intent(activity, AccueilActivity.class);
+                        activity.startActivity(intent);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });

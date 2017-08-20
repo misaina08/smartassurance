@@ -108,6 +108,7 @@ public class TabPhotosSinistreFragment extends Fragment implements View.OnClickL
 //                break;
 
             case R.id.gallery:
+                System.out.println("galleryyyyyyyyyyyyyyy");
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK,
                         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 // Start the Intent

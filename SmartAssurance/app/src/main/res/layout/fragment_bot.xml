@@ -40,7 +40,8 @@
                 android:id="@+id/textSaisi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="hint" />
+                android:hint="hint"
+                android:text="agenceProche" />
 
         </android.support.design.widget.TextInputLayout>
 

@@ -8,9 +8,11 @@
         android:layout_width="279dp"
         android:layout_height="42dp"
         android:layout_gravity="right"
-        android:background="@android:color/holo_blue_dark"
+        android:layout_weight="0.01"
+        android:background="@drawable/shape_bulle_user"
         android:gravity="end"
-        android:layout_weight="0.01">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/textUser"

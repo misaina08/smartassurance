@@ -18,15 +18,28 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:orientation="horizontal">
+            android:layout_height="47dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp">
 
             <TextView
                 android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:layout_weight="0.37"
+                android:text="Filtres" />
+
+            <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Filtres" />
+                android:layout_gravity="fill_vertical"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
