@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context="com.aro.misaina.smartassurance.ResumePaiementContratFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -11,17 +12,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            style="@style/TextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="contrat" />
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="357dp"
+            android:layout_height="274dp"
             android:layout_above="@+id/cAccept"
             android:layout_centerHorizontal="true">
 
             <TextView
                 android:id="@+id/vContrat"
+                style="@style/TextNormal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="contrat" />
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </ScrollView>
 
         <CheckBox

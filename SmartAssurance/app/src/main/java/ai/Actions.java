@@ -10,7 +10,6 @@ import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotFragment;
 import com.aro.misaina.smartassurance.MapAgenceActivity;
-import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 import com.aro.misaina.smartassurance.SRRetraitePopFragment;
 import com.google.gson.Gson;
@@ -122,7 +121,6 @@ public class Actions {
         cardUI.setText(agenceProche.getNom());
 
         Button b1 = new Button(getContext().getActivity());
-        b1.setBackgroundResource(R.drawable.shape_button_background_none);
         b1.setText("Voir dans le map");
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

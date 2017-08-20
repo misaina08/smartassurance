@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context="com.aro.misaina.smartassurance.TabInfoSinistreFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,32 +15,37 @@
 
         <TextView
             android:id="@+id/tConducteur"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="Conducteur" />
 
         <TextView
             android:id="@+id/tNom"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/tPrenom"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/tDn"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/tAdresse"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -50,8 +56,9 @@
 
         <TextView
             android:id="@+id/textView37"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="Permis" />
 
         <LinearLayout
@@ -60,15 +67,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="N°" />
 
             <TextView
                 android:id="@+id/tNo"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
 
@@ -81,15 +90,17 @@
 
             <TextView
                 android:id="@+id/textView42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="Duplicata N°" />
 
             <TextView
                 android:id="@+id/tDupl"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
 
@@ -102,15 +113,17 @@
 
             <TextView
                 android:id="@+id/textView45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="Catégories" />
 
             <TextView
                 android:id="@+id/tCats"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
@@ -122,23 +135,26 @@
 
             <TextView
                 android:id="@+id/textView47"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="Cat. validées" />
 
             <TextView
                 android:id="@+id/tCatValidees"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView48"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="Validité" />
 
         <LinearLayout
@@ -148,15 +164,17 @@
 
             <TextView
                 android:id="@+id/tValDeb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tValFin"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
@@ -167,33 +185,38 @@
 
             <TextView
                 android:id="@+id/textView52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.70"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.64"
                 android:text="Date de délivrance" />
 
             <TextView
                 android:id="@+id/tDateDeliv"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/TextNormal"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.65"
                 android:text="Lieu de délivrance" />
 
             <TextView
                 android:id="@+id/tLieuDeliv"
+                style="@style/TextNormal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>

@@ -22,6 +22,14 @@
             android:padding="10dp"
             android:weightSum="1">
 
+            <TextView
+                android:id="@+id/textView33"
+                style="@style/TextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Souscription assurance auto moto" />
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -30,7 +38,8 @@
                     android:id="@+id/eNoImmatr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="N° immatriculation" />
+                    android:hint="N° immatriculation"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -41,7 +50,8 @@
                     android:id="@+id/eNoSerie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Numéro de serie" />
+                    android:hint="Numéro de serie"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -52,7 +62,8 @@
                     android:id="@+id/eMarque"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Marque - type" />
+                    android:hint="Marque - type"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -63,8 +74,9 @@
 
                 <TextView
                     android:id="@+id/textView8"
+                    style="@style/TextNormal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:gravity="fill_vertical"
                     android:text="Source d'énergie" />
@@ -89,7 +101,8 @@
                     android:id="@+id/eDateCirc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date de mise en circulation" />
+                    android:hint="Date de mise en circulation"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -105,7 +118,8 @@
                         android:id="@+id/ePuissance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Puissance (CV)" />
+                        android:hint="Puissance (CV)"
+                        android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -116,7 +130,8 @@
                         android:id="@+id/eNbRoues"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre de roues" />
+                        android:hint="Nombre de roues"
+                        android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
@@ -128,9 +143,15 @@
                     android:id="@+id/eNbPlace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre de place" />
+                    android:hint="Nombre de place"
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
-
+            <TextView
+                style="@style/TextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Garanties" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

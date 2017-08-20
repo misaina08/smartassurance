@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context="com.aro.misaina.smartassurance.FormulaireSinistreActivity">
 
     <ScrollView
@@ -19,9 +20,11 @@
 
             <TextView
                 android:id="@+id/textView10"
+                style="@style/TextNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
+                android:height="30dp"
                 android:text="Catégorie de l'accident" />
 
             <Spinner
@@ -60,9 +63,11 @@
 
             <TextView
                 android:id="@+id/textView15"
+                style="@style/TextNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
+                android:height="30dp"
                 android:text="Conducteur" />
 
             <android.support.design.widget.TextInputLayout
@@ -127,9 +132,11 @@
 
             <TextView
                 android:id="@+id/textView21"
+                style="@style/TextNormal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
+                android:height="30dp"
                 android:text="Permis" />
 
             <android.support.design.widget.TextInputLayout

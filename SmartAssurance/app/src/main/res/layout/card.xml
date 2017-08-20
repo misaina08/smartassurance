@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
     android:weightSum="1">
 
     <LinearLayout
@@ -11,19 +14,16 @@
         android:layout_weight="0.46"
         android:background="@drawable/shape_bulle"
         android:orientation="vertical"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
         android:weightSum="1">
 
         <LinearLayout
             android:id="@+id/contentCardLayout"
-            android:background="@drawable/shape_bulle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.79"
-            android:orientation="vertical">
+            android:background="@drawable/shape_bulle"
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/textContent"
@@ -34,10 +34,11 @@
 
         <LinearLayout
             android:id="@+id/optionsCardLayout"
-            android:background="@drawable/shape_bulle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.22"
-            android:orientation="horizontal"></LinearLayout>
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:padding="5dp"></LinearLayout>
     </LinearLayout>
 </LinearLayout>

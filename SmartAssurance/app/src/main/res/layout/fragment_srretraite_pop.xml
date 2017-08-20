@@ -8,88 +8,111 @@
     tools:context="com.aro.misaina.smartassurance.SRRetraitePopFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1.00">
 
-    <LinearLayout
-        android:layout_width="326dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.89"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="fill_vertical"
-            android:text="Taux de remboursement en cas de décès" />
-
-        <Spinner
-            android:id="@+id/drType"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/bb_height"
-            android:layout_weight="0.01" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="fill_vertical"
-            android:text="Option de retraite" />
-
-        <Spinner
-            android:id="@+id/drOption"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/bb_height"
-            android:layout_weight="0.03" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="fill_vertical"
-            android:text="Cotisation" />
-
-        <Spinner
-            android:id="@+id/drCotisation"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/bb_height"
-            android:layout_weight="0.01" />
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/eAgeRetraite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Age de retraite" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="326dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.17">
+            android:layout_weight="0.89"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <EditText
-                android:id="@+id/eBeneficiaire"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Bénéficiaire en cas de décès" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/bb_height"
-            android:layout_weight="0.00">
-
-            <EditText
-                android:id="@+id/eMt"
+            <TextView
+                android:id="@+id/textView25"
+                style="@style/TextTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Montant à verser" />
+                android:height="40dp"
+                android:gravity="center"
+                android:text="Souscription assurance retraite" />
 
-        </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="fill_vertical"
+                android:text="Taux de remboursement en cas de décès" />
 
-    </LinearLayout>
+            <Spinner
+                android:id="@+id/drType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_height"
+                android:layout_weight="0.01" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="fill_vertical"
+                android:text="Option de retraite" />
+
+            <Spinner
+                android:id="@+id/drOption"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_height"
+                android:layout_weight="0.03" />
+
+            <TextView
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="fill_vertical"
+                android:text="Cotisation" />
+
+            <Spinner
+                android:id="@+id/drCotisation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_height"
+                android:layout_weight="0.01" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/eAgeRetraite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age de retraite"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17">
+
+                <EditText
+                    android:id="@+id/eBeneficiaire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Bénéficiaire en cas de décès"
+                    android:inputType="textMultiLine" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bb_height"
+                android:layout_weight="0.00">
+
+                <EditText
+                    android:id="@+id/eMt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Montant à verser"
+                    android:inputType="numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

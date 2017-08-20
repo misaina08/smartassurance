@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:weightSum="1">
@@ -9,32 +10,74 @@
     <LinearLayout
         android:layout_width="347dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.04"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/vtype"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+        android:layout_weight="0.01"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
 
         <TextView
             android:id="@+id/vTitulaire"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/vNoCpt"
+            android:id="@+id/vtype"
+            style="@style/TextSub"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="TextView" />
 
-        <TextView
-            android:id="@+id/vDateExp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView29"
+                style="@style/TextSub"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:height="30dp"
+                android:text="Numéro de compte" />
+
+            <TextView
+                android:id="@+id/vNoCpt"
+                style="@style/TextSub"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView31"
+                style="@style/TextSub"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:height="30dp"
+                android:text="Expiré le " />
+
+            <TextView
+                android:id="@+id/vDateExp"
+                style="@style/TextSub"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+    <View style="@style/Divider" />
 </LinearLayout>

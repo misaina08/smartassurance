@@ -35,7 +35,8 @@
                     android:id="@+id/newNomClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="nom" />
+                    android:hint="nom"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -46,7 +47,8 @@
                     android:id="@+id/newPrenomClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Prénom" />
+                    android:hint="Prénom"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -57,7 +59,8 @@
                     android:id="@+id/newAdresseClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Adresse" />
+                    android:hint="Adresse"
+                    android:inputType="textMultiLine" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -68,7 +71,8 @@
                     android:id="@+id/newProfessionClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Profession" />
+                    android:hint="Profession"
+                    android:inputType="textMultiLine" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -79,7 +83,8 @@
                     android:id="@+id/newDateNaissClient"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Date de naissance" />
+                    android:hint="Date de naissance"
+                    android:inputType="date" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -90,7 +95,8 @@
                     android:id="@+id/newLieuNaissClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Lieu de naissance" />
+                    android:hint="Lieu de naissance"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -101,7 +107,8 @@
                     android:id="@+id/newCinClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CIN" />
+                    android:hint="CIN"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -112,7 +119,8 @@
                     android:id="@+id/newTelClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Téléphone" />
+                    android:hint="Téléphone"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
