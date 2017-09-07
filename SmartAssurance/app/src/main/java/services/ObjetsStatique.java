@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import modeles.Agence;
+import modeles.AmGaranti;
 import modeles.automoto.AmDommage;
 import modeles.automoto.SinCategorie;
 import modeles.produit.Produit;
@@ -21,10 +22,14 @@ public class ObjetsStatique {
     private static List<AmDommage> amDommages;
     private static List<Produit> produits;
     private static List<Agence> agences;
+    private static List<AmGaranti> garanties;
 
     private static boolean estSurGuichet = false;
 
-    public void init(){
+    public void init() {
+        AutoMotoService autoMotoService = new AutoMotoService();
+        garanties = autoMotoService.getGaranties();
+
         rtOptions = new ArrayList<String>();
         rtTypes = new ArrayList<String>();
         rtCotisations = new ArrayList<String>();
@@ -63,9 +68,9 @@ public class ObjetsStatique {
         usagesVehicule.add("Entreprise");
 
         agences = new ArrayList<Agence>();
-        agences.add(new Agence(1,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(2,"Anosizato","Antananarivo", "Anosizato", "Anosizato", new Double(47.496558), new Double(-18.938178), "aa", 101, "033890890", "antsahavola@gmail.com"));
-        agences.add(new Agence(3,"Ampefiloha","Antananarivo", "Ampefiloha", "Ampefiloha", new Double(47.517867), new Double(-18.912766), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(1, "Antsahavola", "Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(2, "Anosizato", "Antananarivo", "Anosizato", "Anosizato", new Double(47.496558), new Double(-18.938178), "aa", 101, "033890890", "antsahavola@gmail.com"));
+        agences.add(new Agence(3, "Ampefiloha", "Antananarivo", "Ampefiloha", "Ampefiloha", new Double(47.517867), new Double(-18.912766), "aa", 101, "033890890", "antsahavola@gmail.com"));
 
     }
 
@@ -139,5 +144,13 @@ public class ObjetsStatique {
 
     public static void setUsagesVehicule(List<String> usagesVehicule) {
         ObjetsStatique.usagesVehicule = usagesVehicule;
+    }
+
+    public static List<AmGaranti> getGaranties() {
+        return garanties;
+    }
+
+    public static void setGaranties(List<AmGaranti> garanties) {
+        ObjetsStatique.garanties = garanties;
     }
 }

@@ -8,14 +8,24 @@ public class AmGaranti {
     private Integer id;
     private String libelle;
     private String code;
+    private Double limiteMin;
 
     public AmGaranti() {
     }
 
-    public AmGaranti(Integer id, String libelle, String code) {
+    public AmGaranti(Integer id, String libelle, String code, Double limiteMin) {
         this.id = id;
         this.libelle = libelle;
         this.code = code;
+        this.limiteMin = limiteMin;
+    }
+
+    public Double getLimiteMin() {
+        return limiteMin;
+    }
+
+    public void setLimiteMin(Double limiteMin) {
+        this.limiteMin = limiteMin;
     }
 
     public Integer getId() {

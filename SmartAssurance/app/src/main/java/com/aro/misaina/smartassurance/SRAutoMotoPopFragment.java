@@ -8,9 +8,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutCompat;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -47,6 +51,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
     private EditText eNbRoues;
     private EditText eNbPlace;
     private List<EditText> eListGaranties;
+    private List<CheckBox> chBoxGaranties;
 
     public SRAutoMotoPopFragment() {
         // Required empty public constructor
@@ -93,11 +98,43 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         spinMois.setAdapter(adapterMois);
 
 //        initialisation des saisis de garanties
+        initCheckBoxGaranties();
         initSaisiGaraties();
-        for (EditText editTextGarantie : eListGaranties) {
+        for (int i = 0; i < ObjetsStatique.getGaranties().size(); i++) {
+            final EditText editTextGarantie = eListGaranties.get(i);
+            final CheckBox checkBoxGarantie = chBoxGaranties.get(i);
+
+            final AmGaranti garanti = ObjetsStatique.getGaranties().get(i);
+            checkBoxGarantie.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (checkBoxGarantie.isChecked()) {
+                        editTextGarantie.setText(garanti.getLimiteMin().toString());
+                    } else {
+                        editTextGarantie.setText("");
+                    }
+                    editTextGarantie.setEnabled(checkBoxGarantie.isChecked());
+                }
+            });
+            editTextGarantie.setEnabled(checkBoxGarantie.isChecked());
+            editTextGarantie.setWidth(200);
+
+            if (checkBoxGarantie.isChecked()) {
+                editTextGarantie.setText(garanti.getLimiteMin().toString());
+            }
             TextInputLayout textInputLayout = new TextInputLayout(getBotFragment().getActivity());
             textInputLayout.addView(editTextGarantie);
-            content.addView(textInputLayout);
+            textInputLayout.setMinimumWidth(LinearLayout.LayoutParams.MATCH_PARENT);
+            textInputLayout.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+            LinearLayout linearLayout = new LinearLayout(getBotFragment().getActivity());
+            linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+            linearLayout.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            linearLayout.addView(checkBoxGarantie);
+            linearLayout.addView(textInputLayout);
+
+
+            content.addView(linearLayout);
         }
         // buttons Cancel and OK
         builder.setView(view)
@@ -141,17 +178,23 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             List<AmGaranti> listeGaranties = autoMotoService.getGaranties();
             List<SaisiGaranti> listeGarantiesVehicu = new ArrayList<SaisiGaranti>();
 
-            int i = 0;
-            for (EditText etextGaranties : eListGaranties) {
-                if (!etextGaranties.getText().toString().isEmpty()) {
+
+            for (int i = 0; i < eListGaranties.size(); i++) {
+                EditText etextGaranties = eListGaranties.get(i);
+                if (chBoxGaranties.get(i).isChecked()) {
                     SaisiGaranti gar = new SaisiGaranti();
                     gar.setId(listeGaranties.get(i).getId());
                     gar.setLibelle(listeGaranties.get(i).getLibelle());
                     gar.setCode(listeGaranties.get(i).getCode());
-                    gar.setLimite(new Double(etextGaranties.getText().toString()));
+                    Double valSaisie = new Double(etextGaranties.getText().toString());
+                    if (valSaisie < ObjetsStatique.getGaranties().get(i).getLimiteMin()) {
+
+                    }
+                    else {
+                        gar.setLimite(valSaisie);
+                    }
                     listeGarantiesVehicu.add(gar);
                 }
-                i++;
             }
             vehiculeWS.setGaranties(listeGarantiesVehicu);
             SouscriptionAutoMotoAsync async = new SouscriptionAutoMotoAsync();
@@ -162,6 +205,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             async.execute(param);
 
         } catch (Exception e) {
+            e.printStackTrace();
             throw e;
         }
     }
@@ -176,7 +220,23 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         for (AmGaranti garanti : listeGaranties) {
             EditText editText = new EditText(getBotFragment().getActivity());
             editText.setHint(garanti.getLibelle());
+            editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
+            editText.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
             eListGaranties.add(editText);
+        }
+    }
+
+    public void initCheckBoxGaranties() {
+        chBoxGaranties = new ArrayList<CheckBox>(ObjetsStatique.getGaranties().size());
+        for (int i = 0; i < ObjetsStatique.getGaranties().size(); i++) {
+            CheckBox checkBox = new CheckBox(getBotFragment().getActivity());
+            checkBox.setSelected(false);
+            if (i == 0) {
+
+                checkBox.setChecked(true);
+                checkBox.setEnabled(false);
+            }
+            chBoxGaranties.add(checkBox);
         }
     }
 
