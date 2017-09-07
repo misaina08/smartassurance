@@ -24,6 +24,7 @@ import modeles.client.ClientView;
 import modeles.souscription.SaisiGaranti;
 import modeles.souscription.VehiculeWS;
 import services.AutoMotoService;
+import services.ObjetsStatique;
 import services.SessionManager;
 import utilitaire.Util;
 
@@ -39,6 +40,8 @@ public class SRAutoMotoPopFragment extends DialogFragment {
     private EditText eNoSerie;
     private EditText eMarque;
     private Spinner spSe;
+    private Spinner spinUsage;
+    private Spinner spinMois;
     private EditText eDateCirc;
     private EditText ePuissance;
     private EditText eNbRoues;
@@ -65,6 +68,8 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         eNbRoues = (EditText) view.findViewById(R.id.eNbRoues);
         eNbPlace = (EditText) view.findViewById(R.id.eNbPlace);
         spSe = (Spinner) view.findViewById(R.id.spSe);
+        spinMois = (Spinner) view.findViewById(R.id.spinMois);
+        spinUsage = (Spinner) view.findViewById(R.id.spinUsage);
 
         List<String> es = new ArrayList<String>(2);
         es.add("Essence");
@@ -73,7 +78,19 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         ArrayAdapter<String> adapterDrOption = new ArrayAdapter<String>(this.getActivity(),
                 android.R.layout.simple_spinner_dropdown_item, es);
 
+        ArrayAdapter<String> adapterDrUsage = new ArrayAdapter<String>(this.getActivity(),
+                android.R.layout.simple_spinner_dropdown_item, ObjetsStatique.getUsagesVehicule());
         spSe.setAdapter(adapterDrOption);
+        spinUsage.setAdapter(adapterDrUsage);
+
+        List<String> mois = new ArrayList<String>(12);
+        for (int i = 1; i <= 12; i++) {
+            mois.add(i + "");
+        }
+
+        ArrayAdapter<String> adapterMois = new ArrayAdapter<String>(this.getActivity(),
+                android.R.layout.simple_spinner_dropdown_item, mois);
+        spinMois.setAdapter(adapterMois);
 
 //        initialisation des saisis de garanties
         initSaisiGaraties();
@@ -113,6 +130,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             vehiculeWS.setNbPlaces(new Integer(eNbPlace.getText().toString()));
             vehiculeWS.setPuissance(new Integer(ePuissance.getText().toString()));
             vehiculeWS.setSe(spSe.getSelectedItem().toString());
+            vehiculeWS.setIdUsage(spSe.getSelectedItemPosition() + 1);
             vehiculeWS.setNbRoues(new Integer(eNbRoues.getText().toString()));
             vehiculeWS.setNoSerie(eNoSerie.getText().toString());
             vehiculeWS.setNoImm(eNoImmatr.getText().toString());
@@ -138,7 +156,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             vehiculeWS.setGaranties(listeGarantiesVehicu);
             SouscriptionAutoMotoAsync async = new SouscriptionAutoMotoAsync();
             async.setBotFragment(getBotFragment());
-            async.setNbMois(12);
+            async.setNbMois(new Integer(spinMois.getSelectedItem().toString()));
             VehiculeWS[] param = new VehiculeWS[1];
             param[0] = vehiculeWS;
             async.execute(param);

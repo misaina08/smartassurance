@@ -20,7 +20,9 @@ public class VehiculeWS extends BaseModele {
     private Integer nbRoues;
     private Integer nbPlaces;
     private Integer idClient;
+    private Integer idUsage;
     private List<SaisiGaranti> garanties;
+
 //    private Integer idSouscription;
 
     public VehiculeWS() {
@@ -120,5 +122,13 @@ public class VehiculeWS extends BaseModele {
 
     public void setGaranties(List<SaisiGaranti> garanties) {
         this.garanties = garanties;
+    }
+
+    public Integer getIdUsage() {
+        return idUsage;
+    }
+
+    public void setIdUsage(Integer idUsage) {
+        this.idUsage = idUsage;
     }
 }

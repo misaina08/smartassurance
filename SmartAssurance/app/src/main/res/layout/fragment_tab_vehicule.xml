@@ -75,7 +75,16 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:text="TextView" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tUsage"
+        style="@style/TextNormal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.03"
+        android:text="TextView" />
 
     <LinearLayout
         android:layout_width="match_parent"

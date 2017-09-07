@@ -7,6 +7,7 @@ import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.TabVehiculeSousAutoFragment;
 
 import modeles.souscription.VehiculeWS;
+import services.ObjetsStatique;
 import utilitaire.Util;
 import utilitaire.WSUtil;
 import ws.WSRequestModele;
@@ -44,6 +45,7 @@ public class VehiculeSouscriptionAsync extends AsyncTask<Integer, Void, Vehicule
             TextView vSe = (TextView) fragment.getView().findViewById(R.id.vSe);
             TextView vNbRoues = (TextView) fragment.getView().findViewById(R.id.vNbRoues);
             TextView vNbPlace = (TextView) fragment.getView().findViewById(R.id.vNbPlace);
+            TextView tUsage = (TextView) fragment.getView().findViewById(R.id.tUsage);
 
             vNoimm.setText(vehicule.getNoImm());
             vMarque.setText(vehicule.getMarque());
@@ -55,6 +57,7 @@ public class VehiculeSouscriptionAsync extends AsyncTask<Integer, Void, Vehicule
             vSe.setText(vehicule.getSe());
             vNbRoues.setText(vehicule.getNbRoues().toString());
             vNbPlace.setText(vehicule.getNbPlaces().toString());
+            tUsage.setText("Usage : véhicule "+ ObjetsStatique.getUsagesVehicule().get(vehicule.getIdUsage()-1));
 
         }
     }

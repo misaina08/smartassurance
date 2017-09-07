@@ -7,7 +7,6 @@ import modeles.Agence;
 import modeles.automoto.AmDommage;
 import modeles.automoto.SinCategorie;
 import modeles.produit.Produit;
-import sqlite.GuichetDao;
 
 /**
  * Created by LENOVO on 7/28/2017.
@@ -17,6 +16,7 @@ public class ObjetsStatique {
     private static List<String> rtOptions;
     private static List<String> rtTypes;
     private static List<String> rtCotisations;
+    private static List<String> usagesVehicule;
     private static List<SinCategorie> sinCategories;
     private static List<AmDommage> amDommages;
     private static List<Produit> produits;
@@ -57,6 +57,10 @@ public class ObjetsStatique {
         produits.add(new Produit(1, "Assurance vie"));
         produits.add(new Produit(2, "Assurance auto-moto"));
         produits.add(new Produit(3, "Assurance retraite"));
+
+        usagesVehicule = new ArrayList<String>();
+        usagesVehicule.add("Particulier");
+        usagesVehicule.add("Entreprise");
 
         agences = new ArrayList<Agence>();
         agences.add(new Agence(1,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
@@ -127,5 +131,13 @@ public class ObjetsStatique {
 
     public static void setEstSurGuichet(boolean estSurGuichet) {
         ObjetsStatique.estSurGuichet = estSurGuichet;
+    }
+
+    public static List<String> getUsagesVehicule() {
+        return usagesVehicule;
+    }
+
+    public static void setUsagesVehicule(List<String> usagesVehicule) {
+        ObjetsStatique.usagesVehicule = usagesVehicule;
     }
 }
