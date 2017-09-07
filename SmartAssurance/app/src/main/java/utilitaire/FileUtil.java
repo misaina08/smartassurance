@@ -12,6 +12,8 @@ import android.provider.OpenableColumns;
 
 import java.io.FileDescriptor;
 import java.io.IOException;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by misa on 8/13/2017.

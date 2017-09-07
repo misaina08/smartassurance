@@ -1,5 +1,6 @@
 package ws;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -142,6 +143,28 @@ public class WSRequestModele extends WebServiceModele {
     @Override
     public void delete(String url, BaseModele baseModele)  throws Exception{
 
+    }
+
+    @Override
+    public String getContent(String url) throws Exception {
+        try {
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .connectTimeout(20, TimeUnit.SECONDS)
+                    .writeTimeout(20, TimeUnit.SECONDS)
+                    .readTimeout(40, TimeUnit.SECONDS)
+                    .build();
+            Request request = new Request.Builder()
+                    .url(url)
+                    .build();
+
+            Response response = null;
+            response = client.newCall(request).execute();
+            String jsonStr=response.body().string();
+            return jsonStr;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 

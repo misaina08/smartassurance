@@ -9,14 +9,18 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import ai.Bot;
+import ai.Actions;
 import ai.ui.BulleUI;
 import ai.ui.UIElement;
+import async.ActionBotAsync;
+import sqlite.bot.CurrentQuestionDao;
+import sqlite.bot.NoClientTempDao;
+import sqlite.bot.QuestionCotisationDao;
 
 public class BotFragment extends Fragment {
     private BotFragment botFragment;
 
-    public BotFragment(){
+    public BotFragment() {
 
     }
 
@@ -29,7 +33,7 @@ public class BotFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_bot, container, false);
     }
 
@@ -40,7 +44,31 @@ public class BotFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 try {
-                    sendFromRequest(saisi.getText().toString());
+                    updateMyChat(saisi.getText().toString());
+
+                    CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
+                    String currentQuestion = currentQuestionDao.getCurrentQuestion();
+
+                    if (currentQuestion.compareToIgnoreCase("aucun") != 0) {
+                        if (currentQuestion.compareToIgnoreCase("saveAgeCotisation") == 0) {
+                            Actions action = new Actions(botFragment);
+                            botFragment.updateBotChat(action.saveAgeCotisation(new Integer(saisi.getText().toString())));
+                        }
+                        else if (currentQuestion.compareToIgnoreCase("estimationCotisation") == 0) {
+                            QuestionCotisationDao questionCotisationDao = new QuestionCotisationDao(botFragment.getActivity());
+
+                            Actions action = new Actions(botFragment);
+                            action.estimationCotisation(questionCotisationDao.getAge(), new Double(saisi.getText().toString()), botFragment);
+                        }
+                        else if (currentQuestion.compareToIgnoreCase("situationCompteRetraite") == 0) {
+                            NoClientTempDao noClientTempDao = new NoClientTempDao(botFragment.getActivity());
+
+                            Actions action = new Actions(botFragment);
+                            action.situationCompteRetraite(saisi.getText().toString(), botFragment);
+                        }
+                    } else {
+                        sendFromRequest(saisi.getText().toString());
+                    }
                     saisi.setText("");
 
                 } catch (Exception ex) {
@@ -58,10 +86,13 @@ public class BotFragment extends Fragment {
      * @throws Exception
      */
     public void sendFromRequest(String request) throws Exception {
-        Bot bot = new Bot();
-        UIElement result = bot.execute(request, botFragment);
-        updateMyChat(request);
-        updateBotChat(result);
+//        recherche de l'action correspondante à la requete
+
+        ActionBotAsync async = new ActionBotAsync();
+        async.setBotFragment(this);
+        String[] params = {request};
+        async.execute(params);
+
     }
 
     /**
@@ -77,6 +108,7 @@ public class BotFragment extends Fragment {
         }
         updateBotChat(uiElement);
     }
+
     public void updateMyChat(String myRequest) {
         LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
         BulleUI bulle = new BulleUI(this.getActivity(), 1);
@@ -87,6 +119,10 @@ public class BotFragment extends Fragment {
     public void updateBotChat(UIElement botResponse) {
         LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
         chatContent.addView(botResponse);
+    }
+    public void addStandardComponent(View component) {
+        LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
+        chatContent.addView(component);
     }
 
     public void initSuggestions() {

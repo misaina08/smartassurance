@@ -7,6 +7,7 @@ import modeles.Agence;
 import modeles.automoto.AmDommage;
 import modeles.automoto.SinCategorie;
 import modeles.produit.Produit;
+import sqlite.GuichetDao;
 
 /**
  * Created by LENOVO on 7/28/2017.
@@ -20,6 +21,8 @@ public class ObjetsStatique {
     private static List<AmDommage> amDommages;
     private static List<Produit> produits;
     private static List<Agence> agences;
+
+    private static boolean estSurGuichet = false;
 
     public void init(){
         rtOptions = new ArrayList<String>();
@@ -59,6 +62,7 @@ public class ObjetsStatique {
         agences.add(new Agence(1,"Antsahavola","Antananarivo", "Antsahavola", "Antsahavola", new Double(47.522285), new Double(-18.908629), "aa", 101, "033890890", "antsahavola@gmail.com"));
         agences.add(new Agence(2,"Anosizato","Antananarivo", "Anosizato", "Anosizato", new Double(47.496558), new Double(-18.938178), "aa", 101, "033890890", "antsahavola@gmail.com"));
         agences.add(new Agence(3,"Ampefiloha","Antananarivo", "Ampefiloha", "Ampefiloha", new Double(47.517867), new Double(-18.912766), "aa", 101, "033890890", "antsahavola@gmail.com"));
+
     }
 
     public static List<AmDommage> getAmDommages() {
@@ -115,5 +119,13 @@ public class ObjetsStatique {
 
     public static void setAgences(List<Agence> agences) {
         ObjetsStatique.agences = agences;
+    }
+
+    public static boolean isEstSurGuichet() {
+        return estSurGuichet;
+    }
+
+    public static void setEstSurGuichet(boolean estSurGuichet) {
+        ObjetsStatique.estSurGuichet = estSurGuichet;
     }
 }

@@ -12,7 +12,6 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -25,6 +24,12 @@
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_channel"
+        android:value="com.aro.misaina.smartassurance" />
+
 
     <application
         android:allowBackup="true"
@@ -45,6 +50,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+
         </activity>
         <activity
             android:name=".SaisiIdentifierClientActivity"
@@ -69,12 +90,44 @@
             android:name=".FormulaireSinistreActivity"
             android:parentActivityName=".FicheContratAutoActivity" />
         <activity android:name=".FicheSinistreActivity" />
-        <activity android:name=".MapAgenceActivity"></activity>
+        <activity android:name=".MapAgenceActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDKD4SS2pCLwr-bD1Xz_Ru0_7elsmHHMzU" />
 
+        <activity
+            android:name=".TagActivity"
+            android:launchMode="singleTop">
+            <!-- filtres de découverte des tags et des tech NFC -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <service
+            android:name="fcm.MyFirebaseMessagingService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

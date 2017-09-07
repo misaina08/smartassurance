@@ -22,9 +22,13 @@ import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
 import ai.ui.UIElement;
+import async.retraite.EstimationAsync;
+import async.retraite.SituationCompteAsync;
 import modeles.Agence;
 import modeles.produit.Produit;
 import services.ObjetsStatique;
+import sqlite.bot.CurrentQuestionDao;
+import sqlite.bot.QuestionCotisationDao;
 import utilitaire.Coordonnee;
 import utilitaire.CoordonneeUtil;
 
@@ -140,7 +144,7 @@ public class Actions {
             @Override
             public void onClick(View v) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+agenceProche.getTel()));
+                callIntent.setData(Uri.parse("tel:" + agenceProche.getTel()));
                 if (ActivityCompat.checkSelfPermission(getContext().getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
@@ -194,7 +198,79 @@ public class Actions {
         return bulleUi;
     }
 
+    public UIElement aideCotisation() throws Exception {
+        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
+        bulle1.setTextInBulle("D'accord.");
+        BulleUI bulle2 = new BulleUI(getContext().getActivity(), 0);
+        bulle2.setTextInBulle("Quelle age avez vous actuellement ?");
 
+        List<BulleUI> list = new ArrayList<BulleUI>();
+        list.add(bulle1);
+        list.add(bulle2);
+
+        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
+        bulleListUI.addBulles(list);
+
+        // question suivante
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
+        currentQuestionDao.setCurrentQuestion("saveAgeCotisation");
+        return bulleListUI;
+    }
+
+    public UIElement saveAgeCotisation(Integer age) throws Exception {
+        // enregistrement de l'age saisie
+        QuestionCotisationDao questionCotisationDao = new QuestionCotisationDao(getContext().getActivity());
+        questionCotisationDao.setAge(age);
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
+        currentQuestionDao.setCurrentQuestion("estimationCotisation");
+
+        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
+        bulle1.setTextInBulle("Combien vous désirez avoir à l'age de retraite ?");
+        return bulle1;
+    }
+
+
+
+    public void estimationCotisation(Integer age, Double mtDesire, BotFragment botFragment) throws Exception {
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
+        currentQuestionDao.setCurrentQuestion("aucun");
+
+        Double[] params = {new Double(age), mtDesire};
+        EstimationAsync estimationAsync = new EstimationAsync();
+        estimationAsync.setBotFragment(botFragment);
+        estimationAsync.execute(params);
+
+    }
+
+    public UIElement aideSituationRetraite() throws Exception {
+        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
+        bulle1.setTextInBulle("D'accord.");
+        BulleUI bulle2 = new BulleUI(getContext().getActivity(), 0);
+        bulle2.setTextInBulle("Saisissez votre numéro client ?");
+
+        List<BulleUI> list = new ArrayList<BulleUI>();
+        list.add(bulle1);
+        list.add(bulle2);
+
+        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
+        bulleListUI.addBulles(list);
+
+        // question suivante
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
+        currentQuestionDao.setCurrentQuestion("situationCompteRetraite");
+        return bulleListUI;
+    }
+
+    public void situationCompteRetraite(String noclient, BotFragment botFragment) throws Exception{
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
+        currentQuestionDao.setCurrentQuestion("aucun");
+
+        String[] noClient = {noclient};
+        SituationCompteAsync situationCompteAsync = new SituationCompteAsync();
+        situationCompteAsync.setBotFragment(botFragment);
+        situationCompteAsync.execute(noClient);
+
+    }
     public BotFragment getContext() {
         return context;
     }

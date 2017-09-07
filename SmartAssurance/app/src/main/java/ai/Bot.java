@@ -16,4 +16,5 @@ public class Bot {
         Method method = actions.getClass().getMethod(request, null);
         return (UIElement) method.invoke(actions, null);
     }
+
 }

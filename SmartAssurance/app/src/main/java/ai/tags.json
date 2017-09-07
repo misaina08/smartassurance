@@ -1,0 +1,23 @@
+[
+	{
+		"motscles" : [{"mot" : "liste"}, {"mot" : "produit"}],
+		"libelle" : "liste des produits",
+		"action" : "listeProduit",
+		"param" : "null",
+		"typesparams" : "null"
+	},
+	{
+		"motscles" : [{"mot" : "assurance"}, {"mot" : "auto"},{"mot" : "moto"}],
+		"libelle" : "assurances auto-moto",
+		"action" : "ficheProduit",
+		"param" : "1",
+		"typesparams" : "java.lang.Integer"
+	},
+	{
+		"motscles" : [{"mot" : "assurance"}, {"mot" : "retraite"}],
+		"libelle" : "assurances retraite",
+		"action" : "ficheProduit",
+		"param" : "2",
+		"typesparams" : "java.lang.Integer"
+	}
+]
