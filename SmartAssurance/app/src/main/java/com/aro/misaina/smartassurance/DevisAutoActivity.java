@@ -1,13 +1,11 @@
 package com.aro.misaina.smartassurance;
 
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -22,7 +20,7 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
-import async.souscription.SouscriptionAutoMotoAsync;
+import async.automoto.DevisAsync;
 import modeles.AmGaranti;
 import modeles.client.ClientView;
 import modeles.souscription.SaisiGaranti;
@@ -30,49 +28,32 @@ import modeles.souscription.VehiculeWS;
 import services.AutoMotoService;
 import services.ObjetsStatique;
 import services.SessionManager;
-import utilitaire.Util;
 
+public class DevisAutoActivity extends DialogFragment {
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class SRAutoMotoPopFragment extends DialogFragment {
     private BotFragment botFragment;
-
-    private LinearLayout content;
-    private EditText eNoImmatr;
-    private EditText eNoSerie;
-    private EditText eMarque;
-    private Spinner spSe;
-    private Spinner spinUsage;
     private Spinner spinMois;
-    private EditText eDateCirc;
-    private EditText ePuissance;
-    private EditText eNbRoues;
+    private Spinner spinUsage;
+    private Spinner spinSe;
+    private EditText ePf;
     private EditText eNbPlace;
+    private EditText eNbRoues;
+    private LinearLayout contentGaranties;
+
     private List<EditText> eListGaranties;
     private List<CheckBox> chBoxGaranties;
-
-    public SRAutoMotoPopFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        View view = inflater.inflate(R.layout.fragment_srauto_moto_pop, null);
+        View view = inflater.inflate(R.layout.activity_devis_auto, null);
 
-        content = (LinearLayout) view.findViewById(R.id.content);
-        eNoImmatr = (EditText) view.findViewById(R.id.eNoImmatr);
-        eNoSerie = (EditText) view.findViewById(R.id.eNoSerie);
-        eMarque = (EditText) view.findViewById(R.id.eMarque);
-        eDateCirc = (EditText) view.findViewById(R.id.eDateCirc);
-        ePuissance = (EditText) view.findViewById(R.id.ePuissance);
+        contentGaranties = (LinearLayout) view.findViewById(R.id.contentGaranties);
+        ePf = (EditText) view.findViewById(R.id.ePf);
         eNbRoues = (EditText) view.findViewById(R.id.eNbRoues);
         eNbPlace = (EditText) view.findViewById(R.id.eNbPlace);
-        spSe = (Spinner) view.findViewById(R.id.spSe);
+        spinSe = (Spinner) view.findViewById(R.id.spinSe);
         spinMois = (Spinner) view.findViewById(R.id.spinMois);
         spinUsage = (Spinner) view.findViewById(R.id.spinUsage);
 
@@ -85,7 +66,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
 
         ArrayAdapter<String> adapterDrUsage = new ArrayAdapter<String>(this.getActivity(),
                 android.R.layout.simple_spinner_dropdown_item, ObjetsStatique.getUsagesVehicule());
-        spSe.setAdapter(adapterDrOption);
+        spinSe.setAdapter(adapterDrOption);
         spinUsage.setAdapter(adapterDrUsage);
 
         List<String> mois = new ArrayList<String>(12);
@@ -134,7 +115,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
             linearLayout.addView(textInputLayout);
 
 
-            content.addView(linearLayout);
+            contentGaranties.addView(linearLayout);
         }
         // buttons Cancel and OK
         builder.setView(view)
@@ -142,7 +123,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         try {
-                            souscrire();
+                            valider();
                         } catch (Exception ex) {
                             ex.printStackTrace();
                         }
@@ -151,26 +132,21 @@ public class SRAutoMotoPopFragment extends DialogFragment {
                 .setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        SRAutoMotoPopFragment.this.getDialog().cancel();
+                        DevisAutoActivity.this.getDialog().cancel();
                     }
                 });
 
         return builder.create();
     }
 
-    public void souscrire() throws Exception {
+    public void valider() throws Exception{
         try {
             VehiculeWS vehiculeWS = new VehiculeWS();
-            vehiculeWS.setDateCirculation(Util.stringToDate(eDateCirc.getText().toString()));
-            vehiculeWS.setMarque(eMarque.getText().toString());
-            vehiculeWS.setType(eMarque.getText().toString());
             vehiculeWS.setNbPlaces(new Integer(eNbPlace.getText().toString()));
-            vehiculeWS.setPuissance(new Integer(ePuissance.getText().toString()));
-            vehiculeWS.setSe(spSe.getSelectedItem().toString());
+            vehiculeWS.setPuissance(new Integer(ePf.getText().toString()));
+            vehiculeWS.setSe(spinSe.getSelectedItem().toString());
             vehiculeWS.setIdUsage(spinUsage.getSelectedItemPosition() + 1);
             vehiculeWS.setNbRoues(new Integer(eNbRoues.getText().toString()));
-            vehiculeWS.setNoSerie(eNoSerie.getText().toString());
-            vehiculeWS.setNoImm(eNoImmatr.getText().toString());
             SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
             vehiculeWS.setIdClient(((ClientView) SessionManager.getClientConnected()).getId());
 
@@ -197,7 +173,7 @@ public class SRAutoMotoPopFragment extends DialogFragment {
                 }
             }
             vehiculeWS.setGaranties(listeGarantiesVehicu);
-            SouscriptionAutoMotoAsync async = new SouscriptionAutoMotoAsync();
+            DevisAsync async = new DevisAsync();
             async.setBotFragment(getBotFragment());
             async.setNbMois(new Integer(spinMois.getSelectedItem().toString()));
             VehiculeWS[] param = new VehiculeWS[1];
@@ -210,9 +186,6 @@ public class SRAutoMotoPopFragment extends DialogFragment {
         }
     }
 
-    /**
-     * Création des saisis de garanties
-     */
     public void initSaisiGaraties() {
         AutoMotoService autoMotoService = new AutoMotoService();
         List<AmGaranti> listeGaranties = autoMotoService.getGaranties();

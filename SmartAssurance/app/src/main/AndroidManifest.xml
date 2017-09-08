@@ -25,11 +25,9 @@
         android:name="android.hardware.nfc"
         android:required="true" />
 
-
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_channel"
         android:value="com.aro.misaina.smartassurance" />
-
 
     <application
         android:allowBackup="true"
@@ -50,7 +48,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
 
@@ -65,7 +62,6 @@
             <meta-data
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
-
         </activity>
         <activity
             android:name=".SaisiIdentifierClientActivity"
@@ -99,6 +95,7 @@
         <activity
             android:name=".TagActivity"
             android:launchMode="singleTop">
+
             <!-- filtres de découverte des tags et des tech NFC -->
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
@@ -128,6 +125,8 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".DevisAutoActivity"></activity>
     </application>
 
 </manifest>

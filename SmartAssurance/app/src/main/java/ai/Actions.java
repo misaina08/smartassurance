@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotFragment;
+import com.aro.misaina.smartassurance.DevisAutoActivity;
 import com.aro.misaina.smartassurance.MapAgenceActivity;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 import com.aro.misaina.smartassurance.SRRetraitePopFragment;
@@ -79,13 +80,14 @@ public class Actions {
                 public void onClick(View v) {
                     switch (p.getId()) {
                         case 2:
-
+                            getContext().updateMyChat("Souscription au produit assurance auto-moto");
                             SRAutoMotoPopFragment amPopFragment = new SRAutoMotoPopFragment();
                             amPopFragment.setBotFragment(context);
                             amPopFragment.show(context.getFragmentManager(), "Automoto popup");
                             break;
 
                         case 3:
+                            getContext().updateMyChat("Souscription au produit assurance retraite");
                             SRRetraitePopFragment retraitePopFragment = new SRRetraitePopFragment();
                             retraitePopFragment.setBotFragment(context);
                             retraitePopFragment.show(context.getFragmentManager(), "Retraite popup");
@@ -270,6 +272,30 @@ public class Actions {
         situationCompteAsync.setBotFragment(botFragment);
         situationCompteAsync.execute(noClient);
 
+    }
+
+    public UIElement textDevis() {
+        Button buttonDevis = new Button((getContext().getActivity()));
+        buttonDevis.setText("Prêt");
+        buttonDevis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    getContext().updateMyChat("Prêt");
+
+                    DevisAutoActivity amPopDevis = new DevisAutoActivity();
+                    amPopDevis.setBotFragment(context);
+                    amPopDevis.show(context.getFragmentManager(), "Automoto devis");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        CardUI card = new CardUI(getContext().getActivity());
+        card.setText("Ok. Je vais vous envoyer un formulaire à remplir");
+
+        card.getOptionsCardLayout().addView(buttonDevis);
+        return card;
     }
     public BotFragment getContext() {
         return context;

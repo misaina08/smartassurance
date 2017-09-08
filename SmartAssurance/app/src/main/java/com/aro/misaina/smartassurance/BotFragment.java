@@ -13,9 +13,13 @@ import ai.Actions;
 import ai.ui.BulleUI;
 import ai.ui.UIElement;
 import async.ActionBotAsync;
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 import sqlite.bot.CurrentQuestionDao;
 import sqlite.bot.NoClientTempDao;
 import sqlite.bot.QuestionCotisationDao;
+
+import static com.google.android.gms.internal.zzagz.runOnUiThread;
 
 public class BotFragment extends Fragment {
     private BotFragment botFragment;
@@ -46,6 +50,7 @@ public class BotFragment extends Fragment {
                 try {
                     updateMyChat(saisi.getText().toString());
 
+
                     CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
                     String currentQuestion = currentQuestionDao.getCurrentQuestion();
 
@@ -53,14 +58,12 @@ public class BotFragment extends Fragment {
                         if (currentQuestion.compareToIgnoreCase("saveAgeCotisation") == 0) {
                             Actions action = new Actions(botFragment);
                             botFragment.updateBotChat(action.saveAgeCotisation(new Integer(saisi.getText().toString())));
-                        }
-                        else if (currentQuestion.compareToIgnoreCase("estimationCotisation") == 0) {
+                        } else if (currentQuestion.compareToIgnoreCase("estimationCotisation") == 0) {
                             QuestionCotisationDao questionCotisationDao = new QuestionCotisationDao(botFragment.getActivity());
 
                             Actions action = new Actions(botFragment);
                             action.estimationCotisation(questionCotisationDao.getAge(), new Double(saisi.getText().toString()), botFragment);
-                        }
-                        else if (currentQuestion.compareToIgnoreCase("situationCompteRetraite") == 0) {
+                        } else if (currentQuestion.compareToIgnoreCase("situationCompteRetraite") == 0) {
                             NoClientTempDao noClientTempDao = new NoClientTempDao(botFragment.getActivity());
 
                             Actions action = new Actions(botFragment);
@@ -70,7 +73,6 @@ public class BotFragment extends Fragment {
                         sendFromRequest(saisi.getText().toString());
                     }
                     saisi.setText("");
-
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -109,6 +111,13 @@ public class BotFragment extends Fragment {
         updateBotChat(uiElement);
     }
 
+    public void sendFromUIMyChat(UIElement uiElement, String request) throws Exception {
+        if (request != null) {
+            updateMyChat(request);
+        }
+        updateBotChat(uiElement);
+    }
+
     public void updateMyChat(String myRequest) {
         LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
         BulleUI bulle = new BulleUI(this.getActivity(), 1);
@@ -116,10 +125,47 @@ public class BotFragment extends Fragment {
         chatContent.addView(bulle);
     }
 
-    public void updateBotChat(UIElement botResponse) {
-        LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
-        chatContent.addView(botResponse);
+    public void updateBotChat(final UIElement botResponse) {
+//        final ImageView loading = new ImageView(botFragment.getActivity());
+//        loading.setText("en train  d'ecrire");
+
+//
+        final GifImageView gifView = new GifImageView(botFragment.getActivity());
+
+        try {
+            GifDrawable gifFromAssets = new GifDrawable( botFragment.getActivity().getAssets(), "contents_loading.gif" );
+            gifView.setImageDrawable(gifFromAssets);
+            gifView.setLayoutParams(new LinearLayout.LayoutParams(100, ViewGroup.LayoutParams.WRAP_CONTENT));
+            gifView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+            addStandardComponent(gifView);
+        }catch(Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Thread timerThread = new Thread(){
+            public void run(){
+                try{
+                    synchronized (this) {
+                        wait(3000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
+                                chatContent.removeView(gifView);
+                                chatContent.addView(botResponse);
+                            }
+                        });
+                    }
+                }catch(InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        timerThread.start();
+
     }
+
     public void addStandardComponent(View component) {
         LinearLayout chatContent = (LinearLayout) getView().findViewById(R.id.chatContent);
         chatContent.addView(component);
