@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Smart Assurance</string>
+    <string name="hello">Hello</string>
+    <string name="accueil">Home</string>
+    <string name="guichet">Guichet</string>
+    <string name="bot">Bot</string>
+    <string name="parametre">Settings</string>
+    <string name="contrat">Contracts</string>
+    <string name="nom">Last name</string>
+    <string name="prenom">First name</string>
+    <string name="date_naissance">Birth date</string>
+    <string name="valider">Submit</string>
+    <string name="annuler">Cancel</string>
+    <string name="accepter">Agree</string>
+    <string name="connexion">Connection</string>
+    <string name="connecter">Log in</string>
+    <string name="hello_blank_fragment">hello blank</string>
+    <string name="choisissez_langue">Select your language</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

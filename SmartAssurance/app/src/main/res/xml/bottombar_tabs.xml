@@ -3,21 +3,21 @@
     <tab
         id="@+id/tab_acueil"
         icon="@drawable/ic_home_simple"
-        title="Accueil" />
+        title="@string/accueil" />
     <tab
         id="@+id/tab_guichet"
         icon="@drawable/ic_guichet"
-        title="Guichet" />
+        title="@string/guichet" />
     <tab
         id="@+id/tab_ai"
         icon="@drawable/ic_chat"
-        title="AI" />
+        title="@string/bot" />
     <tab
         id="@+id/tab_contrats"
         icon="@drawable/ic_contrat"
-        title="Contrats" />
+        title="@string/contrat" />
     <tab
         id="@+id/tab_parametres"
         icon="@drawable/ic_setting_simple"
-        title="Paramètres" />
+        title="@string/parametre" />
 </tabs>

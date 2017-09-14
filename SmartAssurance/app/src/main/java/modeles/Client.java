@@ -9,41 +9,40 @@ package modeles;
 import java.util.Date;
 
 /**
- *
  * @author Misaina
  */
 public class Client extends BaseModele {
 
     private Integer id;
-   
+
     private String nom;
-   
+
     private String prenom;
-    
+
     private String adresse;
-   
+    private String codesecret;
     private String profession;
-   
+
     private Date dateNaissance;
-    
+
     private String lieuNaissance;
-    
+
     private String cin;
-    
+
     private String tel;
-    
+
     private String email;
-    
+
     private String mdp;
-    
+
     private String noclient;
-    
+
     private Date dateSouscription;
-    
+
     private Agence agence;
-    
+
     private ClType clType;
-    
+
     public Client() {
     }
 
@@ -165,5 +164,13 @@ public class Client extends BaseModele {
 
     public void setClType(ClType clType) {
         this.clType = clType;
+    }
+
+    public String getCodesecret() {
+        return codesecret;
+    }
+
+    public void setCodesecret(String codesecret) {
+        this.codesecret = codesecret;
     }
 }

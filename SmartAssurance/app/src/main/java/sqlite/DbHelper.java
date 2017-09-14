@@ -18,16 +18,17 @@ import java.io.OutputStream;
 
 public class DbHelper extends SQLiteOpenHelper {
     Context context;
-    public static String DB_NAME="smartassurance.db";
-    public static int VERSIONDB=1;
+    public static String DB_NAME = "smartassurance.db";
+    public static int VERSIONDB = 1;
     public static String DB_PATH;
+
     public DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
                     int version) {
         super(context, name, factory, version);
         this.context = context;
 
 
-        DB_PATH="/data/data/"+context.getApplicationContext().getPackageName()+"/databases/";
+        DB_PATH = "/data/data/" + context.getApplicationContext().getPackageName() + "/databases/";
     }
 
     @Override
@@ -40,21 +41,14 @@ public class DbHelper extends SQLiteOpenHelper {
 
     }
 
-    public static DbHelper init(Context c, boolean open)
-    {
-        DbHelper db=new DbHelper(c, DbHelper.DB_NAME, null, DbHelper.VERSIONDB);
-        if(db.checkdatabase())
-        {
-            if(open)db.opendatabase();
-        }
-        else
-        {
-            try
-            {
+    public static DbHelper init(Context c, boolean open) {
+        DbHelper db = new DbHelper(c, DbHelper.DB_NAME, null, DbHelper.VERSIONDB);
+        if (db.checkdatabase()) {
+            if (open) db.opendatabase();
+        } else {
+            try {
                 db.createdatabase();
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
@@ -64,13 +58,13 @@ public class DbHelper extends SQLiteOpenHelper {
     public void createdatabase() throws IOException {
         boolean dbexist = checkdatabase();
 
-        if(dbexist) {
+        if (dbexist) {
             System.out.println(" Database exists. - creation");
         } else {
             this.getReadableDatabase();
             try {
                 copydatabase();
-            } catch(IOException e) {
+            } catch (IOException e) {
                 throw new Error("Error copying database");
             }
         }
@@ -86,7 +80,7 @@ public class DbHelper extends SQLiteOpenHelper {
             //checkdb = SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READWRITE);
             checkdb = dbfile.exists();
             System.out.println("Database existe .....");
-        } catch(SQLiteException e) {
+        } catch (SQLiteException e) {
             e.printStackTrace();
             System.out.println("Database doesn't exist");
         }
@@ -107,8 +101,8 @@ public class DbHelper extends SQLiteOpenHelper {
         // transfer byte to inputfile to outputfile
         byte[] buffer = new byte[1024];
         int length;
-        while ((length = myinput.read(buffer))>0) {
-            myoutput.write(buffer,0,length);
+        while ((length = myinput.read(buffer)) > 0) {
+            myoutput.write(buffer, 0, length);
         }
 
         //Close the streams
@@ -120,9 +114,10 @@ public class DbHelper extends SQLiteOpenHelper {
     public SQLiteDatabase opendatabase() throws SQLException {
         //Open the database
         String mypath = DB_PATH + DB_NAME;
-        return  SQLiteDatabase.openDatabase(mypath, null, SQLiteDatabase.OPEN_READWRITE);
+        return SQLiteDatabase.openDatabase(mypath, null, SQLiteDatabase.OPEN_READWRITE);
     }
-    public void openlocaldatabase(){
+
+    public void openlocaldatabase() {
         //String mypath=
     }
 

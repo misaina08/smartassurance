@@ -126,7 +126,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".DevisAutoActivity"></activity>
+        <activity android:name=".DevisAutoActivity" />
+        <activity android:name=".VerrouillageActivity"></activity>
     </application>
 
 </manifest>

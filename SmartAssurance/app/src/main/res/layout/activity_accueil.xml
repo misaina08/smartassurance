@@ -5,28 +5,23 @@
     android:id="@+id/contentAccueil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context="com.aro.misaina.smartassurance.AccueilActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:layout_height="314dp"
-        android:layout_above="@+id/bottomBar"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1.00">
 
-        <LinearLayout
-            android:id="@+id/contentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:layout_weight="0.93"
-            android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_weight="1.00"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="200">
 
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottomBar"

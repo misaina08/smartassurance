@@ -31,6 +31,7 @@ import fcm.FirebaseInitializer;
 import services.ObjetsStatique;
 import services.SessionManager;
 import sqlite.GuichetDao;
+import utilitaire.LocaleHelper;
 
 public class AccueilActivity extends AppCompatActivity {
     private AccueilActivity accueilActivity;
@@ -47,7 +48,14 @@ public class AccueilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_accueil);
 
         try {
-            contentAccueil = (LinearLayout)findViewById(R.id.contentAccueil);
+            // init language
+            LocaleHelper localeHelper = new LocaleHelper(this);
+            localeHelper.setLocale();
+
+            // initialisation de la session
+            SessionManager sessionManager = new SessionManager(this.getApplicationContext());
+
+            contentAccueil = (LinearLayout) findViewById(R.id.contentAccueil);
 
             // init sur guichet
             GuichetDao guichetDao = new GuichetDao(this.getApplicationContext());
@@ -142,7 +150,7 @@ public class AccueilActivity extends AppCompatActivity {
 
         MenuItem userAction = (MenuItem) menu.findItem(R.id.user_action);
         MenuItem userSpace = (MenuItem) menu.findItem(R.id.user_space);
-        SessionManager sessionManager = new SessionManager(this.getApplicationContext());
+
         if (SessionManager.estConnecte()) {
             userAction.setVisible(false);
             userSpace.setVisible(true);
@@ -186,12 +194,18 @@ public class AccueilActivity extends AppCompatActivity {
         super.onResume();
         nfcAdapter.enableForegroundDispatch(this, pendingIntent, null,
                 null);
+//        if (SessionManager.estConnecte()) {
+//            Intent intent = new Intent(this, VerrouillageActivity.class) ;
+//            startActivity(intent);
+//        }
+        System.out.println("on resume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
         nfcAdapter.disableForegroundDispatch(this);
+        System.out.println("on pause");
     }
 
     @Override
@@ -203,6 +217,12 @@ public class AccueilActivity extends AppCompatActivity {
             //Méthode qui va traiter le tag NFC
             processNfcIntent(intent);
         }
+        System.out.println("on new intent");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 
     public void processNfcIntent(Intent intent) {
@@ -296,7 +316,6 @@ public class AccueilActivity extends AppCompatActivity {
         // Get the Text
         return new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, textEncoding);
     }
-
 
 
 }

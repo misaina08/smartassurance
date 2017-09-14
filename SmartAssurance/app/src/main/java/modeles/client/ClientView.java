@@ -27,7 +27,7 @@ public class ClientView extends BaseModele {
     private String adresse;
 
     private String profession;
-
+    private String codesecret;
     private Date dateNaissance;
     private String lieuNaissance;
     private String cin;
@@ -179,5 +179,12 @@ public class ClientView extends BaseModele {
         this.agence = agence;
     }
 
+    public String getCodesecret() {
+        return codesecret;
+    }
+
+    public void setCodesecret(String codesecret) {
+        this.codesecret = codesecret;
+    }
 
 }

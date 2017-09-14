@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Smart Assurance</string>
+    <string name="hello">Miarahaba</string>
+    <string name="accueil">Fandraisana</string>
+    <string name="guichet">Birao</string>
+    <string name="bot">Firesahana</string>
+    <string name="parametre">Safidy</string>
+    <string name="contrat">Fifanarahana</string>
+    <string name="nom">Anarana</string>
+    <string name="prenom">Fanampin\'anarana</string>
+    <string name="date_naissance">Daty nahaterahana</string>
+    <string name="valider">Atao</string>
+    <string name="annuler">Miala</string>
+    <string name="accepter">Ekena</string>
+    <string name="connexion">Fidirana</string>
+    <string name="connecter">Miditra</string>
+    <string name="hello_blank_fragment">sali vide</string>
+    <string name="choisissez_langue">Safidio ny teninao</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
