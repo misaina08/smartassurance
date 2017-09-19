@@ -2,21 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/tab_acueil"
-        android:enabled="true"
-        android:icon="@drawable/ic_home_filled"
-        android:title="@string/accueil"
-        app:showAsAction="always|withText" />
-    <item
-        android:id="@+id/tab_guichet"
-        android:enabled="true"
-        android:icon="@drawable/ic_guichet_filled"
-        android:title="@string/guichet"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/tab_ai"
-        />
-    <item
         android:id="@+id/tab_contrats"
         android:enabled="true"
         android:icon="@drawable/ic_contrat_filled"

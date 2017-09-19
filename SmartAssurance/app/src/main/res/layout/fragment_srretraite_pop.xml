@@ -45,7 +45,7 @@
             <Spinner
                 android:id="@+id/drType"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bb_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.01" />
 
             <TextView
@@ -61,7 +61,7 @@
             <Spinner
                 android:id="@+id/drOption"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bb_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.03" />
 
             <TextView
@@ -76,7 +76,7 @@
             <Spinner
                 android:id="@+id/drCotisation"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bb_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.01" />
 
             <android.support.design.widget.TextInputLayout
@@ -112,7 +112,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/bb_height"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.00">
 
                 <EditText
