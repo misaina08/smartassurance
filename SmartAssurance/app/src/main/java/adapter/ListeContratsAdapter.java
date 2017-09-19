@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aro.misaina.smartassurance.FicheContratAutoActivity;
@@ -17,7 +18,6 @@ import java.text.DecimalFormat;
 import java.util.List;
 
 import modeles.souscription.Souscription;
-import utilitaire.Util;
 
 /**
  * Created by LENOVO on 8/2/2017.
@@ -37,9 +37,21 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
 
     @Override
     public void onBindViewHolder(ListeContratsAdapter.ViewHolder holder, int position) {
-        holder.tTitreContrat.setText("Assurances " + contrats.get(position).getNomProduit());
-        holder.eDate.setText(Util.dateToString(contrats.get(position).getDateSouscription()));
-        holder.tMt.setText("Prime total à payer : " + new DecimalFormat("#,##0.00").format(contrats.get(position).getPrimetotal()) + " Ar");
+        holder.tTitreContrat.setText(contrats.get(position).getNomProduit());
+        holder.tMt.setText(new DecimalFormat("#,##0.00").format(contrats.get(position).getPrimetotal()) + " Ar");
+        if (contrats.get(position).getIdProduit() == 2) { //auto moto
+            holder.iconeContrat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.mipmap.ic_car_filled));
+        }
+        else if (contrats.get(position).getIdProduit() == 3) { //retraite
+            holder.iconeContrat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.mipmap.ic_trekking_filled));
+        }
+        if(contrats.get(position).getValide() == 1) {
+            holder.iconeEtat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.drawable.ic_checked));
+        }
+        if(contrats.get(position).getValide() != 1) {
+            holder.iconeEtat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.drawable.ic_radio));
+        }
+
     }
 
     @Override
@@ -49,16 +61,20 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView tTitreContrat;
-        public final TextView eDate;
+
         public final TextView tMt;
+        public final ImageView iconeContrat;
+        public final ImageView iconeEtat;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
 //            initialisation des composants graphiques
             tTitreContrat = ((TextView) itemView.findViewById(R.id.tTitreContrat));
-            eDate = ((TextView) itemView.findViewById(R.id.eDate));
+
             tMt = ((TextView) itemView.findViewById(R.id.tMt));
+            iconeContrat = ((ImageView) itemView.findViewById(R.id.iconeContrat));
+            iconeEtat = ((ImageView) itemView.findViewById(R.id.iconeEtat));
 
 //            events
 //            ex : item onclick

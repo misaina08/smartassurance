@@ -14,7 +14,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:layout_weight="0.04"
-        android:background="@android:color/white"
+        android:background="@color/colorGrey"
         app:cardElevation="1dp">
 
         <TextView
@@ -22,9 +22,9 @@
             style="@style/TextNormal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorGrey"
             android:gravity="center"
             android:text="TextView"
-            android:textSize="18sp"
-            android:background="@android:color/white"/>
+            android:textSize="18sp" />
     </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -70,22 +70,30 @@
         <activity
             android:name=".ConnexionActivity"
             android:parentActivityName=".AccueilActivity" />
-        <activity android:name=".EspaceClientActivity" />
-        <activity android:name=".BotFragment" />
+        <activity
+            android:name=".EspaceClientActivity"
+            android:parentActivityName=".AccueilActivity" />
+        <activity
+            android:name=".BotFragment"
+            android:parentActivityName=".AccueilActivity" />
         <activity android:name=".ListeContratsFragment" />
         <activity
             android:name=".FicheContratAutoActivity"
-            android:parentActivityName=".ListeContratsFragment" />
+            android:parentActivityName=".ListeContratsFragment"
+            android:theme="@style/AroThemeDark" />
         <activity
             android:name=".FicheContratRetraiteActivity"
-            android:parentActivityName=".ListeContratsFragment" />
+            android:parentActivityName=".ListeContratsFragment"
+            android:theme="@style/AroThemeDark" />
         <activity
             android:name=".ListeComptePaiementActivity"
             android:parentActivityName=".EspaceClientActivity" />
         <activity
             android:name=".FormulaireSinistreActivity"
-            android:parentActivityName=".FicheContratAutoActivity" />
-        <activity android:name=".FicheSinistreActivity" />
+            android:theme="@style/AroThemeDark"/>
+        <activity
+            android:name=".FicheSinistreActivity"
+            android:theme="@style/AroThemeDark" />
         <activity android:name=".MapAgenceActivity" />
 
         <meta-data
@@ -127,7 +135,11 @@
         </service>
 
         <activity android:name=".DevisAutoActivity" />
-        <activity android:name=".VerrouillageActivity"></activity>
+        <activity android:name=".VerrouillageActivity" />
+        <activity
+            android:name=".ProfilActivity"
+            android:parentActivityName=".EspaceClientActivity" />
+        <activity android:name=".FicheActusActivity"></activity>
     </application>
 
 </manifest>

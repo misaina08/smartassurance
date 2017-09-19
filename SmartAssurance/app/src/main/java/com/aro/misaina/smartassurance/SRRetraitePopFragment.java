@@ -105,7 +105,7 @@ public class SRRetraitePopFragment extends DialogFragment {
             rtSouscription.setPrimetotal(new Double(eMt.getText().toString()));
             rtSouscription.setValide(0);
             rtSouscription.setIdProduit(3);
-            SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
+            SessionManager sessionManager = new SessionManager(botFragment.getApplicationContext());
             ClientView cl = (ClientView) SessionManager.getClientConnected();
             rtSouscription.setIdClient(cl.getId());
             rtSouscription.setIdClientSouscripteur(cl.getId());

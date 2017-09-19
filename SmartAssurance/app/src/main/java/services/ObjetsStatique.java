@@ -3,6 +3,7 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import async.ListProduitAsync;
 import modeles.Agence;
 import modeles.AmGaranti;
 import modeles.automoto.AmDommage;
@@ -27,6 +28,8 @@ public class ObjetsStatique {
     private static boolean estSurGuichet = false;
 
     public void init() {
+        ListProduitAsync listProduitAsync = new ListProduitAsync();
+        listProduitAsync.execute();
         AutoMotoService autoMotoService = new AutoMotoService();
         garanties = autoMotoService.getGaranties();
 
@@ -58,10 +61,10 @@ public class ObjetsStatique {
         amDommages.add(new AmDommage(3, "Peinture "));
         amDommages.add(new AmDommage(4, "Pneu "));
 
-        produits = new ArrayList<Produit>();
-        produits.add(new Produit(1, "Assurance vie"));
-        produits.add(new Produit(2, "Assurance auto-moto"));
-        produits.add(new Produit(3, "Assurance retraite"));
+//        produits = new ArrayList<Produit>();
+//        produits.add(new Produit(1, "Assurance vie"));
+//        produits.add(new Produit(2, "Assurance auto-moto"));
+//        produits.add(new Produit(3, "Assurance retraite"));
 
         usagesVehicule = new ArrayList<String>();
         usagesVehicule.add("Particulier");

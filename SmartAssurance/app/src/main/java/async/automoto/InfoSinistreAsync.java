@@ -33,7 +33,7 @@ public class InfoSinistreAsync extends AsyncTask<Integer, Void, AmSinistreView> 
             fragment.gettAdresse().setText(res.getAdresseConducteur());
             fragment.gettCats().setText(res.getCatPermis());
             fragment.gettCatValidees().setText(res.getCatValidees());
-            fragment.gettConducteur().setText(res.getNomConducteur());
+            fragment.gettConducteur().setText("Moi");
             fragment.gettDateDeliv().setText(Util.dateToString(res.getDateDelivrance()));
             fragment.gettDn().setText(Util.dateToString(res.getDnConducteur()));
             fragment.gettDupl().setText(res.getNoduplicata());

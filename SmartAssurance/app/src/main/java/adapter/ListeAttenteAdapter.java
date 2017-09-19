@@ -38,7 +38,7 @@ public class ListeAttenteAdapter extends RecyclerView.Adapter<ListeAttenteAdapte
             GuichetDao guichetDao = new GuichetDao(guichetFragment.getActivity().getApplicationContext());
             Integer numeroEnCours = guichetDao.getNumeroEnCours();
             if(numeroEnCours.equals(attentes.get(position).getNumero())) {
-                holder.numero.setBackgroundColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorPrimary));
+                holder.numero.setBackgroundColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.green_aro));
                 holder.numero.setTextColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorWhite));
             }
             if (attentes.get(position).getTermine()==1) {

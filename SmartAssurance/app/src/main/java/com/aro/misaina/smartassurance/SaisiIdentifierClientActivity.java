@@ -22,7 +22,7 @@ public class SaisiIdentifierClientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saisi_identifier_client);
-
+        getSupportActionBar().setTitle(R.string.inscription);
         try {
             client = new Client();
             thisActivity = this;

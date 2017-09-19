@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.TabDepotsRetraiteFragment;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import adapter.ListeDepotsAdapter;
@@ -49,6 +50,11 @@ public class ListeDepotsAsync extends AsyncTask<Integer, Void, List<RtDepot>> {
             ListeDepotsAdapter adapter = new ListeDepotsAdapter();
             adapter.setListeDepots(liste);
             rec.setAdapter(adapter);
+            Double total = new Double(0);
+            for(RtDepot r : liste) {
+                total += r.getValeur();
+            }
+            fragment.getTotal().setText(new DecimalFormat("#,##0.00").format(total) + " Ar");
         }
     }
 

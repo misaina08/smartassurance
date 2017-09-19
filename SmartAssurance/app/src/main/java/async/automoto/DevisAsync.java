@@ -43,11 +43,11 @@ public class DevisAsync extends AsyncTask<VehiculeWS, Void, Double> {
     @Override
     protected void onPostExecute(Double aDouble) {
         if (aDouble != null) {
-            CardUI cardUI = new CardUI(botFragment.getActivity());
+            CardUI cardUI = new CardUI(botFragment);
             try {
 
                 cardUI.setText("La prime nette est de " + new DecimalFormat("#,##0.00").format(aDouble) + " Ariary");
-                Button b1 = new Button(botFragment.getActivity());
+                Button b1 = new Button(botFragment);
                 b1.setText("Souscrire ?");
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -73,10 +73,10 @@ public class DevisAsync extends AsyncTask<VehiculeWS, Void, Double> {
                     garanties += "\n"+saisiGaranti.getLibelle() + " à "+new DecimalFormat("#,##0.00").format(saisiGaranti.getLimite())+" Ar";
                 }
 
-                BulleUI bulleGaranties = new BulleUI(botFragment.getActivity(), 1);
+                BulleUI bulleGaranties = new BulleUI(botFragment, 1);
                 bulleGaranties.setTextInBulle(garanties);
 
-                BulleUI bullereponse = new BulleUI(botFragment.getActivity(), 0);
+                BulleUI bullereponse = new BulleUI(botFragment, 0);
                 bullereponse.setTextInBulle("C'est faite. Voilà le devis de votre de l'assurance de votre véhicule");
 
                 botFragment.updateMyChat(infoVehicule);

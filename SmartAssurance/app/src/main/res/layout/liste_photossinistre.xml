@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/iPhoto"
-            android:layout_width="182dp"
-            android:layout_height="164dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher" />
     </LinearLayout>
 </LinearLayout>

@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
     android:weightSum="1"
     tools:context="com.aro.misaina.smartassurance.BotFragment"
     tools:layout_editor_absoluteX="0dp"
@@ -16,40 +15,49 @@
         android:layout_height="314dp"
         android:layout_above="@+id/contentInput"
         android:layout_centerHorizontal="true"
-        android:layout_weight="1.00">
+        android:layout_weight="1.00"
+        android:fillViewport="false">
 
         <LinearLayout
             android:id="@+id/chatContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="bottom|end"
             android:layout_weight="0.91"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"></LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:id="@+id/contentInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_grey"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
+            android:id="@+id/textSaisi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.04">
-
-            <EditText
-                android:id="@+id/textSaisi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </android.support.design.widget.TextInputLayout>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#00000000" />
 
         <ImageButton
             android:id="@+id/buttonSend"
-            android:layout_width="73dp"
-            android:src="@drawable/ic_send_fill"
-            android:layout_height="match_parent"/>
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_circle_fill"
+            android:padding="0dp"
+            android:src="@drawable/ic_send_fill" />
     </LinearLayout>
 
 </LinearLayout>

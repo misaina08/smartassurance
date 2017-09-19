@@ -19,6 +19,7 @@ import modeles.BaseModele;
 
 public class WSUtil {
     private static String urlServer = "http://192.168.10.4:9090/SmartAssuranceWS-war/rest";
+    private static String urlPhoto = "http://192.168.10.4:9090/SmartAssuranceWS-war/resources/bo/img/actus/";
 
     public String parseObjectToJson(BaseModele baseModele) throws Exception {
         try {
@@ -131,5 +132,13 @@ public class WSUtil {
 
     public static void setUrlServer(String urlServer) {
         WSUtil.urlServer = urlServer;
+    }
+
+    public static String getUrlPhoto() {
+        return urlPhoto;
+    }
+
+    public static void setUrlPhoto(String urlPhoto) {
+        WSUtil.urlPhoto = urlPhoto;
     }
 }

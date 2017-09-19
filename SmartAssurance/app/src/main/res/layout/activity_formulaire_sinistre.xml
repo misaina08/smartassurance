@@ -25,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
                 android:height="30dp"
-                android:text="Catégorie de l'accident" />
+                android:text="Catégorie de l'accident"
+                android:textSize="14sp" />
 
             <Spinner
                 android:id="@+id/sCategorie"
@@ -35,29 +36,33 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.19"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <android.support.design.widget.TextInputLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.00">
+                    android:layout_width="279dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="0.96">
 
                     <EditText
                         android:id="@+id/eLieu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Lieu de l'accident" />
+                        android:layout_width="281dp"
+                        android:layout_height="match_parent"
+                        android:hint="Lieu de l'accident"
+                        android:inputType="textMultiLine" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
                     android:id="@+id/bCurrentPos"
-                    android:layout_width="46dp"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="51dp"
                     android:layout_height="wrap_content"
-                    android:text="C" />
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_ma_position"
+                    android:gravity="center" />
 
             </LinearLayout>
 
@@ -78,7 +83,8 @@
                     android:id="@+id/eConducteur"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Conducteur" />
+                    android:hint="Conducteur"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -137,7 +143,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.19"
                 android:height="30dp"
-                android:text="Permis" />
+                android:text="Permis de conduire"
+                android:textSize="14sp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

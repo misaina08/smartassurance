@@ -21,7 +21,6 @@ public class LangueDao extends BaseDao {
             while (cursor.moveToNext()) {
                 res = cursor.getString(0);
             }
-            System.out.println("___________________________"+res);
             return res;
         } catch (Exception ex) {
             ex.printStackTrace();

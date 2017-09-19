@@ -103,12 +103,12 @@ public class DevisAutoActivity extends DialogFragment {
             if (checkBoxGarantie.isChecked()) {
                 editTextGarantie.setText(garanti.getLimiteMin().toString());
             }
-            TextInputLayout textInputLayout = new TextInputLayout(getBotFragment().getActivity());
+            TextInputLayout textInputLayout = new TextInputLayout(getBotFragment());
             textInputLayout.addView(editTextGarantie);
             textInputLayout.setMinimumWidth(LinearLayout.LayoutParams.MATCH_PARENT);
             textInputLayout.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
-            LinearLayout linearLayout = new LinearLayout(getBotFragment().getActivity());
+            LinearLayout linearLayout = new LinearLayout(getBotFragment());
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
             linearLayout.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             linearLayout.addView(checkBoxGarantie);
@@ -147,7 +147,7 @@ public class DevisAutoActivity extends DialogFragment {
             vehiculeWS.setSe(spinSe.getSelectedItem().toString());
             vehiculeWS.setIdUsage(spinUsage.getSelectedItemPosition() + 1);
             vehiculeWS.setNbRoues(new Integer(eNbRoues.getText().toString()));
-            SessionManager sessionManager = new SessionManager(botFragment.getActivity().getApplicationContext());
+            SessionManager sessionManager = new SessionManager(botFragment.getApplicationContext());
             vehiculeWS.setIdClient(((ClientView) SessionManager.getClientConnected()).getId());
 
             AutoMotoService autoMotoService = new AutoMotoService();
@@ -191,7 +191,7 @@ public class DevisAutoActivity extends DialogFragment {
         List<AmGaranti> listeGaranties = autoMotoService.getGaranties();
         eListGaranties = new ArrayList<EditText>(listeGaranties.size());
         for (AmGaranti garanti : listeGaranties) {
-            EditText editText = new EditText(getBotFragment().getActivity());
+            EditText editText = new EditText(getBotFragment());
             editText.setHint(garanti.getLibelle());
             editText.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
             editText.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
@@ -202,7 +202,7 @@ public class DevisAutoActivity extends DialogFragment {
     public void initCheckBoxGaranties() {
         chBoxGaranties = new ArrayList<CheckBox>(ObjetsStatique.getGaranties().size());
         for (int i = 0; i < ObjetsStatique.getGaranties().size(); i++) {
-            CheckBox checkBox = new CheckBox(getBotFragment().getActivity());
+            CheckBox checkBox = new CheckBox(getBotFragment());
             checkBox.setSelected(false);
             if (i == 0) {
 

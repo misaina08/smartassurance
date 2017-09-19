@@ -24,6 +24,8 @@ public class FicheSinistreActivity extends AppCompatActivity implements ActionBa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_sinistre);
+        getSupportActionBar().setTitle(R.string.sinistre);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         idTab = getIntent().getExtras().getInt("idtab");
         dataJson = getIntent().getExtras().getString("dataJson");
@@ -32,10 +34,14 @@ public class FicheSinistreActivity extends AppCompatActivity implements ActionBa
 
         init();
     }
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
 
 
     public void init(){
-        System.out.println("initu");
         viewPager = (ViewPager) findViewById(R.id.viewPagerSinistre);
         actionBar = getSupportActionBar();
         adapter = new TabSinistreAdapter(getSupportFragmentManager());

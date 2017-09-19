@@ -18,7 +18,7 @@ import modeles.automoto.AmSinistreView;
 import utilitaire.Util;
 
 /**
- * Created by LENOVO on 8/10/2017.
+ * Created by misa on 8/10/2017.
  */
 
 public class ListeSinistresAdapter extends RecyclerView.Adapter<ListeSinistresAdapter.ViewHolder> {

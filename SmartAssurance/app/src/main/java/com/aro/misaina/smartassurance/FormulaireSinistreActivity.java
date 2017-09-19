@@ -63,10 +63,21 @@ public class FormulaireSinistreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulaire_sinistre);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.sinistre);
+
         idsouscription = getIntent().getExtras().getInt("idsouscription");
         datajson = getIntent().getExtras().getString("datajson");
         activity = this;
         initData();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        System.out.println("precedent");
+        finish();
+        return true;
     }
 
     public void initData() {
@@ -122,6 +133,30 @@ public class FormulaireSinistreActivity extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+        eDn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(eDn);
+            }
+        });
+        eDebValidite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(eDebValidite);
+            }
+        });
+        eFinValidite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(eFinValidite);
+            }
+        });
+        eDateDeliv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog(eDateDeliv);
             }
         });
 
@@ -189,6 +224,11 @@ public class FormulaireSinistreActivity extends AppCompatActivity {
         // Handle action bar item clicks here.
         int id = item.getItemId();
         return true;
+    }
+    public void showDatePickerDialog(EditText toFill) {
+        DatePickerFragment newFragment = new DatePickerFragment();
+        newFragment.setEditTextToFill(toFill);
+        newFragment.show(getFragmentManager().beginTransaction(), "Date");
     }
 
 }

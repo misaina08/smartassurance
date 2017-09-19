@@ -15,7 +15,7 @@ public class SaisiInfoClientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saisiinfo_client);
-
+        getSupportActionBar().setTitle(R.string.inscription);
         thisActivity = this;
         // initialisation des composants
         initComponents();

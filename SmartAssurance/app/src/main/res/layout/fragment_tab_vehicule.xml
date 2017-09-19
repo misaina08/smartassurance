@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGrey"
     android:orientation="vertical"
     android:padding="10dp"
     android:weightSum="1"
@@ -9,195 +10,242 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="vertical">
+        android:layout_margin="5dp"
+        android:layout_weight="0.03">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.03"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0.03"
+                android:text="@string/immatriculation" />
+
+            <TextView
+                android:id="@+id/vNoimm"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0.03"
+                android:text="TextView" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.03">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    style="@style/TextNormal"
+                    android:layout_width="118dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.37"
+                    android:text="@string/numero_serie" />
+
+                <TextView
+                    android:id="@+id/vNoSerie"
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.40"
+                    android:text="@string/marque_et_type" />
+
+                <TextView
+                    android:id="@+id/vMarque"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/date_mise_en_circulation" />
+
+                <TextView
+                    android:id="@+id/vDateMisCirc"
+                    style="@style/TextNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.27"
+                    android:text="TextView"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.03">
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/tUsage"
             style="@style/TextNormal"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="0.03"
-            android:text="NO Immatriculation" />
+            android:padding="10dp"
+            android:text="TextView" />
+    </android.support.v7.widget.CardView>
 
-        <TextView
-            android:id="@+id/vNoimm"
-            style="@style/TextNormal"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.03">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="0.03"
-            android:text="TextView" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.09"
-        android:orientation="vertical"
-        android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView13"
-            style="@style/TextNormal"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="0.40"
-            android:text="Marque et type" />
+                <TextView
+                    android:id="@+id/textView24"
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/source_energie" />
 
-        <TextView
-            android:id="@+id/vMarque"
-            style="@style/TextNormal"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="TextView" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/vSe"
+                    style="@style/TextNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.12"
+                    android:text="TextView" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView17"
-            style="@style/TextNormal"
-            android:layout_width="136dp"
-            android:layout_height="40dp"
-            android:text="NO série" />
+                <TextView
+                    android:id="@+id/textView26"
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/nb_roues" />
 
-        <TextView
-            android:id="@+id/vNoSerie"
-            style="@style/TextNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="TextView" />
+                <TextView
+                    android:id="@+id/vNbRoues"
+                    style="@style/TextNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.21"
+                    android:text="TextView" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
-    <TextView
-        android:id="@+id/tUsage"
-        style="@style/TextNormal"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_weight="0.03"
-        android:text="TextView" />
+                <TextView
+                    android:id="@+id/textView28"
+                    style="@style/TextNormal"
+                    android:layout_width="151dp"
+                    android:layout_height="40dp"
+                    android:text="@string/nb_place" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/vNbPlace"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="TextView" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView20"
-            style="@style/TextNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="Mis en circulation" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/vDateMisCirc"
-            style="@style/TextNormal"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_weight="1.27"
-            android:text="TextView" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView22"
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.81"
+                    android:text="@string/puissance" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView22"
-            style="@style/TextNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="Puissance fiscale" />
-
-        <TextView
-            android:id="@+id/vPuissance"
-            style="@style/TextNormal"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_weight="1.23"
-            android:text="TextView" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView24"
-            style="@style/TextNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="Source d'énergie" />
-
-        <TextView
-            android:id="@+id/vSe"
-            style="@style/TextNormal"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_weight="1.12"
-            android:text="TextView" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView26"
-            style="@style/TextNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="Nombre de roues" />
-
-        <TextView
-            android:id="@+id/vNbRoues"
-            style="@style/TextNormal"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_weight="1.21"
-            android:text="TextView" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            android:id="@+id/textView28"
-            style="@style/TextNormal"
-            android:layout_width="170dp"
-            android:layout_height="40dp"
-            android:text="Nombre de places" />
-
-        <TextView
-            android:id="@+id/vNbPlace"
-            style="@style/TextNormal"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="TextView" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/vPuissance"
+                    style="@style/TextNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.23"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

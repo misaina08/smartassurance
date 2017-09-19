@@ -2,177 +2,231 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGrey"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context="com.aro.misaina.smartassurance.TabInfoSousRetraiteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView36"
-                style="@style/TextNormal"
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Numéro police" />
+                android:layout_margin="5dp"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/vNopolice"
-                style="@style/TextSub"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView36"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="@string/numero_police" />
+
+                        <TextView
+                            android:id="@+id/vNopolice"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView34"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="@string/date_souscription" />
+
+                        <TextView
+                            android:id="@+id/vDatesouscription"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        style="@style/TextNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="@string/souscripteur" />
+
+                    <TextView
+                        android:id="@+id/vSouscripteur"
+                        style="@style/TextSub"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/age_retraite" />
+
+                        <TextView
+                            android:id="@+id/vAge"
+                            style="@style/TextSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView32"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/periodicite_cotisation" />
+
+                        <TextView
+                            android:id="@+id/vCotisation"
+                            style="@style/TextSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/type" />
+
+                        <TextView
+                            android:id="@+id/vType"
+                            style="@style/TextSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/beneficiaire_en_cas_deces" />
+
+                        <TextView
+                            android:id="@+id/vBeneficiaire"
+                            style="@style/TextSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            style="@style/TextNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/option_retraite" />
+
+                        <TextView
+                            android:id="@+id/vOption"
+                            style="@style/TextSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView34"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Date de souscription" />
-
-            <TextView
-                android:id="@+id/vDatesouscription"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView12"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Souscripteur" />
-
-            <TextView
-                android:id="@+id/vSouscripteur"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView19"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Type" />
-
-            <TextView
-                android:id="@+id/vType"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView23"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Age de retraite" />
-
-            <TextView
-                android:id="@+id/vAge"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView27"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bénéficiaire en cas de décès" />
-
-            <TextView
-                android:id="@+id/vBeneficiaire"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView30"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Option de retraite" />
-
-            <TextView
-                android:id="@+id/vOption"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView32"
-                style="@style/TextNormal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cotisation" />
-
-            <TextView
-                android:id="@+id/vCotisation"
-                style="@style/TextSub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>

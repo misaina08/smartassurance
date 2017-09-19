@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Smart Assurance</string>
-    <string name="hello">Miarahaba</string>
+    <string name="hello">Apetaho amin\'ny teboka ny smartphone</string>
     <string name="accueil">Fandraisana</string>
     <string name="guichet">Birao</string>
     <string name="bot">Firesahana</string>
@@ -16,6 +16,45 @@
     <string name="connecter">Miditra</string>
     <string name="hello_blank_fragment">sali vide</string>
     <string name="choisissez_langue">Safidio ny teninao</string>
+    <string name="contact">Ifandraisana</string>
+    <string name="adresse">Toerana</string>
+    <string name="coordonnees">Fifandraisana</string>
+    <string name="information_client">Momba ny mpanjifa</string>
+    <string name="identification">Ny maha anao</string>
+    <string name="guichet_approcher">Apetaho amin\'ny teboka ny smartphone</string>
+    <string name="numero_police">Nomerao ahafantara</string>
+    <string name="date_souscription">Nisoratra anarana ny</string>
+    <string name="souscripteur">Mpiahy</string>
+    <string name="type">Karazana</string>
+    <string name="beneficiaire_en_cas_deces">Mpaka ny vola raha maty</string>
+    <string name="option_retraite">Fomba fakana ny vola</string>
+    <string name="age_retraite">Taona hisotroan-dronono</string>
+    <string name="periodicite_cotisation">Fomba andoavana ny vola</string>
+    <string name="duree_contrat">Faharetan\'ny fifanarahana</string>
+    <string name="prime_nette">Prime nette</string>
+    <string name="prime_total">Totalin\'ny aloa</string>
+    <string name="immatriculation">Laharana</string>
+    <string name="numero_serie">Laharana tokana</string>
+    <string name="marque_et_type">Marika sy karazana</string>
+    <string name="date_mise_en_circulation">Daty nanombohany nandeha</string>
+    <string name="source_energie">Mandeha @</string>
+    <string name="nb_roues">Isan\'ny laroa</string>
+    <string name="nb_place">Isan\'ny toerana</string>
+    <string name="puissance">Tanjaka</string>
+    <string name="sinistre">Loza</string>
+    <string name="vehicule">Fiara</string>
+    <string name="garanties">Antoka</string>
+    <string name="informations">Momba momba</string>
+    <string name="permis">Alàlana fitondrana fiara</string>
+    <string name="conducteur">Mpitondra</string>
+    <string name="duplicate">Duplicata N°</string>
+    <string name="actualites">Vaovao</string>
+    <string name="profession">Asa</string>
+    <string name="lieu_naissance">Toerana nahaterahana</string>
+    <string name="suivant">Manaraka</string>
+    <string name="informations_personnelles">Momba momba ahy</string>
+    <string name="inscription">Hanoratra anarana</string>
+    <string name="mdp">Teny miafina</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

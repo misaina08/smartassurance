@@ -33,7 +33,7 @@ public class ListeDepotsAdapter extends RecyclerView.Adapter<ListeDepotsAdapter.
     @Override
     public void onBindViewHolder(ListeDepotsAdapter.ViewHolder holder, int position) {
         holder.vDate.setText(Util.dateToString(getListeDepots().get(position).getDaty()));
-        holder.vMt.setText(new DecimalFormat("#,##0.00").format(getListeDepots().get(position).getValeur()));
+        holder.vMt.setText(new DecimalFormat("#,##0.00").format(getListeDepots().get(position).getValeur())+" Ar");
     }
 
     @Override

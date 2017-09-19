@@ -11,16 +11,15 @@
 
         <TextView
             android:id="@+id/tDommage"
-            android:layout_width="312dp"
+            android:layout_width="256dp"
             android:layout_height="match_parent"
             android:gravity="fill_vertical"
             android:text="TextView" />
 
         <Button
             android:id="@+id/bDel"
-            android:layout_width="wrap_content"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="-" />
     </LinearLayout>
 </LinearLayout>

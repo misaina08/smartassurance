@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<tabs>
+<tabs xmlns:app="http://schemas.android.com/apk/res-auto">
     <tab
+        activeColor="@color/green_aro"
+        barColorWhenSelected="#FFFFFF"
+        icon="@drawable/ic_home_filled"
         id="@+id/tab_acueil"
-        icon="@drawable/ic_home_simple"
         title="@string/accueil" />
     <tab
+        activeColor="@color/green_aro"
+        barColorWhenSelected="#FFFFFF"
+        icon="@drawable/ic_guichet_filled"
         id="@+id/tab_guichet"
-        icon="@drawable/ic_guichet"
         title="@string/guichet" />
     <tab
+        activeColor="@color/green_aro"
+        barColorWhenSelected="#FFFFFF"
+        icon="@drawable/ic_chat_filled"
         id="@+id/tab_ai"
-        icon="@drawable/ic_chat"
         title="@string/bot" />
     <tab
+        activeColor="@color/green_aro"
+        barColorWhenSelected="#FFFFFF"
+        icon="@drawable/ic_contrat_filled"
         id="@+id/tab_contrats"
-        icon="@drawable/ic_contrat"
         title="@string/contrat" />
     <tab
+        activeColor="@color/green_aro"
+        barColorWhenSelected="#FFFFFF"
+        icon="@drawable/ic_settings_filled"
         id="@+id/tab_parametres"
-        icon="@drawable/ic_setting_simple"
         title="@string/parametre" />
 </tabs>

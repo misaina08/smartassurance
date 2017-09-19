@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import async.retraite.ListeDepotsAsync;
 
@@ -14,6 +15,7 @@ import async.retraite.ListeDepotsAsync;
  * A simple {@link Fragment} subclass.
  */
 public class TabDepotsRetraiteFragment extends Fragment {
+    private TextView total;
 
     public TabDepotsRetraiteFragment() {
         // Required empty public constructor
@@ -27,15 +29,24 @@ public class TabDepotsRetraiteFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle bundle){
+    public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
+
+        total = (TextView) getView().findViewById(R.id.total);
 
         Bundle b = this.getArguments();
         Integer[] params = new Integer[1];
-        params[0]  = b.getInt("idSouscription");
+        params[0] = b.getInt("idSouscription");
         ListeDepotsAsync async = new ListeDepotsAsync();
         async.setFragment(this);
         async.execute(params);
     }
 
+    public TextView getTotal() {
+        return total;
+    }
+
+    public void setTotal(TextView total) {
+        this.total = total;
+    }
 }

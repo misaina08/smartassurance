@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,7 @@ import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
 import ai.ui.UIElement;
+import async.bot.SignificationTermeAsync;
 import async.retraite.EstimationAsync;
 import async.retraite.SituationCompteAsync;
 import modeles.Agence;
@@ -50,19 +53,20 @@ public class Actions {
      *
      * @return
      */
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public UIElement listeProduit() {
 
         List<CardUI> cards = new ArrayList<CardUI>(ObjetsStatique.getProduits().size());
         for (final Produit p : ObjetsStatique.getProduits()) {
-            CardUI card = new CardUI(getContext().getActivity());
-            card.setText(p.getNom());
+            CardUI card = new CardUI(getContext());
+            card.setText(p.getIntitule());
 
             // ajout du bouton info pour le card
-            Button buttonInfo = new Button(getContext().getActivity());
+            Button buttonInfo = new Button(getContext());
             buttonInfo.setText("Info");
 
             // ajout du bouton souscrire
-            Button buttonSouscrire = new Button((getContext().getActivity()));
+            Button buttonSouscrire = new Button((getContext()));
             buttonSouscrire.setText("Souscrire");
 
             buttonInfo.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +79,9 @@ public class Actions {
                     }
                 }
             });
+
+//            buttonSouscrire.setBackground(getContext().getResources().getDrawable(R.drawable.shape_blue_strock));
+
             buttonSouscrire.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -101,7 +108,7 @@ public class Actions {
             card.getOptionsCardLayout().addView(buttonSouscrire);
             cards.add(card);
         }
-        CardListUI cardListUI = new CardListUI(getContext().getActivity());
+        CardListUI cardListUI = new CardListUI(getContext());
         cardListUI.addCards(cards);
         return cardListUI;
     }
@@ -119,35 +126,35 @@ public class Actions {
         final Agence agenceProche = coordonneeUtil.getAgenceProche(currPos);
 //        CurrentPositionAsync async = new CurrentPositionAsync();
 //        async.setActions(this);
-//        async.setActivity(getContext().getActivity());
+//        async.setActivity(getContext());
 //        async.execute();
 //        System.out.println(agenceProche());
 
-        CardUI cardUI = new CardUI(getContext().getActivity());
+        CardUI cardUI = new CardUI(getContext());
         cardUI.setText(agenceProche.getNom());
 
-        Button b1 = new Button(getContext().getActivity());
+        Button b1 = new Button(getContext());
         b1.setText("Voir dans le map");
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext().getActivity(), MapAgenceActivity.class);
+                Intent intent = new Intent(getContext(), MapAgenceActivity.class);
                 Gson gson = new Gson();
                 intent.putExtra("currPos", gson.toJson(currPos));
                 intent.putExtra("agenceDest", gson.toJson(agenceProche));
-                getContext().getActivity().startActivity(intent);
+                getContext().startActivity(intent);
             }
         });
 
 
-        Button b3 = new Button(getContext().getActivity());
+        Button b3 = new Button(getContext());
         b3.setText("Appeler");
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:" + agenceProche.getTel()));
-                if (ActivityCompat.checkSelfPermission(getContext().getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -157,7 +164,7 @@ public class Actions {
                     // for ActivityCompat#requestPermissions for more details.
                     return;
                 }
-                getContext().getActivity().startActivity(callIntent);
+                getContext().startActivity(callIntent);
             }
         });
 
@@ -174,13 +181,13 @@ public class Actions {
      * @throws Exception
      */
     public void infoProduit(Produit produit) throws Exception {
-        BulleUI bulleUI = new BulleUI(getContext().getActivity(), 0);
-        bulleUI.setTextInBulle("Informations sur le produit " + produit.getNom());
+        BulleUI bulleUI = new BulleUI(getContext(), 0);
+        bulleUI.setTextInBulle("Informations sur le produit " + produit.getIntitule());
 
-        BulleUI bulleUI1 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulleUI1 = new BulleUI(getContext(), 0);
         bulleUI1.setTextInBulle("wawa ");
 
-        BulleUI bulleUI2 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulleUI2 = new BulleUI(getContext(), 0);
         bulleUI2.setTextInBulle("huhu");
 
         List<BulleUI> list = new ArrayList<BulleUI>();
@@ -188,53 +195,79 @@ public class Actions {
         list.add(bulleUI1);
         list.add(bulleUI2);
 
-        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
+        BulleListUI bulleListUI = new BulleListUI(getContext());
         bulleListUI.addBulles(list);
 
         getContext().sendFromUI(bulleListUI, "Informations sur le produit");
     }
 
     public UIElement name() {
-        BulleUI bulleUi = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulleUi = new BulleUI(getContext(), 0);
         bulleUi.setTextInBulle("my name is jarvis");
         return bulleUi;
     }
 
     public UIElement aideCotisation() throws Exception {
-        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulle1 = new BulleUI(getContext(), 0);
         bulle1.setTextInBulle("D'accord.");
-        BulleUI bulle2 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulle2 = new BulleUI(getContext(), 0);
         bulle2.setTextInBulle("Quelle age avez vous actuellement ?");
 
         List<BulleUI> list = new ArrayList<BulleUI>();
         list.add(bulle1);
         list.add(bulle2);
 
-        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
+        BulleListUI bulleListUI = new BulleListUI(getContext());
         bulleListUI.addBulles(list);
 
         // question suivante
-        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext());
         currentQuestionDao.setCurrentQuestion("saveAgeCotisation");
         return bulleListUI;
     }
 
     public UIElement saveAgeCotisation(Integer age) throws Exception {
-        // enregistrement de l'age saisie
-        QuestionCotisationDao questionCotisationDao = new QuestionCotisationDao(getContext().getActivity());
-        questionCotisationDao.setAge(age);
-        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
-        currentQuestionDao.setCurrentQuestion("estimationCotisation");
+        if (age < 18 || age > 60) {
+            BulleUI bulle = new BulleUI(getContext(), 0);
+            bulle.setTextInBulle("Saisissez entre 18 et 60 ans");
+            return bulle;
+        } else {
+            // enregistrement de l'age saisie
+            QuestionCotisationDao questionCotisationDao = new QuestionCotisationDao(getContext());
+            questionCotisationDao.setAge(age);
+            CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext());
+            currentQuestionDao.setCurrentQuestion("estimationCotisation");
+            String messageAvant = "";
+            if (age < 25) {
+                messageAvant = age + " ans ? Vous etes encore jeune, vous en tirerez davantage a la retraite";
+            } else if (age > 25 && age < 40) {
+                messageAvant = "Ahh !!! C'est bien le moment ideal d'y souscrire";
+            } else if (age > 40 && age < 50) {
+                messageAvant = "C'est bien ... ";
+            } else if (age > 50 && age < 56) {
+                messageAvant = "C'est pas encore tard. Il vous reste bien " + (60 - age) + " ans";
+            } else if (age > 50 && age < 61) {
+                messageAvant = "Mieux vaut tard que jamais. Souscrivez vite et deposez plus !!!!!!";
+            }
+            BulleUI bulle = new BulleUI(getContext(), 0);
+            bulle.setTextInBulle(messageAvant);
+            BulleUI bulle1 = new BulleUI(getContext(), 0);
+            bulle1.setTextInBulle("Combien vous désirez avoir à l'age de retraite ?");
+            List<BulleUI> listeBulle = new ArrayList<BulleUI>();
+            listeBulle.add(bulle);
+            listeBulle.add(bulle1);
 
-        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
-        bulle1.setTextInBulle("Combien vous désirez avoir à l'age de retraite ?");
-        return bulle1;
+            BulleListUI bulleListUI = new BulleListUI(getContext());
+            bulleListUI.addBulles(listeBulle);
+
+            return bulleListUI;
+        }
+
     }
 
 
-
     public void estimationCotisation(Integer age, Double mtDesire, BotFragment botFragment) throws Exception {
-        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment);
         currentQuestionDao.setCurrentQuestion("aucun");
 
         Double[] params = {new Double(age), mtDesire};
@@ -245,26 +278,26 @@ public class Actions {
     }
 
     public UIElement aideSituationRetraite() throws Exception {
-        BulleUI bulle1 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulle1 = new BulleUI(getContext(), 0);
         bulle1.setTextInBulle("D'accord.");
-        BulleUI bulle2 = new BulleUI(getContext().getActivity(), 0);
+        BulleUI bulle2 = new BulleUI(getContext(), 0);
         bulle2.setTextInBulle("Saisissez votre numéro client ?");
 
         List<BulleUI> list = new ArrayList<BulleUI>();
         list.add(bulle1);
         list.add(bulle2);
 
-        BulleListUI bulleListUI = new BulleListUI(getContext().getActivity());
+        BulleListUI bulleListUI = new BulleListUI(getContext());
         bulleListUI.addBulles(list);
 
         // question suivante
-        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext().getActivity());
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(getContext());
         currentQuestionDao.setCurrentQuestion("situationCompteRetraite");
         return bulleListUI;
     }
 
-    public void situationCompteRetraite(String noclient, BotFragment botFragment) throws Exception{
-        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment.getActivity());
+    public void situationCompteRetraite(String noclient, BotFragment botFragment) throws Exception {
+        CurrentQuestionDao currentQuestionDao = new CurrentQuestionDao(botFragment);
         currentQuestionDao.setCurrentQuestion("aucun");
 
         String[] noClient = {noclient};
@@ -275,7 +308,7 @@ public class Actions {
     }
 
     public UIElement textDevis() {
-        Button buttonDevis = new Button((getContext().getActivity()));
+        Button buttonDevis = new Button((getContext()));
         buttonDevis.setText("Prêt");
         buttonDevis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -291,12 +324,83 @@ public class Actions {
                 }
             }
         });
-        CardUI card = new CardUI(getContext().getActivity());
+        CardUI card = new CardUI(getContext());
         card.setText("Ok. Je vais vous envoyer un formulaire à remplir");
 
         card.getOptionsCardLayout().addView(buttonDevis);
         return card;
     }
+
+    public UIElement defaultActions() {
+        List<CardUI> cards = new ArrayList<CardUI>();
+
+        List<String> options = new ArrayList<String>();
+        options.add("Agence la plus proche");
+        options.add("Actualités");
+        options.add("Produits");
+        options.add("Devis");
+        options.add("Compte retraite");
+        options.add("Cotisation retraite");
+
+        for (final String option : options) {
+            CardUI card = new CardUI(getContext());
+            card.setText(option);
+
+            Button buttonOk = new Button(getContext());
+            buttonOk.setText("Aller");
+            buttonOk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        getContext().updateMyChat(option);
+                        getContext().sendFromRequest(option);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            card.getOptionsCardLayout().addView(buttonOk);
+            cards.add(card);
+        }
+
+        CardListUI cardListUI = new CardListUI(getContext());
+        cardListUI.addCards(cards);
+        return cardListUI;
+    }
+
+    public UIElement proceduresProduit(Integer idproduit) {
+        Produit produit = new Produit();
+        for (Produit p : ObjetsStatique.getProduits()) {
+            if (p.getId().equals(idproduit)) {
+                produit = p;
+                break;
+            }
+        }
+
+        BulleUI bulleUI = new BulleUI(getContext(), 0);
+        bulleUI.setTextInBulle("Voici les procedures de souscription : " + produit.getProcedures());
+
+        BulleUI bulleUI1 = new BulleUI(getContext(), 0);
+        bulleUI1.setTextInBulle("Vous devez avoir les pieces suivantes : " + produit.getPiecesNecessaires());
+
+        List<BulleUI> list = new ArrayList<BulleUI>();
+        list.add(bulleUI);
+        list.add(bulleUI1);
+
+        BulleListUI bulleListUI = new BulleListUI(getContext());
+        bulleListUI.addBulles(list);
+
+        return bulleListUI;
+    }
+
+    public void explicationMotCle(String motcle) throws Exception {
+        String[] params = {motcle};
+        SignificationTermeAsync significationTermeAsync = new SignificationTermeAsync();
+        significationTermeAsync.setBotFragment(getContext());
+        significationTermeAsync.execute(params);
+
+    }
+
     public BotFragment getContext() {
         return context;
     }

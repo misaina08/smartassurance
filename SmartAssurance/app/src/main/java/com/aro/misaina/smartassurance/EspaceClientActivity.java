@@ -7,14 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import modeles.client.ClientView;
 import services.SessionManager;
 
 public class EspaceClientActivity extends AppCompatActivity {
-    private TextView nomUser;
     private ClientView client;
     private EspaceClientActivity activity;
     private ListView menu;
@@ -24,7 +21,8 @@ public class EspaceClientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_espace_client);
-
+        getSupportActionBar().setElevation(0);
+        getSupportActionBar().setTitle("Espace cliente");
         try {
             activity = this;
             initData();
@@ -35,8 +33,6 @@ public class EspaceClientActivity extends AppCompatActivity {
     }
 
     public void initComponents() {
-        nomUser = (TextView) findViewById(R.id.nomUser);
-        nomUser.setText(client.getNom() + " " + client.getPrenom());
         menu = (ListView) findViewById(R.id.listViewClient);
         ArrayAdapter<String> adapterMenu = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menus);
         menu.setAdapter(adapterMenu);
@@ -45,15 +41,14 @@ public class EspaceClientActivity extends AppCompatActivity {
         menu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0){
-                    Toast.makeText(getApplicationContext(), menus[0], Toast.LENGTH_SHORT).show();
-                }
-                else if(position == 1){
+                if (position == 0) {
+                    Intent intent = new Intent(activity, ProfilActivity.class);
+                    activity.startActivity(intent);
+                } else if (position == 1) {
                     Intent intent = new Intent(EspaceClientActivity.this, ListeComptePaiementActivity.class);
                     intent.putExtra("action", "liste");
                     activity.startActivity(intent);
-                }
-                else if(position == 2){
+                } else if (position == 2) {
                     try {
                         SessionManager sessionManager = new SessionManager(activity);
                         sessionManager.destroyUserSession();
@@ -72,4 +67,6 @@ public class EspaceClientActivity extends AppCompatActivity {
         SessionManager sessionManager = new SessionManager(this.getApplicationContext());
         client = SessionManager.getClientConnected();
     }
+
+
 }

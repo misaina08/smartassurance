@@ -41,19 +41,19 @@ public class SouscriptionRetraiteAsync extends AsyncTask<RtSouscription, Void, S
         Result resultWS = new Result();
         Gson gson = new Gson();
         resultWS = gson.fromJson(res, Result.class);
-        CardUI cardUI = new CardUI(botFragment.getActivity());
+        CardUI cardUI = new CardUI(botFragment);
         try {
 
             cardUI.setText("Votre souscription a bien été effectuée. Veuillez consulter la liste des souscription en attente de paiement.");
 
             if (resultWS.getRes() == 1) {
-                Button b1 = new Button(botFragment.getActivity());
+                Button b1 = new Button(botFragment);
                 b1.setText("Voir");
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         // action à faire
-                        Toast.makeText(botFragment.getActivity(), "Action à faire", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(botFragment, "Action à faire", Toast.LENGTH_SHORT).show();
                     }
                 });
                 cardUI.getOptionsCardLayout().addView(b1);

@@ -46,18 +46,18 @@ public class SituationCompteAsync extends AsyncTask<String, Void, Double[]> {
     @Override
     protected void onPostExecute(Double[] values) {
         if (values != null) {
-            BulleUI bulle1 = new BulleUI(botFragment.getActivity(), 0);
+            BulleUI bulle1 = new BulleUI(botFragment, 0);
             bulle1.setTextInBulle("Vous avez déposé au total " + values[0] + " Ariary");
 
-            BulleUI bulle2 = new BulleUI(botFragment.getActivity(), 0);
+            BulleUI bulle2 = new BulleUI(botFragment, 0);
             bulle2.setTextInBulle("À l'age de retraite vous retirerez " + values[1] + " Ariary");
 
             botFragment.updateBotChat(bulle1);
             botFragment.updateBotChat(bulle2);
         } else {
-            BulleUI bulle2 = new BulleUI(botFragment.getActivity(), 0);
+            BulleUI bulle2 = new BulleUI(botFragment, 0);
             bulle2.setTextInBulle("Le client n'est pas encore souscrit au produit assurance retraite");
-            Button souscrire = new Button(botFragment.getActivity());
+            Button souscrire = new Button(botFragment);
             souscrire.setText("Souscrire ?");
             souscrire.setOnClickListener(new View.OnClickListener() {
                 @Override

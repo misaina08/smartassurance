@@ -28,7 +28,7 @@ import modeles.souscription.Souscription;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_contrat_auto);
-
+        getSupportActionBar().setTitle("Contrat auto-moto");
         activity = this;
 
 //        get souscription from async

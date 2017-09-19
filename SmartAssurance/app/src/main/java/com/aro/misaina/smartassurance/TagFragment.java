@@ -2,20 +2,24 @@ package com.aro.misaina.smartassurance;
 
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.io.IOException;
+
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class TagFragment extends Fragment {
-    Button bTag;
+    LinearLayout contentGif;
 
     public TagFragment() {
         // Required empty public constructor
@@ -33,16 +37,19 @@ public class TagFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        bTag = (Button)getView().findViewById(R.id.bTag);
-        bTag.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickButtonTag();
-            }
-        });
-    }
-    public void clickButtonTag() {
-        Intent intent = new Intent(this.getActivity(), TagActivity.class);
-        this.getActivity().startActivity(intent);
+        final GifImageView gifView = new GifImageView(this.getActivity());
+        contentGif = (LinearLayout) getView().findViewById(R.id.contentGif);
+
+        try {
+            GifDrawable gifFromAssets = new GifDrawable(this.getActivity().getAssets(), "nfc1.gif");
+            gifView.setImageDrawable(gifFromAssets);
+            gifView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            gifView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+
+            contentGif.addView(gifView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

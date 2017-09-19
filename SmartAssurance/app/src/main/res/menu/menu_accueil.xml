@@ -4,21 +4,20 @@
     <item
         android:id="@+id/user_action"
         app:showAsAction="always"
-        android:icon="@drawable/ic_user_circle"
-        android:title="Action">
+        android:icon="@drawable/ic_usercircle"
+        android:title="Action"
+        >
         <menu>
             <item android:id="@+id/user_connect"
-                android:icon="@drawable/ic_user_circle"
                 android:title="Se connecter" />
             <item android:id="@+id/user_signup"
-                android:icon="@drawable/ic_user_circle"
                 android:title="S'inscrire" />
         </menu>
     </item>
     <item
         android:id="@+id/user_space"
-        android:icon="@drawable/ic_user_circle"
         android:title="Action"
         android:visible="false"
+        android:icon="@drawable/ic_usercircle"
         app:showAsAction="always" />
 </menu>

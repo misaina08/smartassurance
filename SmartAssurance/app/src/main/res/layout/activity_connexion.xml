@@ -22,7 +22,8 @@
                 android:id="@+id/emailConnection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email" />
+                android:hint="email"
+                android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -33,11 +34,13 @@
                 android:id="@+id/mdpConnection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Mot de passe" />
+                android:hint="Mot de passe"
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/connectButton"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connecter" />

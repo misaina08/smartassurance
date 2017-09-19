@@ -27,16 +27,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         try {
 
-            //Calling method to generate notification
+            //La notification à envoyer
             Notification notification = new Notification(remoteMessage.getData().get("title"),
                     remoteMessage.getData().get("body"), remoteMessage.getData().get("target"));
 
             if (notification.getTarget().compareToIgnoreCase("target_client_suivant")==0){
-                System.out.println("target_client_suivant");
                 sendNotifGuichetTour(notification);
             }
             if (notification.getTarget().compareToIgnoreCase("target_client_termine")==0){
-                System.out.println("target_client_termine");
                 sendNotifGuichetTour(notification);
                 GuichetDao guichetDao = new GuichetDao(this);
                 guichetDao.setNumeroEnCours(0);
@@ -48,8 +46,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
     }
 
-    //This method is only generating push notification
-    //It is sa me as we did in earlier posts
     private void sendNotifGuichetTour(Notification notification) {
         Intent intent = new Intent(this, AccueilActivity.class);
         intent.putExtra("tabid", R.id.tab_guichet);

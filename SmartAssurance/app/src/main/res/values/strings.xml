@@ -18,6 +18,45 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="choisissez_langue">Choisissez votre langue</string>
+    <string name="contact">Contacts</string>
+    <string name="adresse">Addresse</string>
+    <string name="coordonnees">Coordonnées</string>
+    <string name="information_client">Informations du client</string>
+    <string name="identification">Identification</string>
+    <string name="guichet_approcher">Approcher votre smartphone sur un tag</string>
+    <string name="numero_police">Numéro police</string>
+    <string name="date_souscription">Date de souscription</string>
+    <string name="souscripteur">Souscripteur</string>
+    <string name="type">Type</string>
+    <string name="beneficiaire_en_cas_deces">Bénéficiaire en cas de décè</string>
+    <string name="option_retraite">Option de retraite</string>
+    <string name="age_retraite">Age de retraite</string>
+    <string name="periodicite_cotisation">Périodicité de cotisation</string>
+    <string name="duree_contrat">Durée du contrat</string>
+    <string name="prime_nette">Prime nette</string>
+    <string name="prime_total">Prime totale</string>
+    <string name="immatriculation">N° immatriculation</string>
+    <string name="numero_serie">N° série</string>
+    <string name="marque_et_type">Marque et type</string>
+    <string name="date_mise_en_circulation">Date de mise en circulation</string>
+    <string name="source_energie">Source d\'énergie</string>
+    <string name="nb_roues">Nombre de roues</string>
+    <string name="nb_place">Nombre de places</string>
+    <string name="puissance">Puissance</string>
+    <string name="sinistre">Sinistre</string>
+    <string name="vehicule">Véhicule</string>
+    <string name="garanties">Garanties</string>
+    <string name="informations">Informations</string>
+    <string name="permis">Permis</string>
+    <string name="conducteur">Conducteur</string>
+    <string name="duplicate">Duplicata N°</string>
+    <string name="actualites">Actualités</string>
+    <string name="profession">Profession</string>
+    <string name="lieu_naissance">Lieu de naissance</string>
+    <string name="suivant">Suivant</string>
+    <string name="informations_personnelles">Informations personnelles</string>
+    <string name="inscription">Inscription</string>
+    <string name="mdp">Mot de passe</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

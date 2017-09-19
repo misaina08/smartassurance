@@ -15,7 +15,7 @@ public class ConnexionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
-
+        getSupportActionBar().setTitle(R.string.connexion);
         thisActivity = this;
         initComponents();
     }

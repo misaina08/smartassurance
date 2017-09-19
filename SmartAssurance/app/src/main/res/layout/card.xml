@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="20dp"
-    android:layout_marginRight="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="4dp"
     android:orientation="vertical"
     android:weightSum="1">
 
     <LinearLayout
         android:id="@+id/cardLayout"
-        android:layout_width="259dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.46"
         android:background="@drawable/shape_bulle"
+        android:elevation="1dp"
         android:orientation="vertical"
         android:weightSum="1">
 
@@ -28,17 +29,21 @@
             <TextView
                 android:id="@+id/textContent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="TextView" />
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAppearance="@style/Widget.AppCompat.Button.Small"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/optionsCardLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.22"
-            android:background="@android:color/white"
+
+            android:background="@color/colorGrey"
             android:orientation="horizontal"
             android:padding="5dp"></LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

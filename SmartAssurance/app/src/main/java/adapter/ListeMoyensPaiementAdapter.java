@@ -38,7 +38,7 @@ public class ListeMoyensPaiementAdapter extends RecyclerView.Adapter<ListeMoyens
 
     @Override
     public void onBindViewHolder(ListeMoyensPaiementAdapter.ViewHolder holder, int position) {
-        holder.vTitulaire.setText(liste.get(position).getNomComplet());
+        holder.vTitulaire.setText("Compte de " + liste.get(position).getNomComplet());
         holder.vNoCpt.setText(liste.get(position).getNumeroCompte());
         holder.vDateExp.setText(Util.dateToString(liste.get(position).getDateExpiration()));
         holder.vType.setText(liste.get(position).getLibelle());
@@ -80,12 +80,12 @@ public class ListeMoyensPaiementAdapter extends RecyclerView.Adapter<ListeMoyens
                         Gson gson = new Gson();
                         Souscription souscription = gson.fromJson(dataJsonSouscrpition, Souscription.class);
 //                        if(souscription.getIdProduit() == 3){
-                            ResumePaiementContratFragment popupResume = new ResumePaiementContratFragment();
-                            Bundle b = new Bundle();
-                            b.putString("dataJson", dataJsonSouscrpition);
-                            b.putString("moyenPaiementJson", gson.toJson(paiement, MoyensPaiementClientView.class));
-                            popupResume.setArguments(b);
-                            popupResume.show(activity.getFragmentManager(), "resume");
+                        ResumePaiementContratFragment popupResume = new ResumePaiementContratFragment();
+                        Bundle b = new Bundle();
+                        b.putString("dataJson", dataJsonSouscrpition);
+                        b.putString("moyenPaiementJson", gson.toJson(paiement, MoyensPaiementClientView.class));
+                        popupResume.setArguments(b);
+                        popupResume.show(activity.getFragmentManager(), "resume");
 //                        }
 
                     }

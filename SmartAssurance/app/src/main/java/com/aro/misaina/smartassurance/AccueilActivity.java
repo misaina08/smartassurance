@@ -54,7 +54,7 @@ public class AccueilActivity extends AppCompatActivity {
 
             // initialisation de la session
             SessionManager sessionManager = new SessionManager(this.getApplicationContext());
-
+            getSupportActionBar().setElevation(0);
             contentAccueil = (LinearLayout) findViewById(R.id.contentAccueil);
 
             // init sur guichet
@@ -78,8 +78,9 @@ public class AccueilActivity extends AppCompatActivity {
             objetsStatique.init();
             Bundle bundle = getIntent().getExtras();
             if (new Integer(bundle.getInt("tabid")) != null) {
-                bottomBar.selectTabWithId(bundle.getInt("tabid"));
+//                bottomBar.selectTabWithId(bundle.getInt("tabid"));
             }
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,15 +93,17 @@ public class AccueilActivity extends AppCompatActivity {
      */
     public void initBottomBar() {
         bottomBar = (BottomBar) findViewById(R.id.bottomBar);
-
+//        bottomBar = (BottomNavigationView) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
-                Fragment fragment = new BotFragment();
+                Fragment fragment = new ActualitesFragment();
                 if (tabId == R.id.tab_acueil) {
-
+                    getSupportActionBar().setTitle(R.string.actualites);
+                    fragment = new ActualitesFragment();
                 }
                 if (tabId == R.id.tab_guichet) {
+                    getSupportActionBar().setTitle(R.string.guichet);
                     if (ObjetsStatique.isEstSurGuichet()) {
                         fragment = new GuichetFragment();
                     } else {
@@ -108,12 +111,17 @@ public class AccueilActivity extends AppCompatActivity {
                     }
                 }
                 if (tabId == R.id.tab_ai) {
-                    fragment = new BotFragment();
+                    getSupportActionBar().setTitle("ARO Assistant");
+                    Intent intentBot = new Intent(accueilActivity, BotFragment.class);
+                    accueilActivity.startActivity(intentBot);
+
                 }
                 if (tabId == R.id.tab_parametres) {
+                    getSupportActionBar().setTitle(R.string.parametre);
                     fragment = new ParametresFragment();
                 }
                 if (tabId == R.id.tab_contrats) {
+                    getSupportActionBar().setTitle(R.string.contrat);
                     fragment = new ListeContratsFragment();
                 }
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -122,10 +130,44 @@ public class AccueilActivity extends AppCompatActivity {
                         .commit();
             }
         });
+//        bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                Fragment fragment = new ParametresFragment();
+//                int tabId = item.getItemId();
+//                if (tabId == R.id.tab_acueil) {
+//
+//                }
+//                if (tabId == R.id.tab_guichet) {
+//                    if (ObjetsStatique.isEstSurGuichet()) {
+//                        fragment = new GuichetFragment();
+//                    } else {
+//                        fragment = new TagFragment();
+//                    }
+//                }
+//                if (tabId == R.id.tab_ai) {
+//
+//                    Intent intentBot = new Intent(accueilActivity, BotFragment.class);
+//                    accueilActivity.startActivity(intentBot);
+//
+//                }
+//                if (tabId == R.id.tab_parametres) {
+//                    fragment = new ParametresFragment();
+//                }
+//                if (tabId == R.id.tab_contrats) {
+//                    fragment = new ListeContratsFragment();
+//                }
+//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.contentContainer, fragment)
+//                        .addToBackStack(fragment.getClass().getName())
+//                        .commit();
+//                return false;
+//            }
+//        });
     }
 
     public void changeContent() {
-        Fragment fragment = new BotFragment();
+        Fragment fragment = new ParametresFragment();
         if (ObjetsStatique.isEstSurGuichet()) {
             fragment = new GuichetFragment();
         } else {

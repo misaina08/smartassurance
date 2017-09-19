@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tab_acueil"
+        android:enabled="true"
+
+        android:title="@string/accueil"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/tab_guichet"
+        android:enabled="true"
+        android:title="@string/guichet"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/tab_ai"
+        android:enabled="true"
+
+        android:title="@string/bot"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/tab_contrats"
+        android:enabled="true"
+
+        android:title="@string/contrat"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/tab_parametres"
+        android:enabled="true"
+
+        android:title="@string/parametre"
+        app:showAsAction="always|withText" />
+</menu>

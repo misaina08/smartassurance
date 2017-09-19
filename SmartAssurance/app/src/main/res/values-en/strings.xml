@@ -16,6 +16,45 @@
     <string name="connecter">Log in</string>
     <string name="hello_blank_fragment">hello blank</string>
     <string name="choisissez_langue">Select your language</string>
+    <string name="contact">Contacts</string>
+    <string name="adresse">Address</string>
+    <string name="coordonnees">Contact information</string>
+    <string name="information_client">Client informations</string>
+    <string name="identification">Identification</string>
+    <string name="guichet_approcher">Approach your smartphone to a tag</string>
+    <string name="numero_police">Policy number</string>
+    <string name="date_souscription">Date of subscription</string>
+    <string name="souscripteur">Subscriber</string>
+    <string name="type">Type</string>
+    <string name="beneficiaire_en_cas_deces">Beneficiary in the event of death</string>
+    <string name="option_retraite">Retirement option</string>
+    <string name="age_retraite">Retirement age</string>
+    <string name="periodicite_cotisation">Frequency of contributions</string>
+    <string name="duree_contrat">Contract length</string>
+    <string name="prime_nette">Net prime</string>
+    <string name="prime_total">Total prime</string>
+    <string name="immatriculation">Registration number</string>
+    <string name="numero_serie">Serie number</string>
+    <string name="marque_et_type">Mark and type</string>
+    <string name="date_mise_en_circulation">Date of circulation</string>
+    <string name="source_energie">Energy source</string>
+    <string name="nb_roues">Wheels number</string>
+    <string name="nb_place">Places number</string>
+    <string name="puissance">Power</string>
+    <string name="sinistre">Sinister</string>
+    <string name="vehicule">Vehicle</string>
+    <string name="garanties">Insurances</string>
+    <string name="informations">Informations</string>
+    <string name="permis">Driver\'s license</string>
+    <string name="conducteur">Driver</string>
+    <string name="duplicate">N° Duplicate</string>
+    <string name="actualites">News</string>
+    <string name="profession">Job</string>
+    <string name="lieu_naissance">Birthplace</string>
+    <string name="suivant">Next</string>
+    <string name="informations_personnelles">Personal informations</string>
+    <string name="inscription">Registration</string>
+    <string name="mdp">Password</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -18,7 +18,7 @@ import modeles.souscription.Souscription;
 public class FicheContratRetraiteActivity extends AppCompatActivity implements ActionBar.TabListener {
     private ViewPager pager;
     private String[] tabs = {"Info", "Dépots", "Retraits"};
-    private android.support.v7.app.ActionBar actionBar;
+    private ActionBar actionBar;
     private TabContratRetraiteAdapter adapter;
     private Integer valide = 0;
     Integer idSouscription;
@@ -30,7 +30,10 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiche_contrat_retraite);
-         activity = this;
+
+        getSupportActionBar().setTitle("Contrat retraite");
+
+        activity = this;
         //        get souscription from async
         idSouscription = getIntent().getExtras().getInt("idSouscription");
         valide = getIntent().getExtras().getInt("valide");
@@ -43,6 +46,7 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
         adapter = new TabContratRetraiteAdapter(getSupportFragmentManager());
         adapter.setIdSouscription(idSouscription);
 
+
         pager.setAdapter(adapter);
         actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -51,6 +55,7 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
         for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name)
                     .setTabListener(this));
+
         }
 
         pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -78,17 +83,17 @@ public class FicheContratRetraiteActivity extends AppCompatActivity implements A
         inflater.inflate(R.menu.menu_etatretraite, menu);
         MenuItem menuPayer = (MenuItem) menu.findItem(R.id.menuPayer);
 //        if (valide == 0 || valide == null) {
-            menuPayer.setTitle("Déposer");
-            menuPayer.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    Intent intent = new Intent(FicheContratRetraiteActivity.this, ListeComptePaiementActivity.class);
-                    intent.putExtra("action", "paiement");
-                    intent.putExtra("dataJson", dataJsonsouscription);
-                    activity.startActivity(intent);
-                    return false;
-                }
-            });
+        menuPayer.setTitle("Déposer");
+        menuPayer.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent = new Intent(FicheContratRetraiteActivity.this, ListeComptePaiementActivity.class);
+                intent.putExtra("action", "paiement");
+                intent.putExtra("dataJson", dataJsonsouscription);
+                activity.startActivity(intent);
+                return false;
+            }
+        });
 //        }else{
 //            menuPayer.setTitle("Payé");
 //        }

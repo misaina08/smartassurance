@@ -8,22 +8,14 @@ import modeles.BaseModele;
 
 public class Produit extends BaseModele {
     private Integer id;
-    private String nom;
+    private String intitule;
     private String code;
-    public Produit(){
+    private String description;
+    private String procedures;
+    private String piecesNecessaires;
 
-    }
-    public Produit(Integer id, String nom) {
-        this.id = id;
-        this.nom = nom;
-    }
+    public Produit() {
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     public Integer getId() {
@@ -34,11 +26,43 @@ public class Produit extends BaseModele {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getIntitule() {
+        return intitule;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setIntitule(String intitule) {
+        this.intitule = intitule;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getProcedures() {
+        return procedures;
+    }
+
+    public void setProcedures(String procedures) {
+        this.procedures = procedures;
+    }
+
+    public String getPiecesNecessaires() {
+        return piecesNecessaires;
+    }
+
+    public void setPiecesNecessaires(String piecesNecessaires) {
+        this.piecesNecessaires = piecesNecessaires;
     }
 }
