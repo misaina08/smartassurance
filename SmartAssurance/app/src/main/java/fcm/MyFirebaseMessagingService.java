@@ -5,17 +5,20 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
 import com.aro.misaina.smartassurance.AccueilActivity;
 import com.aro.misaina.smartassurance.R;
+import com.aro.misaina.smartassurance.TourGuichetActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import modeles.Notification;
 import sqlite.GuichetDao;
+import utilitaire.AndroidUtil;
 
 /**
  * Created by misa on 9/6/2017.
@@ -23,6 +26,7 @@ import sqlite.GuichetDao;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         try {
@@ -31,14 +35,23 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Notification notification = new Notification(remoteMessage.getData().get("title"),
                     remoteMessage.getData().get("body"), remoteMessage.getData().get("target"));
 
-            if (notification.getTarget().compareToIgnoreCase("target_client_suivant")==0){
-                sendNotifGuichetTour(notification);
+            if (notification.getTarget().compareToIgnoreCase("target_client_suivant") == 0) {
+//                sendNotifGuichetTour(notification);
+
+                Intent intentVibrate = new Intent(getBaseContext(), TourGuichetActivity.class);
+                intentVibrate.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intentVibrate.putExtra("noGuichet", notification.getContenu());
+                getBaseContext().startActivity(intentVibrate);
             }
-            if (notification.getTarget().compareToIgnoreCase("target_client_termine")==0){
+            if (notification.getTarget().compareToIgnoreCase("target_client_termine") == 0) {
+                notification.setTitre("Terminée");
                 sendNotifGuichetTour(notification);
                 GuichetDao guichetDao = new GuichetDao(this);
                 guichetDao.setNumeroEnCours(0);
                 guichetDao.setSurGuichet(0);
+            }
+            else{
+                sendNotifGuichetTour(notification);
             }
 
         } catch (Exception e) {
@@ -53,9 +66,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
-        Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        AndroidUtil androidUtil = new AndroidUtil();
+        Bitmap icon = androidUtil.drawableToBitmap(getResources().getDrawable(R.mipmap.ic_launcher));
+
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(icon)
                 .setContentTitle(notification.getTitre())
                 .setContentText(notification.getContenu())
                 .setAutoCancel(true)

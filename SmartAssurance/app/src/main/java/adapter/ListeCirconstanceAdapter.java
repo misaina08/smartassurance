@@ -32,6 +32,8 @@ public class ListeCirconstanceAdapter extends RecyclerView.Adapter<ListeCirconst
     @Override
     public void onBindViewHolder(ListeCirconstanceAdapter.ViewHolder holder, int position) {
         holder.eDesc.setText(listeCirconstance.get(position).getDescription());
+        Integer etape = position + 1;
+        holder.etape.setText(etape+"");
     }
 
     @Override
@@ -41,12 +43,17 @@ public class ListeCirconstanceAdapter extends RecyclerView.Adapter<ListeCirconst
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView eDesc;
+        public final TextView etape;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
 //            initialisation des composants graphiques
             eDesc = ((TextView) itemView.findViewById(R.id.eDesc));
+            etape = ((TextView) itemView.findViewById(R.id.etape));
+            etape.setBackground(fragment.getResources().getDrawable(R.drawable.shape_grey_doux_fill));
+//            etape.setTextColor(fragment.getResources().getColor(R.color.colorWhite));
+
 
 //            events
 //            ex : item onclick

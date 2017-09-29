@@ -21,21 +21,37 @@ import ws.WSRequestModele;
  * Created by LENOVO on 8/2/2017.
  */
 
-public class ListeContratsAsync extends AsyncTask<Void, Void, List<Souscription>> {
+public class ListeContratsAsync extends AsyncTask<Integer, Void, List<Souscription>> {
     private ListeContratsFragment listeContratsFragment;
+
     @Override
-    protected List<Souscription> doInBackground(Void... params) {
+    protected List<Souscription> doInBackground(Integer... params) {
         List<Souscription> contrats = new ArrayList<Souscription>();
         SessionManager sessionManager = new SessionManager(listeContratsFragment.getActivity());
 
-        try{
+        try {
             ClientView clientConnected = SessionManager.getClientConnected();
-            String urlContrat = WSUtil.getUrlServer()+"/souscription/contrats/"+clientConnected.getId();
+            String urlContrat = WSUtil.getUrlServer() + "/souscription/contrats/" + clientConnected.getId();
             WSRequestModele wsRequestModele = new WSRequestModele();
-            contrats.addAll((List<Souscription>)(List<?>)wsRequestModele.get(urlContrat, new Souscription()));
+            List<Souscription> res = (List<Souscription>) (List<?>) wsRequestModele.get(urlContrat, new Souscription());
+            if (params[0] == 0) { //tout
+                contrats.addAll(res);
+            } else if (params[0] == 2) { // validés
+                for (Souscription s : res) {
+                    if (s.getValide() == 1) {
+                        contrats.add(s);
+                    }
+                }
+            } else { //non validés
+                for (Souscription s : res) {
+                    if (s.getValide() == 0) {
+                        contrats.add(s);
+                    }
+                }
+            }
+
             return contrats;
-        }
-        catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return null;
@@ -43,7 +59,7 @@ public class ListeContratsAsync extends AsyncTask<Void, Void, List<Souscription>
 
     @Override
     protected void onPostExecute(List<Souscription> contrats) {
-        final RecyclerView recyclerView = (RecyclerView) listeContratsFragment.getView().findViewById(R.id.recContrats);
+        final RecyclerView recyclerView = (RecyclerView) listeContratsFragment.getActivity().findViewById(R.id.recContrats);
         recyclerView.setLayoutManager(new LinearLayoutManager(getListeContratsFragment().getActivity().getBaseContext()));
         ListeContratsAdapter listeContratsAdapter = new ListeContratsAdapter();
         listeContratsAdapter.setListeContratsFragment(listeContratsFragment);

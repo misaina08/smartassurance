@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import async.retraite.EstimationRetraiteAsync;
 import async.retraite.ListeDepotsAsync;
 
 
@@ -16,6 +17,7 @@ import async.retraite.ListeDepotsAsync;
  */
 public class TabDepotsRetraiteFragment extends Fragment {
     private TextView total;
+    private TextView estimation;
 
     public TabDepotsRetraiteFragment() {
         // Required empty public constructor
@@ -33,6 +35,7 @@ public class TabDepotsRetraiteFragment extends Fragment {
         super.onViewCreated(view, bundle);
 
         total = (TextView) getView().findViewById(R.id.total);
+        estimation = (TextView) getView().findViewById(R.id.estimation);
 
         Bundle b = this.getArguments();
         Integer[] params = new Integer[1];
@@ -40,6 +43,10 @@ public class TabDepotsRetraiteFragment extends Fragment {
         ListeDepotsAsync async = new ListeDepotsAsync();
         async.setFragment(this);
         async.execute(params);
+
+        EstimationRetraiteAsync estimationRetraiteAsync =new EstimationRetraiteAsync();
+        estimationRetraiteAsync.setTextView(estimation);
+        estimationRetraiteAsync.execute();
     }
 
     public TextView getTotal() {

@@ -32,17 +32,19 @@ public class ListeAttenteAdapter extends RecyclerView.Adapter<ListeAttenteAdapte
 
     @Override
     public void onBindViewHolder(ListeAttenteAdapter.ViewHolder holder, final int position) {
-        holder.numero.setText("N° " + attentes.get(position).getNumero());
+        holder.numero.setText(attentes.get(position).getNumero().toString());
 
         try {
             GuichetDao guichetDao = new GuichetDao(guichetFragment.getActivity().getApplicationContext());
             Integer numeroEnCours = guichetDao.getNumeroEnCours();
             if(numeroEnCours.equals(attentes.get(position).getNumero())) {
-                holder.numero.setBackgroundColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.green_aro));
+                holder.numero.setBackground(guichetFragment.getActivity().getApplicationContext().getResources().getDrawable(R.drawable.shape_green_fill));
+
                 holder.numero.setTextColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorWhite));
             }
-            if (attentes.get(position).getTermine()==1) {
-                holder.numero.setBackgroundColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorYellow));
+            if (attentes.get(position).getTermine().equals(1)) {
+                holder.numero.setBackground(guichetFragment.getActivity().getApplicationContext().getResources().getDrawable(R.drawable.shape_orange_fill_demi));
+//                holder.numero.setBackgroundColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorYellow));
                 holder.numero.setTextColor(guichetFragment.getActivity().getApplicationContext().getResources().getColor(R.color.colorWhite));
             }
         } catch(Exception ex) {

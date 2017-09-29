@@ -4,8 +4,8 @@
     <item
         android:id="@+id/user_action"
         app:showAsAction="always"
-        android:icon="@drawable/ic_usercircle"
-        android:title="Action"
+        android:icon="@drawable/ic_user"
+        android:title="Espace client"
         >
         <menu>
             <item android:id="@+id/user_connect"
@@ -16,8 +16,8 @@
     </item>
     <item
         android:id="@+id/user_space"
-        android:title="Action"
+        android:title="Espace client"
         android:visible="false"
-        android:icon="@drawable/ic_usercircle"
+        android:icon="@drawable/ic_user"
         app:showAsAction="always" />
 </menu>

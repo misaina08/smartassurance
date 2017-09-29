@@ -7,15 +7,21 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
+import android.view.ContextThemeWrapper;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.aro.misaina.smartassurance.BotFragment;
 import com.aro.misaina.smartassurance.DevisAutoActivity;
 import com.aro.misaina.smartassurance.MapAgenceActivity;
+import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.SRAutoMotoPopFragment;
 import com.aro.misaina.smartassurance.SRRetraitePopFragment;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +30,7 @@ import ai.ui.BulleListUI;
 import ai.ui.BulleUI;
 import ai.ui.CardListUI;
 import ai.ui.CardUI;
+import ai.ui.ListUIElement;
 import ai.ui.UIElement;
 import async.bot.SignificationTermeAsync;
 import async.retraite.EstimationAsync;
@@ -33,8 +40,10 @@ import modeles.produit.Produit;
 import services.ObjetsStatique;
 import sqlite.bot.CurrentQuestionDao;
 import sqlite.bot.QuestionCotisationDao;
+import utilitaire.AndroidUtil;
 import utilitaire.Coordonnee;
 import utilitaire.CoordonneeUtil;
+import utilitaire.WSUtil;
 
 /**
  * Created by Misaina on 27/07/2017.
@@ -60,14 +69,25 @@ public class Actions {
         for (final Produit p : ObjetsStatique.getProduits()) {
             CardUI card = new CardUI(getContext());
             card.setText(p.getIntitule());
+            ImageView imageProduit = new ImageView(getContext());
+            imageProduit.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
+            Picasso.with(getContext()).load(WSUtil.getUrlPhotoProduit() + p.getPhoto()).into(imageProduit);
+            card.getContentTop().addView(imageProduit);
 
             // ajout du bouton info pour le card
-            Button buttonInfo = new Button(getContext());
+            Button buttonInfo = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
             buttonInfo.setText("Info");
+            buttonInfo.setBackground(context.getResources().getDrawable(R.drawable.ripple_circle));
+            buttonInfo.setElevation(0);
+            buttonInfo.setAllCaps(false);
+
 
             // ajout du bouton souscrire
-            Button buttonSouscrire = new Button((getContext()));
+            Button buttonSouscrire = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
             buttonSouscrire.setText("Souscrire");
+            buttonSouscrire.setBackground(context.getResources().getDrawable(R.drawable.ripple_circle));
+            buttonSouscrire.setElevation(0);
+            buttonSouscrire.setAllCaps(false);
 
             buttonInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -130,11 +150,19 @@ public class Actions {
 //        async.execute();
 //        System.out.println(agenceProche());
 
+        AndroidUtil androidUtil =new AndroidUtil();
+
         CardUI cardUI = new CardUI(getContext());
+        ImageView image = new ImageView(getContext());
+        image.setImageDrawable(getContext().getResources().getDrawable(R.drawable.ic_location_filled));
+
+        cardUI.getContent().addView(image);
         cardUI.setText(agenceProche.getNom());
 
-        Button b1 = new Button(getContext());
+        Button b1 = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
         b1.setText("Voir dans le map");
+        b1.setBackground(context.getResources().getDrawable(R.drawable.ripple_circle));
+        b1.setAllCaps(false);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +175,9 @@ public class Actions {
         });
 
 
-        Button b3 = new Button(getContext());
+        Button b3 = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
+        b3.setBackground(context.getResources().getDrawable(R.drawable.ripple_circle));
+        b3.setAllCaps(false);
         b3.setText("Appeler");
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,15 +215,12 @@ public class Actions {
         bulleUI.setTextInBulle("Informations sur le produit " + produit.getIntitule());
 
         BulleUI bulleUI1 = new BulleUI(getContext(), 0);
-        bulleUI1.setTextInBulle("wawa ");
+        bulleUI1.setTextInBulle(produit.getDescription());
 
-        BulleUI bulleUI2 = new BulleUI(getContext(), 0);
-        bulleUI2.setTextInBulle("huhu");
 
         List<BulleUI> list = new ArrayList<BulleUI>();
         list.add(bulleUI);
         list.add(bulleUI1);
-        list.add(bulleUI2);
 
         BulleListUI bulleListUI = new BulleListUI(getContext());
         bulleListUI.addBulles(list);
@@ -308,8 +335,10 @@ public class Actions {
     }
 
     public UIElement textDevis() {
-        Button buttonDevis = new Button((getContext()));
+        Button buttonDevis = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
+        buttonDevis.setBackground(getContext().getResources().getDrawable(R.drawable.ripple_circle));
         buttonDevis.setText("Prêt");
+        buttonDevis.setAllCaps(false);
         buttonDevis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -331,8 +360,8 @@ public class Actions {
         return card;
     }
 
-    public UIElement defaultActions() {
-        List<CardUI> cards = new ArrayList<CardUI>();
+    public ListUIElement defaultActions() {
+        List<UIElement> liste = new ArrayList<UIElement>();
 
         List<String> options = new ArrayList<String>();
         options.add("Agence la plus proche");
@@ -341,13 +370,17 @@ public class Actions {
         options.add("Devis");
         options.add("Compte retraite");
         options.add("Cotisation retraite");
-
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(0,0,20,20);
         for (final String option : options) {
-            CardUI card = new CardUI(getContext());
-            card.setText(option);
 
-            Button buttonOk = new Button(getContext());
-            buttonOk.setText("Aller");
+
+            Button buttonOk = new Button(new ContextThemeWrapper(getContext(), android.R.style.Widget_Material_Button_Borderless_Colored));
+            buttonOk.setBackground(getContext().getResources().getDrawable(R.drawable.default_actions_bot_selector));
+
+//            buttonOk.setLayoutParams(layoutParams);
+            buttonOk.setText(option);
+            buttonOk.setAllCaps(false);
             buttonOk.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -359,13 +392,16 @@ public class Actions {
                     }
                 }
             });
-            card.getOptionsCardLayout().addView(buttonOk);
-            cards.add(card);
+
+            UIElement uiElement = new UIElement(getContext());
+            uiElement.addView(buttonOk);
+            uiElement.setLayoutParams(layoutParams);
+            liste.add(uiElement);
         }
 
-        CardListUI cardListUI = new CardListUI(getContext());
-        cardListUI.addCards(cards);
-        return cardListUI;
+        ListUIElement res = new ListUIElement(getContext());
+        res.addUIElements(liste);
+        return res;
     }
 
     public UIElement proceduresProduit(Integer idproduit) {

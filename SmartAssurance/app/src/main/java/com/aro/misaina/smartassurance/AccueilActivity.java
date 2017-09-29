@@ -69,11 +69,10 @@ public class AccueilActivity extends AppCompatActivity {
                 }
             });
 
-            initAccueil();
-
             // init sur guichet
             GuichetDao guichetDao = new GuichetDao(this.getApplicationContext());
             ObjetsStatique.setEstSurGuichet(guichetDao.estSurGuichet());
+
 
             //        initialisation de l'adapteur nfc
             nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -86,18 +85,24 @@ public class AccueilActivity extends AppCompatActivity {
                     .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
 
             accueilActivity = this;
+            ObjetsStatique objetsStatique = new ObjetsStatique();
+            objetsStatique.init();
 
             initBottomNavigation();
 
-            ObjetsStatique objetsStatique = new ObjetsStatique();
-            objetsStatique.init();
             Bundle bundle = getIntent().getExtras();
+
             if (new Integer(bundle.getInt("tabid")) != null) {
 //                bottomBar.selectTabWithId(bundle.getInt("tabid"));
+                navigationBottom.setSelectedItemId(bundle.getInt("tabid"));
+            } else {
+
+                initAccueil();
             }
 
 
-
+        } catch (NullPointerException e) {
+            initAccueil();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -129,6 +134,9 @@ public class AccueilActivity extends AppCompatActivity {
                     getSupportActionBar().setTitle("ARO Assistant");
                     Intent intentBot = new Intent(accueilActivity, BotFragment.class);
                     accueilActivity.startActivity(intentBot);
+
+//                    Intent intentBot = new Intent(accueilActivity, TourGuichetActivity.class);
+//                    accueilActivity.startActivity(intentBot);
                 }
                 if (tabId == R.id.tab_contrats) {
                     getSupportActionBar().setTitle(R.string.contrat);
@@ -165,6 +173,13 @@ public class AccueilActivity extends AppCompatActivity {
         } else {
             fragment = new TagFragment();
         }
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.contentContainer, fragment)
+                .addToBackStack(fragment.getClass().getName())
+                .commit();
+    }
+
+    public void changeContent(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.contentContainer, fragment)
                 .addToBackStack(fragment.getClass().getName())

@@ -1,25 +1,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.aro.misaina.smartassurance.GuichetFragment">
+    tools:context="com.aro.misaina.smartassurance.GuichetFragment"
+    android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <LinearLayout
+    <View style="@style/Divider"></View>
+    <TextView
+        android:id="@+id/textView50"
+        style="@style/TextNormal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorWhite"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/en_attente" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:scrollbars="none">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recAttente"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <View style="@style/Divider"></View>
+
+    <TextView
+        android:id="@+id/textView51"
+        style="@style/TextNormal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/pub" />
+
+    <!--<VideoView-->
+        <!--android:id="@+id/videoPub"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:layout_gravity="bottom|end" />-->
 
 
-    </LinearLayout>
-
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="2.31"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp" />
 </LinearLayout>

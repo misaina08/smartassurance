@@ -8,31 +8,39 @@
     tools:context="com.aro.misaina.smartassurance.TabSinistreFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-    <RelativeLayout
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recSinistres"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fCreateSinistre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/recSinistres"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="20dp"
-            android:clickable="true"
-            app:backgroundTint="@color/green_aro"
-            app:elevation="1dp"
-            app:fabSize="normal"
-            app:srcCompat="@drawable/ic_accident" />
 
-    </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recSinistres"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fCreateSinistre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/recSinistres"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:scaleType="center"
+                app:backgroundTint="@color/green_aro"
+                app:elevation="1dp"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_accident" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

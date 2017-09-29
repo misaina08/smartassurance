@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context="com.aro.misaina.smartassurance.DevisAutoActivity">
 
     <ScrollView
@@ -27,22 +28,27 @@
 
                 <TextView
                     android:id="@+id/textView38"
+                    style="@style/TextNormal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     android:text="Durée" />
 
                 <Spinner
                     android:id="@+id/spinMois"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:id="@+id/textView40"
+                    style="@style/TextNormal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical"
                     android:text="mois" />
             </LinearLayout>
 
@@ -50,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.02"
-                app:cardElevation="1dp">
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -59,14 +65,17 @@
 
                     <TextView
                         android:id="@+id/textView41"
+                        style="@style/TextNormal"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:gravity="center_vertical"
                         android:text="Usage" />
 
                     <Spinner
                         android:id="@+id/spinUsage"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp" />
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -78,8 +87,10 @@
 
                 <TextView
                     android:id="@+id/textView43"
+                    style="@style/TextNormal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
                     android:text="Source d'énergie" />
 
                 <Spinner
@@ -96,7 +107,8 @@
                     android:id="@+id/ePf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Puissance " />
+                    android:hint="Puissance "
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -114,7 +126,8 @@
                         android:id="@+id/eNbPlace"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nb place" />
+                        android:hint="Nb place"
+                        android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -126,7 +139,8 @@
                         android:id="@+id/eNbRoues"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre roue" />
+                        android:hint="Nombre roue"
+                        android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 

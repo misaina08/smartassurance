@@ -23,7 +23,7 @@
     <string name="coordonnees">Coordonnées</string>
     <string name="information_client">Informations du client</string>
     <string name="identification">Identification</string>
-    <string name="guichet_approcher">Approcher votre smartphone sur un tag</string>
+    <string name="guichet_approcher">Approcher votre smartphone sur un tag NFC</string>
     <string name="numero_police">Numéro police</string>
     <string name="date_souscription">Date de souscription</string>
     <string name="souscripteur">Souscripteur</string>
@@ -57,6 +57,17 @@
     <string name="informations_personnelles">Informations personnelles</string>
     <string name="inscription">Inscription</string>
     <string name="mdp">Mot de passe</string>
+    <string name="description">Description</string>
+    <string name="filtre">Filtre</string>
+    <string name="non_valide">Non validé</string>
+    <string name="courant">Courant</string>
+    <string name="tout">Tout</string>
+    <string name="en_attente">En attente</string>
+    <string name="pub">Publicité</string>
+    <string name="c_est_votre_tour">C\'est votre tour</string>
+    <string name="daccord">D\'accord</string>
+    <string name="terme_contrat_auto">Contrat auto ..............................................................................</string>
+    <string name="terme_contrat_retraite">contrat retraite</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

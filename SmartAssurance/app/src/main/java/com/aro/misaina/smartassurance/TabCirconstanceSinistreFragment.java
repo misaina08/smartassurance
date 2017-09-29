@@ -6,8 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 
@@ -22,7 +22,7 @@ import modeles.automoto.SinCirconstanceView;
  */
 public class TabCirconstanceSinistreFragment extends Fragment implements View.OnClickListener {
     private EditText eDescription;
-    private Button bAjouter;
+    private ImageButton bAjouter;
     private AmSinistreView sinistreView;
 
     public TabCirconstanceSinistreFragment() {
@@ -46,7 +46,7 @@ public class TabCirconstanceSinistreFragment extends Fragment implements View.On
 
 
         eDescription = (EditText) getView().findViewById(R.id.eDescription);
-        bAjouter = (Button) getView().findViewById(R.id.bAjouter);
+        bAjouter = (ImageButton) getView().findViewById(R.id.bAjouter);
 
         bAjouter.setOnClickListener(this);
 
@@ -61,6 +61,7 @@ public class TabCirconstanceSinistreFragment extends Fragment implements View.On
             circ.setDescription(eDescription.getText().toString());
             SinCirconstanceView[] par = new SinCirconstanceView[1];
             par[0] = circ;
+            eDescription.setText("");
             CreerCirconstanceAsync async = new CreerCirconstanceAsync();
             async.setFragment(this);
             async.execute(par);

@@ -36,10 +36,9 @@ public class DevantAsync extends AsyncTask<Integer, Void, List<AttenteView>> {
 
     @Override
     protected void onPostExecute(List<AttenteView> attenteViews) {
-        System.out.println("_____________"+attenteViews.size());
         if (attenteViews != null) {
             RecyclerView recAttente = (RecyclerView) guichetFragment.getActivity().findViewById(R.id.recAttente);
-            recAttente.setLayoutManager(new LinearLayoutManager(guichetFragment.getActivity().getApplicationContext()));
+            recAttente.setLayoutManager(new LinearLayoutManager(guichetFragment.getActivity().getApplicationContext(),  LinearLayoutManager.HORIZONTAL, false));
             ListeAttenteAdapter listeAttenteAdapter = new ListeAttenteAdapter();
             listeAttenteAdapter.setGuichetFragment(guichetFragment);
             listeAttenteAdapter.setAttentes(attenteViews);

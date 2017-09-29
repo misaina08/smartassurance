@@ -38,6 +38,7 @@ public class ListeSinistresAsync extends AsyncTask<Integer, Void, List<AmSinistr
     protected void onPostExecute(List<AmSinistreView> liste) {
         if (liste != null) {
             RecyclerView rec = (RecyclerView) getFragment().getActivity().findViewById(R.id.recSinistres);
+            rec.removeAllViews();
             rec.setLayoutManager(new LinearLayoutManager(getFragment().getActivity().getBaseContext()));
             ListeSinistresAdapter adapter = new ListeSinistresAdapter();
             adapter.setFragment(fragment);

@@ -13,6 +13,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:background="@drawable/ripple_circle"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
@@ -24,9 +25,9 @@
             android:id="@+id/iconeContrat"
             android:layout_width="wrap_content"
             android:layout_height="51dp"
+            android:layout_weight="0.09"
             android:fadingEdgeLength="0dp"
-            app:srcCompat="@drawable/ic_retraite"
-            android:layout_weight="0.09" />
+            app:srcCompat="@drawable/ic_retraite" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -42,6 +43,7 @@
                 android:layout_height="30dp"
                 android:gravity="fill_vertical"
                 android:text="TextView"
+                android:textColor="@color/textGrey"
                 android:textSize="16sp" />
 
             <TextView

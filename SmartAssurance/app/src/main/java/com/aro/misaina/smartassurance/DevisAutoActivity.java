@@ -49,6 +49,7 @@ public class DevisAutoActivity extends DialogFragment {
 
         View view = inflater.inflate(R.layout.activity_devis_auto, null);
 
+
         contentGaranties = (LinearLayout) view.findViewById(R.id.contentGaranties);
         ePf = (EditText) view.findViewById(R.id.ePf);
         eNbRoues = (EditText) view.findViewById(R.id.eNbRoues);
@@ -117,6 +118,7 @@ public class DevisAutoActivity extends DialogFragment {
 
             contentGaranties.addView(linearLayout);
         }
+
         // buttons Cancel and OK
         builder.setView(view)
                 .setPositiveButton("Valider", new DialogInterface.OnClickListener() {

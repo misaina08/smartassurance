@@ -1,15 +1,18 @@
 package async.guichet;
 
+import android.app.AlertDialog;
 import android.os.AsyncTask;
-import android.support.design.widget.Snackbar;
 
 import com.aro.misaina.smartassurance.AccueilActivity;
+import com.aro.misaina.smartassurance.ProgressTagFragment;
 
 import modeles.guichet.AttenteView;
 import services.ObjetsStatique;
 import sqlite.GuichetDao;
 import utilitaire.WSUtil;
 import ws.WSRequestModele;
+
+import static com.google.android.gms.internal.zzagz.runOnUiThread;
 
 /**
  * Created by misa on 9/5/2017.
@@ -19,6 +22,7 @@ import ws.WSRequestModele;
 
 public class NouveauClientAsync extends AsyncTask<String, Void, String> {
     private AccueilActivity accueilActivity;
+    private AlertDialog.Builder builder;
 
     @Override
     protected String doInBackground(String... params) {
@@ -39,8 +43,8 @@ public class NouveauClientAsync extends AsyncTask<String, Void, String> {
             guichetDao.setNumeroEnCours(new Integer(resNumero));
             guichetDao.setSurGuichet(1);
 
-            System.out.println("____________________"+guichetDao.getNumeroEnCours());
-            System.out.println("sur guichet : "+guichetDao.estSurGuichet());
+            System.out.println("____________________" + guichetDao.getNumeroEnCours());
+            System.out.println("sur guichet : " + guichetDao.estSurGuichet());
 
             return "Mr/Mme, bienvenue à l'agence " + messagesTag[1] + ". Vous êtes N°" + resNumero;
         } catch (Exception ex) {
@@ -52,9 +56,28 @@ public class NouveauClientAsync extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String message) {
         if (message != null) {
-            Snackbar.make(accueilActivity.contentAccueil, message, Snackbar.LENGTH_LONG).show();
-            ObjetsStatique.setEstSurGuichet(true);
-            accueilActivity.changeContent();
+//            Snackbar.make(accueilActivity.contentAccueil, message, Snackbar.LENGTH_LONG).show();
+            accueilActivity.changeContent(new ProgressTagFragment());
+            Thread timerThread = new Thread() {
+                public void run() {
+                    try {
+                        synchronized (this) {
+                            wait(2000);
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    ObjetsStatique.setEstSurGuichet(true);
+                                    accueilActivity.changeContent();
+                                }
+                            });
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            timerThread.start();
+
         }
     }
 

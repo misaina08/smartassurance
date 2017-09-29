@@ -60,6 +60,27 @@ public class ObjetsStatique {
         amDommages.add(new AmDommage(2, "Capot "));
         amDommages.add(new AmDommage(3, "Peinture "));
         amDommages.add(new AmDommage(4, "Pneu "));
+        amDommages.add(new AmDommage(5,"Toit"));
+        amDommages.add(new AmDommage(6,"Pare-brise"));
+        amDommages.add(new AmDommage(7,"Coffre"));
+        amDommages.add(new AmDommage(8,"Feu arrière"));
+        amDommages.add(new AmDommage(9,"Aile arrière"));
+        amDommages.add(new AmDommage(10,"Glace de  custode"));
+        amDommages.add(new AmDommage(11,"Montant du toit"));
+        amDommages.add(new AmDommage(12,"Calandre"));
+        amDommages.add(new AmDommage(13,"Enjoliveur de roue"));
+        amDommages.add(new AmDommage(14,"Roue"));
+        amDommages.add(new AmDommage(15,"Aile avant"));
+        amDommages.add(new AmDommage(16,"Retroviseur"));
+        amDommages.add(new AmDommage(17,"Essuie glace"));
+        amDommages.add(new AmDommage(18,"Capot"));
+        amDommages.add(new AmDommage(19,"Clignotant"));
+        amDommages.add(new AmDommage(20,"Glace"));
+        amDommages.add(new AmDommage(21,"Poigné de porte"));
+        amDommages.add(new AmDommage(22,"Porte"));
+        amDommages.add(new AmDommage(23,"Phare"));
+        amDommages.add(new AmDommage(24,"Toit ouvrant"));
+
 
 //        produits = new ArrayList<Produit>();
 //        produits.add(new Produit(1, "Assurance vie"));

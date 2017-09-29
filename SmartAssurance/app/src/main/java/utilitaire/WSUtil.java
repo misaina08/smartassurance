@@ -18,8 +18,9 @@ import modeles.BaseModele;
  */
 
 public class WSUtil {
-    private static String urlServer = "http://192.168.10.4:9090/SmartAssuranceWS-war/rest";
-    private static String urlPhoto = "http://192.168.10.4:9090/SmartAssuranceWS-war/resources/bo/img/actus/";
+    private static String urlServer = "http://192.168.10.2:9090/SmartAssuranceWS-war/rest";
+    private static String urlPhoto = "http://192.168.10.2:9090/SmartAssuranceWS-war/resources/bo/img/actus/";
+    private static String urlPhotoProduit = "http://192.168.10.2:9090/SmartAssuranceWS-war/resources/img/produits/";
 
     public String parseObjectToJson(BaseModele baseModele) throws Exception {
         try {
@@ -124,6 +125,14 @@ public class WSUtil {
             i++;
         }
         return res + "]";
+    }
+
+    public static String getUrlPhotoProduit() {
+        return urlPhotoProduit;
+    }
+
+    public static void setUrlPhotoProduit(String urlPhotoProduit) {
+        WSUtil.urlPhotoProduit = urlPhotoProduit;
     }
 
     public static String getUrlServer() {

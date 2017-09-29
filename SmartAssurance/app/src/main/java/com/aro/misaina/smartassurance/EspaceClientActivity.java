@@ -21,8 +21,7 @@ public class EspaceClientActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_espace_client);
-        getSupportActionBar().setElevation(0);
-        getSupportActionBar().setTitle("Espace cliente");
+        getSupportActionBar().setTitle("Espace client");
         try {
             activity = this;
             initData();

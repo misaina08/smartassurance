@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.aro.misaina.smartassurance.ListeComptePaiementActivity">
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,4 +18,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-</LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/parentBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <include layout="@layout/bottomsheet_moyens_paiement" />
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

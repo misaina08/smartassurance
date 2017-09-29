@@ -21,7 +21,6 @@ public class TabInfoSinistreFragment extends Fragment {
     AmSinistreView sinistreView;
     private TextView tConducteur;
     private TextView tNom;
-    private TextView tPrenom;
     private TextView tDn;
     private TextView tAdresse;
     private TextView tNo;
@@ -53,7 +52,7 @@ public class TabInfoSinistreFragment extends Fragment {
         super.onViewCreated(v, b);
         tConducteur = (TextView) getView().findViewById(R.id.tConducteur);
         tNom = (TextView) getView().findViewById(R.id.tNom);
-        tPrenom = (TextView) getView().findViewById(R.id.tPrenom);
+
         tDn = (TextView) getView().findViewById(R.id.tDn);
         tAdresse = (TextView) getView().findViewById(R.id.tAdresse);
         tNo = (TextView) getView().findViewById(R.id.tNo);
@@ -86,14 +85,6 @@ public class TabInfoSinistreFragment extends Fragment {
 
     public void settNom(TextView tNom) {
         this.tNom = tNom;
-    }
-
-    public TextView gettPrenom() {
-        return tPrenom;
-    }
-
-    public void settPrenom(TextView tPrenom) {
-        this.tPrenom = tPrenom;
     }
 
     public TextView gettDn() {

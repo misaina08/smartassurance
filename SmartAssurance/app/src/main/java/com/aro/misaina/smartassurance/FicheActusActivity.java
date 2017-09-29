@@ -27,6 +27,7 @@ public class FicheActusActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Fiche de l'actualité");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setElevation(0);
 
         jsonData = getIntent().getExtras().getString("dataJson");
         Gson gson = new Gson();

@@ -13,6 +13,7 @@ public class Produit extends BaseModele {
     private String description;
     private String procedures;
     private String piecesNecessaires;
+    private String photo;
 
     public Produit() {
 
@@ -64,5 +65,13 @@ public class Produit extends BaseModele {
 
     public void setPiecesNecessaires(String piecesNecessaires) {
         this.piecesNecessaires = piecesNecessaires;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

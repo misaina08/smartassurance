@@ -37,6 +37,23 @@ public class ListeSinistresAdapter extends RecyclerView.Adapter<ListeSinistresAd
     public void onBindViewHolder(ListeSinistresAdapter.ViewHolder holder, int position) {
         holder.vDate.setText(Util.dateToString(getListeSinistres().get(position).getDaty()));
         holder.vCategorie.setText(getListeSinistres().get(position).getCategorie());
+        AmSinistreView sinistre = listeSinistres.get(position);
+        if (sinistre.getTermine()==0){
+            if(sinistre.getDemande()==0){
+                holder.etat.setText("Non envoyé");
+                holder.etat.setBackground(fragment.getActivity().getResources().getDrawable(R.drawable.shape_orange_strocke));
+                holder.etat.setTextColor(fragment.getActivity().getResources().getColor(R.color.colorYellow));
+            }else{
+                holder.etat.setText("Envoyé");
+                holder.etat.setBackground(fragment.getActivity().getResources().getDrawable(R.drawable.shape_blue_strock));
+                holder.etat.setTextColor(fragment.getActivity().getResources().getColor(R.color.colorBlue));
+            }
+        }
+        else {
+            holder.etat.setText("Terminé");
+            holder.etat.setTextColor(fragment.getActivity().getResources().getColor(R.color.green_aro));
+            holder.etat.setBackground(fragment.getActivity().getResources().getDrawable(R.drawable.shape_green_strocke));
+        }
     }
 
     @Override
@@ -47,6 +64,7 @@ public class ListeSinistresAdapter extends RecyclerView.Adapter<ListeSinistresAd
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView vCategorie;
         public TextView vDate;
+        public TextView etat;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -54,6 +72,8 @@ public class ListeSinistresAdapter extends RecyclerView.Adapter<ListeSinistresAd
 //            initialisation des composants graphiques
             vCategorie = ((TextView) itemView.findViewById(R.id.vCategorie));
             vDate = ((TextView) itemView.findViewById(R.id.vDate));
+            etat = ((TextView) itemView.findViewById(R.id.etat));
+
 
 //            events
 //            ex : item onclick

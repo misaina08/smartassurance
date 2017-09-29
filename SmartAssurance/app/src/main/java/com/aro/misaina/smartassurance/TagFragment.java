@@ -41,9 +41,9 @@ public class TagFragment extends Fragment {
         contentGif = (LinearLayout) getView().findViewById(R.id.contentGif);
 
         try {
-            GifDrawable gifFromAssets = new GifDrawable(this.getActivity().getAssets(), "nfc1.gif");
+            GifDrawable gifFromAssets = new GifDrawable(this.getActivity().getAssets(), "animation-nfc.gif");
             gifView.setImageDrawable(gifFromAssets);
-            gifView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            gifView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 600));
             gifView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
 
             contentGif.addView(gifView);

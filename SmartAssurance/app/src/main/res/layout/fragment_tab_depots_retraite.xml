@@ -36,6 +36,23 @@
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView55"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Estimation de retraite à 60 ans"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/estimation"
+                style="@style/TextNormal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20sp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 

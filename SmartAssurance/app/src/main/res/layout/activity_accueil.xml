@@ -22,15 +22,12 @@
 
     </LinearLayout>
 
-    <View
-        style="@style/Divider"
-        android:layout_margin="0dp"></View>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_alignTop="@+id/contentContainer"
         android:background="@android:color/white"
-        android:elevation="1dp">
+        android:elevation="11dp">
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigationBottom"
@@ -40,7 +37,7 @@
             android:layout_weight="1"
             android:foregroundGravity="bottom"
             android:theme="@style/AroThemeDark"
-            app:elevation="1dp"
+            app:elevation="8dp"
             app:menu="@menu/bottombar">
 
 
@@ -51,16 +48,19 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignBottom="@+id/navigationBottom"
-            android:layout_alignParentEnd="true"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorWhite"
             android:clickable="true"
+            android:scaleType="center"
+            android:scaleX="1"
             app:backgroundTint="@color/green_aro"
+            app:elevation="0dp"
             app:fabSize="normal"
-            app:srcCompat="@drawable/ic_bot" />
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@mipmap/ic_chatbot" />
     </FrameLayout>
 
 

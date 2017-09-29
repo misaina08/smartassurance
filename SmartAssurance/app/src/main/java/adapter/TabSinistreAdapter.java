@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.aro.misaina.smartassurance.RapportsFragment;
 import com.aro.misaina.smartassurance.TabCirconstanceSinistreFragment;
 import com.aro.misaina.smartassurance.TabDommagesSinistreFragment;
 import com.aro.misaina.smartassurance.TabInfoSinistreFragment;
@@ -50,13 +51,19 @@ public class TabSinistreAdapter extends FragmentPagerAdapter {
                 b3.putString("dataJson", gson.toJson(sinistre));
                 photosSinistre.setArguments(b3);
                 return photosSinistre;
+            case 4:
+                RapportsFragment rapportsFragment = new RapportsFragment();
+                Bundle b4 = new Bundle();
+                b4.putString("dataJson", gson.toJson(sinistre));
+                rapportsFragment.setArguments(b4);
+                return rapportsFragment;
         }
         return null;
     }
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 
     public AmSinistreView getSinistre() {

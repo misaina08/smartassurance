@@ -15,6 +15,7 @@ import ws.WSRequestModele;
 
 public class InfoSinistreAsync extends AsyncTask<Integer, Void, AmSinistreView> {
     private TabInfoSinistreFragment fragment;
+
     @Override
     protected AmSinistreView doInBackground(Integer... params) {
         try {
@@ -35,14 +36,14 @@ public class InfoSinistreAsync extends AsyncTask<Integer, Void, AmSinistreView> 
             fragment.gettCatValidees().setText(res.getCatValidees());
             fragment.gettConducteur().setText("Moi");
             fragment.gettDateDeliv().setText(Util.dateToString(res.getDateDelivrance()));
-            fragment.gettDn().setText(Util.dateToString(res.getDnConducteur()));
+            fragment.gettDn().setText("Né(e) le " + Util.dateToString(res.getDnConducteur()));
             fragment.gettDupl().setText(res.getNoduplicata());
             fragment.gettLieuDeliv().setText(res.getLieuDelivrance());
             fragment.gettValDeb().setText(Util.dateToString(res.getDebValidite()));
             fragment.gettValFin().setText(Util.dateToString(res.getFinValidite()));
             fragment.gettNo().setText(res.getNopermis());
-            fragment.gettNom().setText(res.getNomConducteur());
-            fragment.gettPrenom().setText(res.getPrenomConducteur());
+            fragment.gettNom().setText(res.getNomConducteur()+" "+res.getPrenomConducteur());
+
         }
     }
 

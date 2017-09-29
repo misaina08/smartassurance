@@ -33,7 +33,8 @@
 
                 <Button
                     android:id="@+id/bAdd"
-                    android:layout_width="182dp"
+                    style="@android:style/Widget.Material.Button.Colored"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ajouter" />
             </LinearLayout>

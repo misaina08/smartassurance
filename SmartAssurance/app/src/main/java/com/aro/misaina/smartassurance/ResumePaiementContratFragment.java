@@ -126,6 +126,12 @@ public class ResumePaiementContratFragment extends DialogFragment {
             }
         });
 
+        if(souscription.getIdProduit() == 2){ // auto
+            vContrat.setText(R.string.terme_contrat_auto);
+        } else if(souscription.getIdProduit()==3){ // retraite
+            vContrat.setText(R.string.terme_contrat_retraite);
+        }
+
     }
 
 }

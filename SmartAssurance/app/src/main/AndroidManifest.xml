@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -42,12 +43,16 @@
         <activity
             android:name=".SaisiInfoClientActivity"
             android:parentActivityName=".AccueilActivity" />
-        <activity android:name=".AccueilActivity">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AccueilActivity">
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
 
@@ -72,7 +77,8 @@
             android:parentActivityName=".AccueilActivity" />
         <activity
             android:name=".EspaceClientActivity"
-            android:parentActivityName=".AccueilActivity" />
+            android:parentActivityName=".AccueilActivity"
+            android:theme="@style/AroThemeDark" />
         <activity
             android:name=".BotFragment"
             android:parentActivityName=".AccueilActivity" />
@@ -87,10 +93,11 @@
             android:theme="@style/AroThemeDark" />
         <activity
             android:name=".ListeComptePaiementActivity"
-            android:parentActivityName=".EspaceClientActivity" />
+            android:parentActivityName=".EspaceClientActivity"
+            android:theme="@style/AroThemeDark" />
         <activity
             android:name=".FormulaireSinistreActivity"
-            android:theme="@style/AroThemeDark"/>
+            android:theme="@style/AroThemeDark" />
         <activity
             android:name=".FicheSinistreActivity"
             android:theme="@style/AroThemeDark" />
@@ -138,8 +145,12 @@
         <activity android:name=".VerrouillageActivity" />
         <activity
             android:name=".ProfilActivity"
-            android:parentActivityName=".EspaceClientActivity" />
-        <activity android:name=".FicheActusActivity"></activity>
+            android:parentActivityName=".EspaceClientActivity"
+            android:theme="@style/AroThemeDark" />
+        <activity
+            android:name=".FicheActusActivity"
+            android:theme="@style/AroThemeDark" />
+        <activity android:name=".TourGuichetActivity" />
     </application>
 
 </manifest>

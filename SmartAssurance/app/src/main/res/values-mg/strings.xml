@@ -21,7 +21,7 @@
     <string name="coordonnees">Fifandraisana</string>
     <string name="information_client">Momba ny mpanjifa</string>
     <string name="identification">Ny maha anao</string>
-    <string name="guichet_approcher">Apetaho amin\'ny teboka ny smartphone</string>
+    <string name="guichet_approcher">Apetaho amin\'ny teboka NFC ny findainao</string>
     <string name="numero_police">Nomerao ahafantara</string>
     <string name="date_souscription">Nisoratra anarana ny</string>
     <string name="souscripteur">Mpiahy</string>
@@ -55,6 +55,17 @@
     <string name="informations_personnelles">Momba momba ahy</string>
     <string name="inscription">Hanoratra anarana</string>
     <string name="mdp">Teny miafina</string>
+    <string name="description">Famaritana</string>
+    <string name="filtre">Sokajy</string>
+    <string name="non_valide">Tsy manakery</string>
+    <string name="courant">Amin\'izao fotoana izao</string>
+    <string name="tout">Rehetra</string>
+    <string name="en_attente">Miandry</string>
+    <string name="pub">Dokam-barotra</string>
+    <string name="c_est_votre_tour">Ianao izao</string>
+    <string name="daccord">Okay</string>
+    <string name="terme_contrat_auto">fifanarahana auto</string>
+    <string name="terme_contrat_retraite">retraite</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

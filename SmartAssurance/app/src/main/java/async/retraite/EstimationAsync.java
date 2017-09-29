@@ -1,10 +1,12 @@
 package async.retraite;
 
 import android.os.AsyncTask;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
 
 import com.aro.misaina.smartassurance.BotFragment;
+import com.aro.misaina.smartassurance.R;
 import com.aro.misaina.smartassurance.SRRetraitePopFragment;
 
 import java.text.DecimalFormat;
@@ -38,10 +40,11 @@ public class EstimationAsync extends AsyncTask<Double, Void, Double> {
     @Override
     protected void onPostExecute(Double montant) {
         BulleUI bulle1 = new BulleUI(botFragment, 0);
-        bulle1.setTextInBulle("Vous devez déposer " + new DecimalFormat("#,##0.00").format(montant));
+        bulle1.setTextInBulle("Vous devez déposer " + new DecimalFormat("#,##0.00").format(montant) + " Ariary par an");
 
-        Button souscrire = new Button(botFragment);
-        souscrire.setText("Souscrire ?");
+        Button souscrire = new Button(new ContextThemeWrapper(botFragment, android.R.style.Widget_Material_Button_Borderless_Colored));
+        souscrire.setBackground(botFragment.getResources().getDrawable(R.drawable.ripple_circle));
+        souscrire.setText("Souscrire");
         souscrire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

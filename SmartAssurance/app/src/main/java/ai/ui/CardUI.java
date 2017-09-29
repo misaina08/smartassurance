@@ -13,6 +13,8 @@ import com.aro.misaina.smartassurance.R;
 public class CardUI extends UIElement {
     private LinearLayout cardLayout;
     private LinearLayout contentCardLayout;
+    private LinearLayout content;
+    private LinearLayout contentTop;
     private LinearLayout optionsCardLayout;
     private TextView textContent;
 
@@ -28,7 +30,9 @@ public class CardUI extends UIElement {
         this.cardLayout = (LinearLayout)findViewById(R.id.cardLayout);
         this.contentCardLayout = (LinearLayout)findViewById(R.id.contentCardLayout);
         this.optionsCardLayout = (LinearLayout)findViewById(R.id.optionsCardLayout);
+        this.content = (LinearLayout)findViewById(R.id.content);
         this.textContent = (TextView) findViewById(R.id.textContent);
+        this.contentTop = (LinearLayout) findViewById(R.id.contentTop);
     }
 
     public void changeText() {
@@ -74,5 +78,21 @@ public class CardUI extends UIElement {
     public void setText(String text) {
         this.text = text;
         changeText();
+    }
+
+    public LinearLayout getContent() {
+        return content;
+    }
+
+    public void setContent(LinearLayout content) {
+        this.content = content;
+    }
+
+    public LinearLayout getContentTop() {
+        return contentTop;
+    }
+
+    public void setContentTop(LinearLayout contentTop) {
+        this.contentTop = contentTop;
     }
 }

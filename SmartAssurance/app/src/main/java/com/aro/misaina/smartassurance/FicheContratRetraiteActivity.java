@@ -17,7 +17,7 @@ import modeles.souscription.Souscription;
 
 public class FicheContratRetraiteActivity extends AppCompatActivity implements ActionBar.TabListener {
     private ViewPager pager;
-    private String[] tabs = {"Info", "Dépots", "Retraits"};
+    private String[] tabs = {"Info", "Dépots"};
     private ActionBar actionBar;
     private TabContratRetraiteAdapter adapter;
     private Integer valide = 0;

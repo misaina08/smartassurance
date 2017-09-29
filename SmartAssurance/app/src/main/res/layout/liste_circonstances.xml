@@ -8,16 +8,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
         android:weightSum="1">
 
         <TextView
+            android:id="@+id/etape"
+            style="@style/TextNormal"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="TextView"
+            android:textAlignment="center" />
+
+        <View style="@style/DividerVertical"></View>
+
+        <TextView
             android:id="@+id/eDesc"
+            style="@style/TextNormal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.10"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:gravity="fill_vertical"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

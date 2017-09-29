@@ -40,7 +40,7 @@ public class PayerContratAsync extends AsyncTask<HistoriquePaiementView, Void, B
             Intent intent = new Intent(context, AccueilActivity.class);
             intent.putExtra("tabid", R.id.tab_contrats);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent);
+            context.getApplicationContext().startActivity(intent);
         } else {
             Toast.makeText(context, "Une erreur est survenue.", Toast.LENGTH_SHORT).show();
         }

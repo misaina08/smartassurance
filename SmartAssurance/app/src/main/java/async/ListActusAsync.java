@@ -35,7 +35,7 @@ public class ListActusAsync extends AsyncTask<Void, Void, List<Actualite>> {
     @Override
     protected void onPostExecute(List<Actualite> actualites) {
         if (actualites != null) {
-            RecyclerView recActus = (RecyclerView) actualitesFragment.getActivity().findViewById(R.id.recActus);
+            RecyclerView recActus = (RecyclerView) actualitesFragment.getView().findViewById(R.id.recActus);
             recActus.setLayoutManager(new LinearLayoutManager(actualitesFragment.getActivity()));
             ListeActusAdapter listeActusAdapter = new ListeActusAdapter();
             listeActusAdapter.setActualites(actualites);

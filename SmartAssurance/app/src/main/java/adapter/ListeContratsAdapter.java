@@ -40,7 +40,7 @@ public class ListeContratsAdapter extends RecyclerView.Adapter<ListeContratsAdap
         holder.tTitreContrat.setText(contrats.get(position).getNomProduit());
         holder.tMt.setText(new DecimalFormat("#,##0.00").format(contrats.get(position).getPrimetotal()) + " Ar");
         if (contrats.get(position).getIdProduit() == 2) { //auto moto
-            holder.iconeContrat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.mipmap.ic_car_filled));
+            holder.iconeContrat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.mipmap.ic_car));
         }
         else if (contrats.get(position).getIdProduit() == 3) { //retraite
             holder.iconeContrat.setImageDrawable(listeContratsFragment.getActivity().getResources().getDrawable(R.mipmap.ic_trekking_filled));

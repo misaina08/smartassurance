@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:background="@android:color/white"
     tools:context="com.aro.misaina.smartassurance.FormulaireSinistreActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
 
         <LinearLayout
@@ -22,21 +23,27 @@
                 android:id="@+id/textView10"
                 style="@style/TextNormal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.19"
                 android:height="30dp"
                 android:text="Catégorie de l'accident"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <Spinner
                 android:id="@+id/sCategorie"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.19" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.19"
                 android:orientation="horizontal"
                 android:weightSum="1">
@@ -66,18 +73,25 @@
 
             </LinearLayout>
 
+            <View style="@style/Divider"></View>
+
             <TextView
                 android:id="@+id/textView15"
                 style="@style/TextNormal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.19"
                 android:height="30dp"
-                android:text="Conducteur" />
+                android:text="Conducteur"
+                android:textSize="16sp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eConducteur"
@@ -89,7 +103,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eNomCond"
@@ -102,7 +118,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/ePrenomCond"
@@ -114,7 +132,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eDn"
@@ -126,7 +146,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eAdresse"
@@ -136,19 +158,25 @@
                     android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
+            <View style="@style/Divider"></View>
+
             <TextView
                 android:id="@+id/textView21"
                 style="@style/TextNormal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="0.19"
                 android:height="30dp"
                 android:text="Permis de conduire"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eNopermis"
@@ -160,7 +188,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eDuplic"
@@ -172,7 +202,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eCatPermis"
@@ -184,19 +216,23 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eCatvalidees"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Cat. validées"
+                    android:hint="Catégories validées"
                     android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eDebValidite"
@@ -208,7 +244,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eFinValidite"
@@ -220,7 +258,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eDateDeliv"
@@ -232,7 +272,9 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
 
                 <EditText
                     android:id="@+id/eLieuDelivrance"

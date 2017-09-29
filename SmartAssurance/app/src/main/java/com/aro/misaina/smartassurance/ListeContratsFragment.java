@@ -5,11 +5,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import async.souscription.ListeContratsAsync;
 
 public class ListeContratsFragment extends Fragment {
 //    private SwipeRefreshLayout swipeRefreshLayout;
+    private Spinner spinnerFilter;
     public ListeContratsFragment(){
 
     }
@@ -19,7 +26,26 @@ public class ListeContratsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         try {
-            initData();
+            spinnerFilter = (Spinner) getActivity().findViewById(R.id.spinnerFilter);
+            List<String> filtres = new ArrayList<String>(3);
+            filtres.add(getActivity().getResources().getString(R.string.tout));
+            filtres.add(getActivity().getResources().getString(R.string.non_valide));
+            filtres.add(getActivity().getResources().getString(R.string.courant));
+            ArrayAdapter<String> adapterFiltre = new ArrayAdapter<String>(this.getActivity(),
+                    android.R.layout.simple_spinner_dropdown_item, filtres);
+            spinnerFilter.setAdapter(adapterFiltre);
+            initData(spinnerFilter.getSelectedItemPosition());
+            spinnerFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    initData(position);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
 //            swipeRefreshLayout = (SwipeRefreshLayout)getView().findViewById(R.id.swipeContrats);
 //            swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
 
@@ -39,13 +65,15 @@ public class ListeContratsFragment extends Fragment {
     }
 
     public void refresh(){
-        initData();
+        initData(spinnerFilter.getSelectedItemPosition());
 //        swipeRefreshLayout.setRefreshing(false);
     }
-    public void initData(){
+    public void initData(Integer filtre){
+        Integer[] param = {filtre};
         ListeContratsAsync listeContratsAsync = new ListeContratsAsync();
         listeContratsAsync.setListeContratsFragment(this);
-        listeContratsAsync.execute();
+        listeContratsAsync.execute(param);
     }
+
 
 }

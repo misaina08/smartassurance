@@ -54,7 +54,7 @@ public class ListeDepotsAsync extends AsyncTask<Integer, Void, List<RtDepot>> {
             for(RtDepot r : liste) {
                 total += r.getValeur();
             }
-            fragment.getTotal().setText(new DecimalFormat("#,##0.00").format(total) + " Ar");
+            fragment.getTotal().setText(new DecimalFormat("#,##0.00").format(total) + " Ariary");
         }
     }
 

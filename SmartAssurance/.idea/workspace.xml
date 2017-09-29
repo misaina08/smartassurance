@@ -20,14 +20,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79ed4559-916c-43e0-851e-bc5112d96524" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/BottomNavigationViewEx_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bottom_bar_2_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_add.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/shape_circle_fill.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_green_fill.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/adapter/ListeAttenteAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/adapter/ListeAttenteAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/adapter/ListeCirconstanceAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/adapter/ListeCirconstanceAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/adapter/ListeContratsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/adapter/ListeContratsAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/adapter/ListeSinistresAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/adapter/ListeSinistresAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/adapter/TabSinistreAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/adapter/TabSinistreAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ai/Actions.java" afterPath="$PROJECT_DIR$/app/src/main/java/ai/Actions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ai/ui/CardUI.java" afterPath="$PROJECT_DIR$/app/src/main/java/ai/ui/CardUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/ListActusAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/ListActusAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/automoto/InfoSinistreAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/automoto/InfoSinistreAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/automoto/ListeSinistresAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/automoto/ListeSinistresAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/guichet/DevantAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/guichet/DevantAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/guichet/NouveauClientAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/guichet/NouveauClientAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/retraite/EstimationAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/retraite/EstimationAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/retraite/ListeDepotsAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/retraite/ListeDepotsAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/retraite/SituationCompteAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/retraite/SituationCompteAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/souscription/ListeContratsAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/souscription/ListeContratsAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/souscription/PayerContratAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/souscription/PayerContratAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/souscription/SouscriptionAutoMotoAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/souscription/SouscriptionAutoMotoAsync.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/async/souscription/SouscriptionRetraiteAsync.java" afterPath="$PROJECT_DIR$/app/src/main/java/async/souscription/SouscriptionRetraiteAsync.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/DevisAutoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/DevisAutoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheActusActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheActusActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/GuichetFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/GuichetFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeComptePaiementActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeComptePaiementActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeContratsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeContratsFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ResumePaiementContratFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ResumePaiementContratFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabCirconstanceSinistreFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabCirconstanceSinistreFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabDepotsRetraiteFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabDepotsRetraiteFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabInfoSinistreFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabInfoSinistreFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabSinistreFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabSinistreFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TagFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TagFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fcm/MyFirebaseMessagingService.java" afterPath="$PROJECT_DIR$/app/src/main/java/fcm/MyFirebaseMessagingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/modeles/produit/Produit.java" afterPath="$PROJECT_DIR$/app/src/main/java/modeles/produit/Produit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/services/AutoMotoService.java" afterPath="$PROJECT_DIR$/app/src/main/java/services/AutoMotoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/services/ObjetsStatique.java" afterPath="$PROJECT_DIR$/app/src/main/java/services/ObjetsStatique.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/shape_white.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shape_white.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_srretraite_pop.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_srretraite_pop.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottombar.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottombar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_connexion.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_connexion.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_devis_auto.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_devis_auto.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_actus.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_actus.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_formulaire_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_formulaire_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_liste_compte_paiement.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_liste_compte_paiement.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bot.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bot.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_choix_langage.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_choix_langage.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_guichet.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_guichet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_liste_contrats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_liste_contrats.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_circonstance_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_circonstance_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_depots_retraite.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_depots_retraite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_dommages_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_dommages_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_info_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_info_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_photos_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_photos_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_sinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_sinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_souscription_auto.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_souscription_auto.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_actus.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_actus.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_attente.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_attente.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/liste_circonstances.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/liste_circonstances.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/liste_contrats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/liste_contrats.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/liste_depots.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/liste_depots.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/liste_photossinistre.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/liste_photossinistre.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/liste_sinistres.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/liste_sinistres.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_accueil.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_accueil.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_crud.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_crud.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-mg/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-mg/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <ignored path="Smart Assurance.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,26 +138,15 @@
     <favorites_list name="Smart Assurance" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FicheContratRetraiteActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -965,6 +1034,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.synnapps:carouselview:0.1.4" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComSynnappsCarouselview014Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -2008,6 +2082,11 @@
                 <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.synnapps:carouselview:0.1.4" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComSynnappsCarouselview014Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
@@ -2209,7 +2288,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="C:\Users\LENOVO\Documents\GitHub\smartassurance\SmartAssurance" value="4503687565132" />
-        <entry key="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance" value="4513737447554" />
+        <entry key="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance" value="4514384721329" />
         <entry key="D:\Misaina\android\projects\SmartAssurance" value="4500963824052" />
       </map>
     </option>
@@ -2564,57 +2643,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bot.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/card_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_white.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_bulle.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_blue_strock.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_srauto_moto_pop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/modeles/Actualite.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_actualites.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/async/souscription/PayerContratAsync.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/async/souscription/ListeContratsAsync.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/async/ListActusAsync.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ActualitesFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/adapter/ListeActusAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheActusActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_actus.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_actus.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_connexion.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ConnexionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_saisiinfo_client.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/SaisiInfoClientActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/SaisiIdentifierClientActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_saisi_identifier_client.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_espace_client.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ProfilActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeComptePaiementActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/adapter/ListeMoyensPaiementAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratAutoActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_formulaire_sinistre.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_sinistre.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FormulaireSinistreActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/async/retraite/EstimationAsync.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/modeles/Terme.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/BotFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ai/Bot.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/async/bot/SignificationTermeAsync.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/async/ActionBotAsync.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ai/Actions.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_srretraite_pop.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/utilitaire/BottomNavigationViewHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/bottombar1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/bottombar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/liste_depots.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabSinistreFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_formulaire_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fcm/MyFirebaseMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_connexion.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ripple_circle.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ripple_circle_strocke1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ripple_round.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/default_actions_bot_selector.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/default_actions_bot.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ai/Actions.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/async/automoto/ListeSinistresAsync.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/async/automoto/CheckDemandeSinistreAsync.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/liste_sinistres.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/liste_rapportssinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/shape_grey_doux_fill.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapter/ListeCirconstanceAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapter/ListeRapportsSinistresAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/liste_circonstances.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabCirconstanceSinistreFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bot.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_actus.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/liste_contrats.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_crud.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ProfilActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/adapter/ListeContratsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_accueil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_guichet.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/GuichetFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/Main2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/async/automoto/InfoSinistreAsync.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabInfoSinistreFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_info_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_actus.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_dommages_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_photos_sinistre.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_liste_compte_paiement.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/bottomsheet_moyens_paiement.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeComptePaiementActivity.java" />
       </list>
     </option>
   </component>
@@ -2668,8 +2747,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2677,158 +2754,28 @@
               <option name="myItemId" value="SmartAssurance" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utilitaire" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartAssurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartassurance" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches">
         <subPane />
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="192.168.10.2:5555" />
+    <property name="device.picker.selection" value="192.168.10.3:5555" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="SearchEverywhereHistoryKey" value="ficheretrai&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java&#10;wsut&#9;PSI&#9;JAVA://utilitaire.WSUtil&#10;sinistre&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FormulaireSinistreActivity&#10;fichesini&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java&#10;fiche&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FicheContratAutoActivity&#10;fichere&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FicheContratRetraiteActivity&#10;com&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ListeComptePaiementActivity&#10;profil&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ProfilActivity&#10;connex&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/activity_connexion.xml&#10;wsu&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;accu&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java&#10;tabdom&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.R.layout#fragment_tab_dommages_sinistre&#10;tab&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/TabInfoSinistreFragment.java&#10;colors&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/values/colors.xml&#10;list&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_contrats.xml&#10;trekking&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/mipmap-hdpi/ic_trekking_filled.png&#10;wsutil&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;accueil&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java&#10;color&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/values/colors.xml&#10;ws&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;shape&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/drawable/shape_circle.xml&#10;wsuti&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;tag&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tag.xml&#10;bot&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/BotFragment.java&#10;guichet&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/GuichetFragment.java&#10;produit&#9;PSI&#9;JAVA://modeles.produit.Produit&#10;espa&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java&#10;dbh&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/sqlite/DbHelper.java&#10;sr&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/SRAutoMotoPopFragment.java&#10;actions&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/ai/Actions.java&#10;client&#9;PSI&#9;JAVA://modeles.client.ClientView&#10;garantiasync&#9;PSI&#9;JAVA://async.souscription.ListeGarantiesSouscriptionAsync&#10;objet&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/services/ObjetsStatique.java&#10;amgar&#9;PSI&#9;JAVA://modeles.AmGaranti&#10;dbhe&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/sqlite/DbHelper.java&#10;dbher&#9;null&#9;null&#10;accuei&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java&#10;dao&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/sqlite/GuichetDao.java&#10;notificat&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/modeles/Notification.java&#10;fragment_bot&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_bot.xml&#10;style&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/values/styles.xml&#10;obj&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/services/ObjetsStatique.java&#10;obje&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/services/ObjetsStatique.java&#10;liste_&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_photossinistre.xml&#10;util&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/Util.java&#10;liste&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_dommagessinistre.xml&#10;objets&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/services/ObjetsStatique.java&#10;liste_sini&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_sinistres.xml&#10;menu_&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/menu/menu_formulaire_sinistre.xml&#10;popfra&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.SRRetraitePopFragment" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tab_photos_sinistre.xml&#10;dommages&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tab_dommages_sinistre.xml&#10;listac&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/list_actus.xml&#10;colors&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/values/colors.xml&#10;photos&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tab_photos_sinistre.xml&#10;infosinis&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tab_info_sinistre.xml&#10;tabdomm&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.TabDommagesSinistreFragment&#10;wsutil&#9;PSI&#9;JAVA://utilitaire.WSUtil&#10;wsut&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;moyenspaiement&#9;PSI&#9;JAVA://adapter.ListeMoyensPaiementAdapter&#10;wsu&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;profil&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ProfilActivity&#10;listcon&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_contrats.xml&#10;color&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/values/colors.xml&#10;fragment_bo&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_bot.xml&#10;circonst&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_circonstances.xml&#10;list_rappo&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_rapportssinistre.xml&#10;listsini&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.R.layout#liste_sinistres&#10;messa&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/fcm/MyFirebaseMessagingService.java&#10;formu&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/activity_formulaire_sinistre.xml&#10;list_dep&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_depots.xml&#10;devis&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/DevisAutoActivity.java&#10;objet&#9;PSI&#9;JAVA://services.ObjetsStatique&#10;sr&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/SRRetraitePopFragment.java&#10;choi&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ChoixLangageFragment&#10;form&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FormulaireSinistreActivity&#10;paiement&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ResumePaiementContratFragment&#10;list_&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_depots.xml&#10;actions&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/ai/Actions.java&#10;list_con&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_contrats.xml&#10;tag&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tag.xml&#10;shape_white&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/drawable/shape_white.xml&#10;shape_whi&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/drawable/shape_white_demi.xml&#10;sutil&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;wsuti&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/utilitaire/WSUtil.java&#10;produit&#9;PSI&#9;JAVA://modeles.produit.Produit&#10;card_&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/card_list.xml&#10;card&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/card_list.xml&#10;devant&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/async/guichet/DevantAsync.java&#10;contra&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_liste_contrats.xml&#10;list_a&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/list_actus.xml&#10;liste_pho&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/liste_photossinistre.xml&#10;circonstance&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/fragment_tab_circonstance_sinistre.xml&#10;ficheretrai&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java&#10;sinistre&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FormulaireSinistreActivity&#10;fichesini&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java&#10;fiche&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FicheContratAutoActivity&#10;fichere&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.FicheContratRetraiteActivity&#10;com&#9;PSI&#9;JAVA://com.aro.misaina.smartassurance.ListeComptePaiementActivity&#10;connex&#9;FILE&#9;file://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/src/main/res/layout/activity_connexion.xml" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="VectorAssetImportPath" value="C:\Program Files\Android\Android Studio\jre\jre" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ibuy-mobile/Ibuy" />
+    <property name="VectorAssetImportPath" value="C:\Users\misa\Downloads" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -2841,16 +2788,16 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="async.bot" />
       <recent name="adapter" />
+      <recent name="async.bot" />
       <recent name="sqlite" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\res\drawable" />
+      <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\res\layout" />
       <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\res\menu" />
       <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\java\com\aro\misaina\smartassurance" />
-      <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\res\drawable" />
       <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\java\ai\model" />
-      <recent name="C:\Users\misa\Documents\GitHub\smartassurance\SmartAssurance\app\src\main\java\ai" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3178,25 +3125,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39445302" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39224806" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5541195" sideWeight="0.5355522" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5285054" sideWeight="0.4644478" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.524031" sideWeight="0.4644478" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266564" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5351438" sideWeight="0.50907713" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22012103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -3209,7 +3164,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5266559" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -3231,37 +3188,276 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_actualites.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_send_simple.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance//Theme Editor">
+      <provider selected="true" editor-type-id="themeEditor">
+        <state theme-name="AppTheme" module-name="app" proportion="0.680198" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_writing.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/retraite.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_vehicule.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_settings_filled.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_home_filled.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_bot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_action_name.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_chat.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_add.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ProfilActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_crud.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_sinistre.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/liste_contrats.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_chat.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_car_filled.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_car_bleu.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_trekking_filled.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_car_bleu.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_trekking_filled.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_car.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/sketch.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_accueil.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/ListeContratsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="40" column="78" selection-start-line="40" selection-start-column="77" selection-end-line="40" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/ListeActusAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="306">
+          <caret line="43" column="134" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="134" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheActusActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_actus.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_guichet.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="935">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/GuichetFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/ListeMoyensPaiementAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/Main2Activity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/ListeSinistresAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="82" column="44" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/automoto/InfoSinistreAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabInfoSinistreFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/TabDommagesSinistreFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_info_sinistre.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3270,63 +3466,22 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_connexion.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="260">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ConnexionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_saisiinfo_client.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_saisi_identifier_client.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/DatePickerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_espace_client.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_photos_sinistre.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3336,27 +3491,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/EspaceClientActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_dommages_sinistre.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.android/build-cache/5994f3d1fae954a456af9324dfa56908abe1d79e/output/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="232" column="18" selection-start-line="232" selection-start-column="18" selection-end-line="232" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/bottomsheet_moyens_paiement.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profil.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ProfilActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3365,341 +3525,19 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ListeComptePaiementActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/ListeMoyensPaiementAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/liste_moyenspaiement.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_formulaire_sinistre.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fiche_sinistre.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheSinistreActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratAutoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="android-dummy://C:/Users/misa/Documents/GitHub/smartassurance/SmartAssurance/app/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/SaisiIdentifierClientActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/SaisiInfoClientActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FormulaireSinistreActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="77" column="37" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/retraite/RetraiteInfoAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/utilitaire/WSUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/retraite/EstimationAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="40" column="99" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/modeles/Terme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bot.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/retraite/SituationCompteAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ai/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/BotFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/bot/SignificationTermeAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2079#2088#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/ActionBotAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ai/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="233" column="16" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
-          <folding>
-            <element signature="e#9823#9832#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/async/guichet/NouveauClientAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_srretraite_pop.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="2" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
-          <folding>
-            <element signature="e#3598#3620#0" expanded="true" />
-            <element signature="e#4355#4390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/utilitaire/BottomNavigationViewHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottombar1.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_tab_sinistre.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottombar.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#525#542#0" expanded="true" />
-            <element signature="e#787#804#0" expanded="true" />
-            <element signature="e#1007#1026#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="53" column="48" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/ActualitesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/AccueilActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5695">
-          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2053#2458#0" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#3979#5809#0" expanded="true" />
-            <element signature="e#4339#4358#0" expanded="true" />
-            <element signature="e#4536#4552#0" expanded="true" />
-            <element signature="e#5177#5193#0" expanded="true" />
-            <element signature="e#5378#5396#0" expanded="true" />
-            <element signature="e#5808#5809#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aro/misaina/smartassurance/FicheContratRetraiteActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

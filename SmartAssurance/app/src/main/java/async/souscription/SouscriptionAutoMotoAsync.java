@@ -1,11 +1,14 @@
 package async.souscription;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.aro.misaina.smartassurance.AccueilActivity;
 import com.aro.misaina.smartassurance.BotFragment;
+import com.aro.misaina.smartassurance.R;
 import com.google.gson.Gson;
 
 import ai.ui.CardUI;
@@ -45,7 +48,7 @@ public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, Strin
         CardUI cardUI = new CardUI(botFragment);
         try {
 
-            cardUI.setText("Votre souscription a bien été effectuée. Veuillez consulter la liste des souscription en attente de paiement.");
+            cardUI.setText("Votre souscription a été effectuée. Veuillez consulter la liste des souscriptions en attente de paiement.");
 
             if (resultWS.getRes() == 1) {
                 Button b1 = new Button(botFragment);
@@ -55,6 +58,9 @@ public class SouscriptionAutoMotoAsync extends AsyncTask<VehiculeWS, Void, Strin
                     public void onClick(View v) {
                         // action à faire
                         Toast.makeText(botFragment, "Action à faire", Toast.LENGTH_SHORT).show();
+                        Intent intent =new Intent(botFragment, AccueilActivity.class);
+                        intent.putExtra("tabid", R.id.tab_contrats);
+                        botFragment.startActivity(intent);
                     }
                 });
                 cardUI.getOptionsCardLayout().addView(b1);
